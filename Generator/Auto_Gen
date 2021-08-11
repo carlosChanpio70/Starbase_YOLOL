@@ -17,6 +17,7 @@ if :Battery>9999 then :GenLimit= :Generator-2 goto 1 end goto 1
 
 
 
+//Auto_Gen script made by carlosChanpio70 / Carlos //
 
 Description:
 Automatically controls the Generator based on energy needs
