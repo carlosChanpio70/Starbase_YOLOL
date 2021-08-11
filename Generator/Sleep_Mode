@@ -17,6 +17,7 @@ if :Slep== 0 then goto 1 end
 
 
 
+// Sleep code made by carlosChanpio70 / Carlos //
 
 Description:
 Stops the Auto generator chip from doing unnecessary changed in GenLimit when idling
