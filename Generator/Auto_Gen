@@ -1,0 +1,24 @@
+if :AuG== 1 then goto 2 end goto 1
+if :Battery<9999 then :GenLimit= :Generator+2 goto 1 end
+if :Battery>9999 then :GenLimit= :Generator-2 goto 1 end goto 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Setup
+You'll need an button and an Generator (obviously)
+Rename ONLY the Generator field "GeneratorUnitRateLimit" to "GenLimit"
+Rename the button's field "ButtonState" to "AuG"
