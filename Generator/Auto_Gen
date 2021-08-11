@@ -18,7 +18,9 @@ if :Battery>9999 then :GenLimit= :Generator-2 goto 1 end goto 1
 
 
 
-Setup
-You'll need an button and an Generator (obviously)
+Description:
+Automatically controls the Generator based on energy needs
+Setup:
+You'll need an button,a battery and an Generator (obviously)
 Rename ONLY the Generator field "GeneratorUnitRateLimit" to "GenLimit"
 Rename the button's field "ButtonState" to "AuG"
