@@ -14,7 +14,7 @@ if :Scanbutton==1 then
             else 
                 :Index=1
                 M2=:Material
-                V1=:Volume
+                V2=:Volume
                 if :ScanRes==2 then
                 :Scanner=M1+"\n"+V1+"kv\n"+M2+"\n"+V2+"kv"
                 else 
