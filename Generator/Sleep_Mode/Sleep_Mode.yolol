@@ -1,6 +1,6 @@
-if :Slep== 0 then goto 1 end
-:GenLimit= 0 :AuG= 0 if :Battery>= 2500 then goto 1 end
-:AuG= 1 :Slep= 0 goto 1
+if:Slep==0thengoto1end
+:GenLimit=0 :AuG=0 if:Battery>=2500thengoto1end
+:AuG=1 :Slep=0 goto1
 
 
 
