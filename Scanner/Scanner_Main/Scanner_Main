@@ -18,13 +18,3 @@ M1= "" V1= 0 M2= "" V2= 0 M3= "" V3= 0 goto 10
 M1= "" V1= 0 M2= "" V2= 0 goto 10
 :Scanner= M1+"\n"+V1+"kv" M1= "" V1= 0 goto 10
 //Material Scanner code made by carlosChanpio70 / Carlos//
-----------------------------------------------------------
-Description:
-Controls the Material point Scanner and displays scan results
-Setup:
-You'll need the Material point Scanner, an button and an 24x24 text panel
-In the Material point Scanner change ONLY these values
-"Active" to "Scanbutton"
-"ScanResults" to "ScanRes"
-Change in the button the variable "ButtonState" to "Scanbutton"
-Change in the text panel the variable "PanelValue" to "Scanner"

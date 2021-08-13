@@ -1,5 +1,3 @@
-//Auto_Gen script made by carlosChanpio70 / Carlos //
------------------------------------------------------
 Description:
 Automatically controls the Generator based on energy needs
 Setup:
