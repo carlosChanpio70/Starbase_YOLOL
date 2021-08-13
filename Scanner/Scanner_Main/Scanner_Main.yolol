@@ -1,4 +1,12 @@
-:Scanner="Offline" if:Scanbutton==1thengoto3end goto1
+if:Scanbutton!=1thengoto9end
+ifb<=:Scanner_Delay*5thenb=b+1 goto2end :Scan=1
+if:ScanRes==0then:Scanner="\nNo Target" goto1end :Index=0 c=:Material
+d=:Volume if:ScanRes==1then:Scanner=c+"\n"+d+"kv" goto1end :Index=1
+e=:Material d=:Volume
+if:ScanRes==2then:Scanner=c+"\n"+d+"kv\n"+e+"\n"+f+"kv" goto1end
+:Index=2 g=:Material h=:Volume if:ScanRes!=3thengoto1end
+:Scanner=c+"\n"+d+"kv\n"+e+"\n"+f+"kv\n"+g+"\n"+h+"kv" goto1
+:Scanner="Offline" goto1
 
 
 
@@ -7,14 +15,6 @@
 
 
 
-if:Scanbutton==0thengoto1end :Scan=1 a=:ScanRes
-:Index=0 b=:Material :V1=:Volume ifa==1thengoto19end
-ifa==0then:Scanner="\nNo Target" goto10end
-ifa==2then:Index=1 c=:Material d=:Volume goto17end
-ifa==3then:Index=2 e=:Material d=:Volume elsegoto10end
-:Scanner=b+"\n"+f+"kv\n"+c+"\n"+d+"kv\n"+e+"\n"+g+"kv"
-b="" f=0 c="" d=0 e="" g=0 goto10
-:Scanner=b+"\n"+f+"kv\n"+c+"\n"+d+"kv"
-b="" f=0 c="" d=0 goto10
-:Scanner=b+"\n"+f+"kv" b="" f=0 goto10
+
+
 //Material Scanner code made by carlosChanpio70 / Carlos//
