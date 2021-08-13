@@ -1,6 +1,6 @@
-:Nose=0
-if:Scanbutton==0thengoto2end
-:Nose=1 if:Scanbutton==0thengoto1end goto3
+if:Scanbutton==1then:Nose=1else:Nose=0end goto1
+
+
 
 
 
