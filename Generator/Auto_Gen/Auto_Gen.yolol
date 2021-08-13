@@ -1,6 +1,6 @@
-if:AuG==1thengoto2end goto1
-if:Battery<9999then:GenLimit=:Generator+2 goto1end
-if:Battery>9999then:GenLimit=:Generator-2 goto1end goto1
+if:AuG!=1thengoto1end if:Battery<9999then:GenLimit=:Generator+2end
+if:Battery>9999then:GenLimit=:Generator-2end goto1
+
 
 
 

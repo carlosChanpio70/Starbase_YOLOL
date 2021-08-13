@@ -1,0 +1,8 @@
+if :AuG==1 then
+    if:Battery<9999 then
+        :GenLimit=:Generator+2
+    end
+    if:Battery>9999 then
+        :GenLimit=:Generator-2
+    end
+end
