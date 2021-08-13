@@ -1,4 +1,4 @@
-:Scanner= "Offline" if :Scanbutton == 1 then goto 3 end goto 1
+:Scanner="Offline" if:Scanbutton==1thengoto3end goto1
 
 
 
@@ -7,14 +7,14 @@
 
 
 
-if :Scanbutton == 0 then goto 1 end :Scan= 1 I= :ScanRes
-:Index= 0 M1= :Material :V1= :Volume if I== 1 then goto 19 end
-if I== 0 then :Scanner= "\nNo Target" goto 10 end
-if I== 2 then :Index= 1 M2= :Material V2= :Volume goto 17 end
-if I== 3 then :Index= 2 M3= :Material V2= :Volume else goto 10 end
-:Scanner= M1+"\n"+V1+"kv\n"+M2+"\n"+V2+"kv\n"+M3+"\n"+V3+"kv"
-M1= "" V1= 0 M2= "" V2= 0 M3= "" V3= 0 goto 10
-:Scanner= M1+"\n"+V1+"kv\n"+M2+"\n"+V2+"kv"
-M1= "" V1= 0 M2= "" V2= 0 goto 10
-:Scanner= M1+"\n"+V1+"kv" M1= "" V1= 0 goto 10
+if:Scanbutton==0thengoto1end :Scan=1 a=:ScanRes
+:Index=0 b=:Material :V1=:Volume ifa==1thengoto19end
+ifa==0then:Scanner="\nNo Target" goto10end
+ifa==2then:Index=1 c=:Material d=:Volume goto17end
+ifa==3then:Index=2 e=:Material d=:Volume elsegoto10end
+:Scanner=b+"\n"+f+"kv\n"+c+"\n"+d+"kv\n"+e+"\n"+g+"kv"
+b="" f=0 c="" d=0 e="" g=0 goto10
+:Scanner=b+"\n"+f+"kv\n"+c+"\n"+d+"kv"
+b="" f=0 c="" d=0 goto10
+:Scanner=b+"\n"+f+"kv" b="" f=0 goto10
 //Material Scanner code made by carlosChanpio70 / Carlos//

@@ -1,10 +1,10 @@
-:Distance= "\nNo Target"
-XYZ= :X + :Y + :Z if XYZ== 0 then goto 1 end
-X2= ((:XX+0.5)/1000*1000)
-Y2= ((:YY+0.5)/1000*1000)
-Z2= ((:ZZ+0.5)/1000*1000)
-X1= :X-X2 Y1= :Y-Y2 Z1= :Z-Z2 D1= X1+Y1+Z1
-:Distance= "\nX:"+X1+"m\nY:"+Y1+"m\nZ:"+Z1+"m\nTotal:\n"+D1+"m" goto 2
+:Distance="\nNo Target"
+a=:X+:Y+:Z ifa==0thengoto1end
+b=(:XX+0.5)/1000*1000
+c=(:YY+0.5)/1000*1000
+d=(:ZZ+0.5)/1000*1000
+e=:X-b f=:Y-c g=:Z-d h=e+f+g
+:Distance="\nX:"+e+"m\nY:"+f+"m\nZ:"+g+"m\nTotal:\n"+h+"m" goto2
 
 
 
