@@ -1,7 +1,7 @@
-if:Slep==0 then
+if:Slep==1 then
     :GenLimit=0
     :AuG=0
-    if:Battery>=2500 then
+    if:Battery<=2500 then
     :AuG=1
     :Slep=0
     end
