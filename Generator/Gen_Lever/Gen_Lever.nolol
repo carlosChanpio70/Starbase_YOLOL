@@ -1,0 +1,6 @@
+if :BT> 0 then
+    :GenLimit= :GenLimit+5 
+end
+if :BT< 0 then
+:GenLimit= :GenLimit-5
+end
