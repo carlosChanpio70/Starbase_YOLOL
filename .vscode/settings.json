@@ -1,4 +1,5 @@
 {
     "yolol.lengthChecking.mode": "Optimize",
-    "yolol.chipType": "Basic"
+    "yolol.chipType": "Basic",
+    "yolol.debug.enable": true
 }

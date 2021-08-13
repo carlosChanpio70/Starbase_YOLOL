@@ -11,6 +11,7 @@ if :_!=" POS  :_\n     \n\n  Streamer\n    Mode" then
         Z2=:Z-Z1
         D1=X2+Y2+Z2
         :Distance="\nX:"+X2+"m\nY:"+Y2+"m\nZ:"+Z1+"m\nTotal:\n"+D1+"m"
-end
-:Distance="\nStreamer Mode"
+        end
+else
+    :Distance="\nStreamer Mode"
 end
