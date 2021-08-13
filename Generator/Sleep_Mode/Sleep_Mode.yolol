@@ -1,6 +1,5 @@
-if:Slep==0thengoto1end
-:GenLimit=0 :AuG=0 if:Battery>=2500thengoto1end
-:AuG=1 :Slep=0 goto1
+if:Slep!=0thengoto1end :GenLimit=0 :AuG=0
+if:Battery>=2500then:AuG=1 :Slep=0end goto1
 
 
 
@@ -17,4 +16,5 @@ if:Slep==0thengoto1end
 
 
 
-// Sleep code made by carlosChanpio70 / Carlos //
+
+//Generator Sleep mode code made by carlosChanpio70 / Carlos//
