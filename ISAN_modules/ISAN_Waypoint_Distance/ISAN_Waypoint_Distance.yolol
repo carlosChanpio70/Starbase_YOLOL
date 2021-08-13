@@ -1,7 +1,9 @@
-b=:X+:Y+:Z ifb==0then:Distance="\nNo Target" goto1end
+if:_==" POS  :_\n     \n\n  Streamer\n    Mode"thengoto1end
+b=:X+:Y+:Z ifb==0then:Distance="\nNo Target" goto6end
 c=(:XX+0.5)/1000*1000 d=(:YY+0.5)/1000*1000 e=(:ZZ+0.5)/1000*1000
 f=:X-c g=:Y-d h=:Z-e i=f+g+h
-:Distance="\nX:"+f+"m\nY:"+g+"m\nZ:"+e+"m\nTotal:\n"+i+"m" goto1
+:Distance="\nX:"+f+"m\nY:"+g+"m\nZ:"+e+"m\nTotal:\n"+i+"m"
+:Distance="\nStreamer Mode" goto1
 
 
 
@@ -15,6 +17,4 @@ f=:X-c g=:Y-d h=:Z-e i=f+g+h
 
 
 
-
-
-// Code made by carlosChanpio70 / Carlos //
+//Waypoint Distance code made by carlosChanpio70 / Carlos //

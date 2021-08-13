@@ -1,13 +1,16 @@
-XYZ=:X+:Y+:Z
-if XYZ==0 then
-    :Distance="\nNo Target"
-    else
-    X1=(:XX+0.5)/1000*1000
-    Y1=(:YY+0.5)/1000*1000
-    Z1=(:ZZ+0.5)/1000*1000
-    X2=:X-X1
-    Y2=:Y-Y1
-    Z2=:Z-Z1
-    D1=X2+Y2+Z2
-    :Distance="\nX:"+X2+"m\nY:"+Y2+"m\nZ:"+Z1+"m\nTotal:\n"+D1+"m"
+if :_!=" POS  :_\n     \n\n  Streamer\n    Mode" then
+    XYZ=:X+:Y+:Z
+    if XYZ==0 then
+        :Distance="\nNo Target"
+        else
+        X1=(:XX+0.5)/1000*1000
+        Y1=(:YY+0.5)/1000*1000
+        Z1=(:ZZ+0.5)/1000*1000
+        X2=:X-X1
+        Y2=:Y-Y1
+        Z2=:Z-Z1
+        D1=X2+Y2+Z2
+        :Distance="\nX:"+X2+"m\nY:"+Y2+"m\nZ:"+Z1+"m\nTotal:\n"+D1+"m"
+end
+:Distance="\nStreamer Mode"
 end
