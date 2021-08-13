@@ -299,3 +299,4 @@
 20:05:51 protocol.go:48: method "github.com/dbaumgarten/yodk/pkg/langserver.(*LangServer).DidClose" not yet implemented
 20:05:51 stream.go:85: Received: {"jsonrpc":"2.0","id":1,"method":"workspace/executeCommand","params":{"command":"activeDocument","arguments":["file:///c%3A/Users/carlo/OneDrive/Documentos/GitHub/Starbase_YOLOL/language-server-log.txt"]}}
 20:05:51 stream.go:37: Sent: {"jsonrpc":"2.0","result":null,"id":1}
+20:06:18 stream.go:85: Received: {"jsonrpc":"2.0","id":2,"method":"shutdown","params":null}
