@@ -1,6 +1,6 @@
-if :AuG== 1 then goto 2 end goto 1
-if :Battery<9999 then :GenLimit= :Generator+2 goto 1 end
-if :Battery>9999 then :GenLimit= :Generator-2 goto 1 end goto 1
+if:AuG==1thengoto2end goto1
+if:Battery<9999then:GenLimit=:Generator+2 goto1end
+if:Battery>9999then:GenLimit=:Generator-2 goto1end goto1
 
 
 
