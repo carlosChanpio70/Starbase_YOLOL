@@ -19,14 +19,11 @@ if :Scanbutton==1 then
                 M2=:Material
                 V2=:Volume
                 if :ScanRes==2 then
-                :Scanner=M1+"\n"+V1+"kv\n"+M2+"\n"+V2+"kv"
-                M1=""
-                V1=0
-                M2=""
-                V2=0
-                    if :Scanres>=2 then
-                        SA=1
-                    end
+                    :Scanner=M1+"\n"+V1+"kv\n"+M2+"\n"+V2+"kv"
+                    M1=""
+                    V1=0
+                    M2=""
+                    V2=0
                 end
             end
         end
