@@ -1,5 +1,5 @@
 Description:
-    An version of the Scanner_Main but that can handle 4 ore targets
+    An direct upgrade to the Scanner_2_Ores that can handle 4 ores in 2 displays
 Setup:
     You'll need the Material point Scanner, an button. an progress bar & 2 24x24 text panel
         In the Material point Scanner change ONLY these values

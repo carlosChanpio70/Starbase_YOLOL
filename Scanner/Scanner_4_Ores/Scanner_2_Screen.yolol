@@ -17,4 +17,4 @@ if:ScanRes!=4thengoto3end :Index=3 j=:Material k=:Volume
 
 
 
-//Scanner_2_Screen code made by carlosChanpio70 / Carlos//
+//Scanner_4_Ores code made by carlosChanpio70 / Carlos//
