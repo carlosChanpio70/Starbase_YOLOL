@@ -1,5 +1,0 @@
-if :Scanbutton== 1 then
-    :Nose=1
-    else
-    :Nose=0
-end

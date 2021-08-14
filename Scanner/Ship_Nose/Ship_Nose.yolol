@@ -1,5 +1,5 @@
-if:Scanbutton==1then:Nose=1else:Nose=0end goto1
-
+if:Scanbutton==1then:Nose=1 goto2end goto1
+if:Scanbutton==0then:Nose=0 goto1end goto2
 
 
 
