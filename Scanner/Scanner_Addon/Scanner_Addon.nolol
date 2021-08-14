@@ -1,0 +1,20 @@
+if :SA==1 then
+    :Index=2
+    M3=:Material
+    V3=:Volume
+    if :ScanRes==3 then
+        :ScannerAddon="\n"+M3+"\n"+V3+"kv"
+        M3=""
+         V3=0
+    else
+        if :ScanRes==4 then
+            :Index=3
+            M4=:Material
+            V4=:Volume
+            :ScannerAddon="\n"+M3+"\n"+V3+"kv\n"+M4+"\n"+V4+"kv"
+            M4=""
+            V4=0
+        end
+    end
+end
+:SA=0

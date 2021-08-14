@@ -2,6 +2,7 @@ if :Scanbutton==1 then
     while Loop<=:Scanner_Delay*5 do
         Loop=Loop+1
     end
+    while SA!=1 do
     :Scan=1
         if :ScanRes==0 then
         :Scanner="\nNo Target"
@@ -23,22 +24,13 @@ if :Scanbutton==1 then
                 V1=0
                 M2=""
                 V2=0
-                else 
-                    :Index=2
-                    M3=:Material
-                    V3=:Volume
-                    if :ScanRes==3 then
-                    :Scanner=M1+"\n"+V1+"kv\n"+M2+"\n"+V2+"kv\n"+M3+"\n"+V3+"kv"
-                    M1=""
-                    V1=0
-                    M2=""
-                    V2=0
-                    M3=""
-                    V3=0
+                    if :Scanres>=2 then
+                        SA=1
                     end
                 end
             end
         end
+    end
 else
     :Scanner="Offline"
 end

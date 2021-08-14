@@ -1,0 +1,20 @@
+if:SA!=1thengoto5end :Index=2 b=:Material c=:Volume
+if:ScanRes==3then:ScannerAddon="\n"+b+"\n"+c+"kv" b="" c=0 goto5end
+if:ScanRes!=4thengoto5end :Index=3 d=:Material e=:Volume
+:ScannerAddon="\n"+b+"\n"+c+"kv\n"+d+"\n"+e+"kv" d="" e=0
+:SA=0 goto1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Scanner Addon code made by carlosChanpio70 / Carlos//
