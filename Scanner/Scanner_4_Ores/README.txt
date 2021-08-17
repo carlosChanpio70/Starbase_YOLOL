@@ -7,5 +7,5 @@ Setup:
             "ScanResults" to "ScanRes"
     Change in the button the variable "ButtonState" to "Scanbutton"
     Change in the text panels the variables
-    "PanelValue" to "Scanner" and "Scanner_Addon
+        "PanelValue" to "Scanner" and "Scanner_Addon
     Change in the progress bar the variable "PanelValue" to ":Scanner_Delay"
