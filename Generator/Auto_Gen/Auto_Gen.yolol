@@ -1,5 +1,4 @@
-if:AuG!=1thengoto1end if:Battery<9999then:GenLimit=:Generator+2end
-if:Battery>9999then:GenLimit=:Generator-2end goto1
+if:AuG==1then:GenLimit=:Battery/100end goto1
 
 
 
@@ -17,4 +16,5 @@ if:Battery>9999then:GenLimit=:Generator-2end goto1
 
 
 
-//Auto_Gen script made by carlosChanpio70 / Carlos //
+
+//Auto_Gen code made by carlosChanpio70 / Carlos//
