@@ -1,0 +1,20 @@
+if:Scanbutton!=1thengoto13end
+ifb==1thengoto1end :Scan=1
+if:ScanRes==0then:Scanner="\nNo Target" goto2end :Index=0 c=:Material
+d=:Volume if:ScanRes==1then:Scanner=c+"\n"+d+"kv" c="" d=0 goto2end
+:Index=1 e=:Material f=:Volume if:ScanRes!=2thengoto7end
+:Scanner=c+"\n"+d+"kv\n"+e+"\n"+f+"kv" c="" d=0 e="" f=0 goto2
+if:Scanres<2thengoto12end :Index=2 g=:Material h=:Volume
+if:ScanRes==3then:Scanner_Addon="\n"+g+"\n"+h+"kv" g="" h=0 goto2end
+if:ScanRes!=4thengoto2end :Index=3 i=:Material j=:Volume
+:Scanner_Addon="\n"+g+"\n"+h+"kv\n"+i+"\n"+j+"kv" g="" h=0 i="" j=0
+goto2
+:Scanner_Addon="\nNo extra Ores" goto2
+:Scanner="Offline" goto1
+
+
+
+
+
+
+//Scanner_4_Ores made by carlosChanpio70 / Carlos//
