@@ -1,21 +1,27 @@
+define Display1=:Scanner
+define Results=:ScanRes
+define Material=:Material
+define Volume=:Volume
+define Index=:Index
+
 if :Scanbutton==1 then
     :Scan=1
-    if :ScanRes==0 then
-    :Scanner="\nNo Target"
+    if Results==0 then
+    Display1="\nNo Target"
     else 
         :Index=0
-        M1=:Material
-        V1=:Volume
-        if :ScanRes==1 then
-        :Scanner=M1+"\n"+V1+"kv"
+        M1=Material
+        V1=Volume
+        if Results==1 then
+        Display1=M1+"\n"+V1+"kv"
         M1=""
         V1=0
         else 
             :Index=1
-            M2=:Material
-            V2=:Volume
-            if :ScanRes==2 then
-                :Scanner=M1+"\n"+V1+"kv\n"+M2+"\n"+V2+"kv"
+            M2=Material
+            V2=Volume
+            if Results==2 then
+                Display1=M1+"\n"+V1+"kv\n"+M2+"\n"+V2+"kv"
                 M1=""
                 V1=0
                 M2=""
@@ -24,5 +30,5 @@ if :Scanbutton==1 then
         end
     end
 else
-    :Scanner="Offline"
+    Display1="Offline"
 end
