@@ -13,9 +13,9 @@ if :Deploy_Weapon==1 then
     :Door_Hinge=1
     :Deploying_Color=3
     :Deploying=1
-    logic_wait(:Door_Hinge_State!=0)
+    logic_wait(:Door_Hinge_State!=1)
     :Weapon_Hinge=1
-    logic_wait(:Weapon_Hinge_State!=0)
+    logic_wait(:Weapon_Hinge_State!=1)
     :Weapon_Deployed=2
     :Deploying=0
     while :Deploy_Weapon==1 do
@@ -24,7 +24,7 @@ if :Deploy_Weapon==1 then
             :Deploying=1
             :Weapon_Deployed=1
             :Weapon_Hinge=1
-            logic_wait(:Weapon_Hinge_State!=1)
+            logic_wait(:Weapon_Hinge_State!=0)
             :Door_Hinge=1
             logic_wait(:Door_Hinge_State!=0)
             :Deploying=0

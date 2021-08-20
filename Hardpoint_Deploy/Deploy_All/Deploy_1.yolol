@@ -1,6 +1,20 @@
 if:DW!=1thengoto1end :H1=1 :DBC=3 :DB=1
-if:H1R!=0thengoto2end :H2=1
-if:H2R!=0thengoto3end :WD=2 :DB=0
+if:H1R!=1thengoto2end :H2=1
+if:H2R!=1thengoto3end :WD=2 :DB=0
 if:DW!=1thengoto1end if:DW==1thengoto4end :DBC=1 :DB=1 :WD=1 :H2=1
-if:H2R!=1thengoto5end :H1=1
+if:H2R!=0thengoto5end :H1=1
 if:H1R!=0thengoto6end :DB=0 goto1
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Deploy_1 code made by carlosChanpio70 / Carlos//
