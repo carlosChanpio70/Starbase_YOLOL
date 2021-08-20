@@ -1,0 +1,18 @@
+21:13:13 session.go:142: Message received: {"seq":1,"type":"request","command":"initialize","arguments":{"clientID":"vscode","clientName":"Visual Studio Code","adapterID":"yodk","locale":"pt-br","linesStartAt1":true,"columnsStartAt1":true,"pathFormat":"path","supportsVariableType":true,"supportsVariablePaging":true,"supportsRunInTerminalRequest":true,"supportsMemoryReferences":true,"supportsProgressReporting":true}}
+21:13:13 session.go:442: Message sent: {"seq":0,"type":"response","request_seq":1,"success":true,"command":"initialize","body":{"supportsConfigurationDoneRequest":true,"supportsSetVariable":true,"supportsRestartRequest":true,"supportTerminateDebuggee":true,"supportsLoadedSourcesRequest":true,"supportsTerminateRequest":true}}
+21:13:13 session.go:142: Message received: {"seq":2,"type":"request","command":"launch","arguments":{"__sessionId":"5f2fdda5-1bc8-47b5-9574-360b182a1129","name":"Debug current script","request":"launch","scripts":["c:\\Users\\carlo\\OneDrive\\Documentos\\GitHub\\Starbase_YOLOL\\Hardpoint_Deploy\\Deploy_All\\Deploy_All.nolol"],"type":"yodk"}}
+21:13:13 session.go:442: Message sent: {"seq":0,"type":"event","event":"initialized"}
+21:13:13 session.go:442: Message sent: {"seq":0,"type":"response","request_seq":2,"success":true,"command":"launch"}
+21:13:13 session.go:142: Message received: {"seq":3,"type":"request","command":"configurationDone","arguments":{}}
+21:13:13 session.go:442: Message sent: {"seq":0,"type":"response","request_seq":3,"success":true,"command":"configurationDone"}
+21:13:13 session.go:142: Message received: {"seq":4,"type":"request","command":"loadedSources","arguments":{}}
+21:13:13 session.go:442: Message sent: {"seq":0,"type":"response","request_seq":4,"success":true,"command":"loadedSources","body":{"sources":[{"name":"Hardpoint_Deploy\\Deploy_All\\Deploy_All.nolol","path":"c:\\Users\\carlo\\OneDrive\\Documentos\\GitHub\\Starbase_YOLOL\\Hardpoint_Deploy\\Deploy_All\\Deploy_All.nolol"},{"name":"(Compiled)Hardpoint_Deploy\\Deploy_All\\Deploy_All.nolol","path":"c:\\Users\\carlo\\OneDrive\\Documentos\\GitHub\\Starbase_YOLOL\\Hardpoint_Deploy\\Deploy_All\\Deploy_All.nolol.compiled","sourceReference":10001}]}}
+21:13:13 session.go:142: Message received: {"seq":5,"type":"request","command":"threads"}
+21:13:13 session.go:442: Message sent: {"seq":0,"type":"response","request_seq":5,"success":true,"command":"threads","body":{"threads":[{"id":1,"name":"Hardpoint_Deploy\\Deploy_All\\Deploy_All.nolol"}]}}
+21:13:24 session.go:142: Message received: {"seq":6,"type":"request","command":"terminate","arguments":{}}
+21:13:24 session.go:442: Message sent: {"seq":0,"type":"event","event":"terminated","body":{}}
+21:13:24 session.go:442: Message sent: {"seq":0,"type":"event","event":"stopped","body":{"reason":"breakpoint","description":"Execution completed","threadId":1}}
+21:13:24 session.go:442: Message sent: {"seq":0,"type":"response","request_seq":6,"success":true,"command":"terminate"}
+21:13:24 session.go:142: Message received: {"seq":7,"type":"request","command":"disconnect","arguments":{}}
+21:13:24 handler.go:257: Teminating debugadapter
+21:13:24 session.go:442: Message sent: {"seq":0,"type":"response","request_seq":7,"success":true,"command":"disconnect"}

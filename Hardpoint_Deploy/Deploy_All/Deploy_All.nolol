@@ -1,0 +1,35 @@
+define :Deploy_Weapon=:DW
+define :Deploy_timer=:DT
+define :Door_Hinge=:H1
+define :Weapon_Hinge=:H2
+define :Weapon_Deployed=:WD
+define :Deploying=:DB
+define :RangeFinderDistance=:RFD
+define :Rangefinder_Range=:RFR
+
+if :Deploy_Weapon==1 then
+    :Deploying=1
+    :Door_Hinge=1
+    while Timer!=:Deploy_timer do
+        Timer=Timer+1
+    end
+    :Weapon_Hinge=1
+    while WS!=1 do
+        if :Rangefinder_Range<=:RangeFinderDistance then
+            :Deploying=0
+            :Weapon_Deployed=2
+            while WS!=1 do
+                if :Deploy_Weapon!=1 then
+                    :Deploying=1
+                    :Weapon_Hinge=0
+                    if :Rangefinder_Range>=:RangeFinderDistance then
+                        :Door_Hinge=0
+                        :Weapon_Deployed=1
+                        break
+                        break
+                    end
+                end
+            end
+        end
+    end
+end

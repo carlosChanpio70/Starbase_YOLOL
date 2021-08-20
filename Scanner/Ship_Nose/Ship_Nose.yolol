@@ -1,5 +1,6 @@
-if:Scanbutton==1then:Nose=1 goto2end goto1
-if:Scanbutton==0then:Nose=0 goto1end goto2
+b=:Scanbutton
+ifb==1then:Nose=1 if:Scanbutton==0then:Nose=0 goto1end goto2end
+goto1
 
 
 
@@ -16,5 +17,4 @@ if:Scanbutton==0then:Nose=0 goto1end goto2
 
 
 
-
-// Auto Nose control made by carlosChanpio70 / Carlos //
+//Ship_Nose code made by carlosChanpio70 / Carlos //
