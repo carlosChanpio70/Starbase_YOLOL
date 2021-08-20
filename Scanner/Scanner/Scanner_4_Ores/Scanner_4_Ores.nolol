@@ -1,5 +1,4 @@
 if :Scanbutton==1 then
-    while SA!=1 do
     :Scan=1
         if :ScanRes==0 then
         :Scanner="\nNo Target"
@@ -48,7 +47,6 @@ if :Scanbutton==1 then
                 end
             end
         end
-    end
 else
     :Scanner="Offline"
 end

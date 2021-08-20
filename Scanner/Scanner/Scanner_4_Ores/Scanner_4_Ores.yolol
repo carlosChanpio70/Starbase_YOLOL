@@ -1,20 +1,20 @@
-if:Scanbutton!=1thengoto13end
-ifb==1thengoto1end :Scan=1
-if:ScanRes==0then:Scanner="\nNo Target" goto2end :Index=0 c=:Material
-d=:Volume if:ScanRes==1then:Scanner=c+"\n"+d+"kv" c="" d=0 goto2end
-:Index=1 e=:Material f=:Volume if:ScanRes!=2thengoto7end
-:Scanner=c+"\n"+d+"kv\n"+e+"\n"+f+"kv" c="" d=0 e="" f=0 goto2
-if:Scanres<2thengoto12end :Index=2 g=:Material h=:Volume
-if:ScanRes==3then:Scanner_Addon="\n"+g+"\n"+h+"kv" g="" h=0 goto2end
-if:ScanRes!=4thengoto2end :Index=3 i=:Material j=:Volume
-:Scanner_Addon="\n"+g+"\n"+h+"kv\n"+i+"\n"+j+"kv" g="" h=0 i="" j=0
-goto2
-:Scanner_Addon="\nNo extra Ores" goto2
-:Scanner="Offline" goto1
+if:Scanbutton!=1thengoto12end :Scan=1
+if:ScanRes==0then:Scanner="\nNo Target" goto1end :Index=0 b=:Material
+c=:Volume if:ScanRes==1then:Scanner=b+"\n"+c+"kv" b="" c=0 goto1end
+:Index=1 d=:Material e=:Volume if:ScanRes!=2thengoto6end
+:Scanner=b+"\n"+c+"kv\n"+d+"\n"+e+"kv" b="" c=0 d="" e=0 goto1
+if:Scanres<2thengoto11end :Index=2 f=:Material g=:Volume
+if:ScanRes==3then:Scanner_Addon="\n"+f+"\n"+g+"kv" f="" g=0 goto13end
+if:ScanRes!=4thengoto13end :Index=3 h=:Material i=:Volume
+:Scanner_Addon="\n"+f+"\n"+g+"kv\n"+h+"\n"+i+"kv" f="" g=0 h="" i=0
+goto1
+:Scanner_Addon="\nNo extra Ores" goto1
+:Scanner="Offline"
+goto1
 
 
 
 
 
 
-//Scanner_4_Ores made by carlosChanpio70 / Carlos//
+//Scanner_4_Ores code made by carlosChanpio70 / Carlos//
