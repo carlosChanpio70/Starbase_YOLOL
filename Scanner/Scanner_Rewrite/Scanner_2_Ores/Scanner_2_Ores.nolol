@@ -26,4 +26,6 @@ if :Scanbutton==1 then
             V2=0
         end
     end
+else
+    :Display="\n\n-=|Offline|=-"
 end

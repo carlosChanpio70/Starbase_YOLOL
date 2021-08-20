@@ -20,8 +20,7 @@ if :Scanbutton==1 then
                     V1=0
                     M2=""
                     V2=0
-                else
-                    if :Scanres>=2 then
+                else if :Scanres>=2 then
                         :Index=2
                         M3=:Material
                         V3=:Volume
@@ -29,8 +28,7 @@ if :Scanbutton==1 then
                             :Scanner_Addon="\n"+M3+"\n"+V3+"kv"
                             M3=""
                             V3=0
-                        else
-                            if :ScanRes==4 then
+                        else if :ScanRes==4 then
                                 :Index=3
                                 M4=:Material
                                 V4=:Volume
