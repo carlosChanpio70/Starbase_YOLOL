@@ -1,34 +1,31 @@
-define Display1=:Scanner
-define Results=:ScanRes
-define Material=:Material
-define Volume=:Volume
-define Index=:Index
+include "std/logic"
+define :Display=:Scanner
+define :Scan_Results=:ScanRes
 
 if :Scanbutton==1 then
     :Scan=1
-    if Results==0 then
-    Display1="\nNo Target"
-    else 
+    logic_wait(:Scan==1)
+    if :Scan_Results==0 then
+        :Display="\n\n-=|No Target|=-"
+    else
         :Index=0
-        M1=Material
-        V1=Volume
-        if Results==1 then
-        Display1=M1+"\n"+V1+"kv"
-        M1=""
+        M1=:Material
+        V1=:Volume
+        if :Scan_Results==1 then
+        :Display=(M1-"Ore")+"\n"+V1+"kv"
+        M1=0
         V1=0
-        else 
+        else if :Scan_Results>=1 then
             :Index=1
-            M2=Material
-            V2=Volume
-            if Results==2 then
-                Display1=M1+"\n"+V1+"kv\n"+M2+"\n"+V2+"kv"
-                M1=""
-                V1=0
-                M2=""
-                V2=0
-            end
+            M2=:Material
+            V2=:Volume
+            :Display=(M1-"Ore")+"\n"+V1+"kv\n"+(M2-"Ore")+"\n"+V2+"kv"
+            M1=0
+            V1=0
+            M2=0
+            V2=0
         end
     end
 else
-    Display1="Offline"
+    :Display="\n\n-=|Offline|=-"
 end

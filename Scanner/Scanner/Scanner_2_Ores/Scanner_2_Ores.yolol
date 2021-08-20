@@ -1,12 +1,12 @@
-if:Scanbutton!=1thengoto6end :Scan=1
-if:ScanRes==0then:Scanner="\nNo Target" goto1end :Index=0 b=:Material
-c=:Volume if:ScanRes==1then:Scanner=b+"\n"+c+"kv" b="" c=0 goto1end
-:Index=1 d=:Material e=:Volume if:ScanRes!=2thengoto1end
-:Scanner=b+"\n"+c+"kv\n"+d+"\n"+e+"kv" b="" c=0 d="" e=0 goto1
-:Scanner="Offline" goto1
-
-
-
+if:Scanbutton!=1thengoto9end :Scan=1
+if:Scan==1thengoto2end
+if:ScanRes==0then:Scanner="\n\n-=|No Target|=-" goto1end :Index=0
+b=:Material c=:Volume
+if:ScanRes==1then:Scanner=b-"Ore"+"\n"+c+"kv" b=0 c=0 goto1end
+if:ScanRes<1thengoto1end :Index=1 d=:Material e=:Volume
+:Scanner=b-"Ore"+"\n"+c+"kv\n"+(d-"Ore")+"\n"+e+"kv" b=0 c=0 d=0 e=0
+goto1
+:Scanner="\n\n-=|Offline|=-" goto1
 
 
 
