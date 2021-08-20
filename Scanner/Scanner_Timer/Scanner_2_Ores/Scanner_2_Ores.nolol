@@ -10,7 +10,7 @@ if :Scanbutton==1 then
     :Scan=1
     logic_wait(:Scan==1)
     if :Scan_Results==0 then
-        :Display="\n\n-=|No Target|=-"
+        :Display="\n\nNo Target"
     else
         :Index=0
         M1=:Material
@@ -25,5 +25,5 @@ if :Scanbutton==1 then
         end
     end
 else
-    :Display="\n\n-=|Offline|=-"
+    :Display="\n\n  Offline"
 end

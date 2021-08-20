@@ -1,6 +1,6 @@
 if:Scanbutton!=1thengoto13end :Scan=1
 if:Scan==1thengoto2end
-if:ScanRes==0then:Scanner="\n\n-=|No Target|=-" goto5end :Index=0
+if:ScanRes==0then:Scanner="\n\nNo Target" goto5end :Index=0
 b=:Material c=:Volume
 if:ScanRes==1then:Scanner=b-"Ore"+"\n"+c+"kv" goto1end
 if:ScanRes<2thengoto1end :Index=1 d=:Material e=:Volume
@@ -9,8 +9,8 @@ if:ScanRes<3thengoto12end :Index=2 f=:Material g=:Volume
 if:ScanRes==3then:Scanner_Addon=f-"Ore"+"\n"+g+"kv" goto14end
 if:ScanRes<4thengoto14end h=:Material i=:Volume
 :Scanner_Addon=f-"Ore"+"\n"+g+"kv\n"+(h-"Ore")+"\n"+i+"kv" goto1
-:Scanner_Addon="\n\n-=|No Extra Ores|=-" goto1
-:Scanner="\n\n-=|Offline|=-"
+:Scanner_Addon="\n\nNo Extra Ores" goto1
+:Scanner="\n\n  Offline"
 goto1
 
 
