@@ -1,0 +1,20 @@
+if:Scanbutton!=1thengoto1end :Scan=1
+if:Scan==1thengoto2end
+if:ScanRes==0then:Scanner="\n\n-=|No Target|=-" goto1end :Index=0
+b=:Material c=:Volume
+if:ScanRes==1then:Scanner=b-"Ore"+"\n"+c+"kv" b=0 c=0 goto1end
+if:ScanRes<1thengoto1end :Index=1 d=:Material e=:Volume
+:Scanner=b-"Ore"+"\n"+c+"kv\n"+(d-"Ore")+"\n"+e+"kv" b=0 c=0 d=0 e=0
+goto1
+
+
+
+
+
+
+
+
+
+
+
+//Scanner_2_Ores code made by carlosChanpio70 / Carlos//
