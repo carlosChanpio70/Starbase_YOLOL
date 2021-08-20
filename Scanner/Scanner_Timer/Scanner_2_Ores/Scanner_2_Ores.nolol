@@ -17,17 +17,11 @@ if :Scanbutton==1 then
         V1=:Volume
         if :Scan_Results==1 then
         :Display=(M1-"Ore")+"\n"+V1+"kv"
-        M1=0
-        V1=0
         else if :Scan_Results>=1 then
             :Index=1
             M2=:Material
             V2=:Volume
             :Display=(M1-"Ore")+"\n"+V1+"kv\n"+(M2-"Ore")+"\n"+V2+"kv"
-            M1=0
-            V1=0
-            M2=0
-            V2=0
         end
     end
 else
