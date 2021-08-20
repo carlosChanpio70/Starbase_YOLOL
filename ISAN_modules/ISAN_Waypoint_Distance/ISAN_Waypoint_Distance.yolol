@@ -1,9 +1,9 @@
-if:_==" POS  :_\n     \n\n  Streamer\n    Mode"thengoto6end
-ifnot :X+:Y+:Z!=0thengoto5end b=:XX/1000*1000 c=:YY/1000*1000
+if(:_-"Streamer")==:_ thengoto3end
+:Distance="\n\n -=|Streamer Mode|=-" goto1
+ifnot :X+:Y+:Z!=0thengoto6end b=:XX/1000*1000 c=:YY/1000*1000
 d=:ZZ/1000*1000 e=:X-b f=:Y-c g=:Z-d h=e+f+g
-:Distance="\nX:"+e+"m\nY:"+f+"m\nZ:"+g+"m\nTotal:\n"+h+"m" goto2
+:Distance="\nX:"+e+"m\nY:"+f+"m\nZ:"+g+"m\nTotal:\n"+h+"m" goto3
 :Distance="\nNo Target" goto1
-:Distance="\nStreamer Mode" goto1
 
 
 

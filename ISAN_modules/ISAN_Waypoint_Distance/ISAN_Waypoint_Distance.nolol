@@ -1,17 +1,18 @@
 include "std/math"
+include "std/string"
 
-if :_!=" POS  :_\n     \n\n  Streamer\n    Mode" then
-while :X+:Y+:Z!=0 do
-    X1=math_floor(:XX)
-    Y1=math_floor(:YY)
-    Z1=math_floor(:ZZ)
-    X2=:X-X1
-    Y2=:Y-Y1
-    Z2=:Z-Z1
-    D1=X2+Y2+Z2
-    :Distance="\nX:"+X2+"m\nY:"+Y2+"m\nZ:"+Z2+"m\nTotal:\n"+D1+"m"
+if string_contains(:_,"Streamer") then
+    :Distance="\n\n -=|Streamer Mode|=-"
+else
+    while :X+:Y+:Z!=0 do
+        X1=math_floor(:XX)
+        Y1=math_floor(:YY)
+        Z1=math_floor(:ZZ)
+        X2=:X-X1
+        Y2=:Y-Y1
+        Z2=:Z-Z1
+        D1=X2+Y2+Z2
+        :Distance="\nX:"+X2+"m\nY:"+Y2+"m\nZ:"+Z2+"m\nTotal:\n"+D1+"m"
     end
     :Distance="\nNo Target"
-else
-    :Distance="\nStreamer Mode"
 end
