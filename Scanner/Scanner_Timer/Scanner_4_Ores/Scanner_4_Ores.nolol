@@ -1,55 +1,45 @@
+include "std/logic"
+define :Display=:Scanner
+define :Scan_Results=:ScanRes
+define :Display_2=:Scanner_Addon
+define :Delay=:Scanner_Delay*5
+
+
 if :Scanbutton==1 then
-    while Loop<=:Scanner_Delay*5 do
+    while Loop<=:Delay do
         Loop=Loop+1
     end
     :Scan=1
-        if :ScanRes==0 then
-        :Scanner="\nNo Target"
-        else 
-            :Index=0
-            M1=:Material
-            V1=:Volume
-            if :ScanRes==1 then
-            :Scanner=M1+"\n"+V1+"kv"
-            M1=""
-            V1=0
-            else 
-                :Index=1
-                M2=:Material
-                V2=:Volume
-                if :ScanRes==2 then
-                    :Scanner=M1+"\n"+V1+"kv\n"+M2+"\n"+V2+"kv"
-                    M1=""
-                    V1=0
-                    M2=""
-                    V2=0
-                else
-                    if :Scanres>=2 then
-                        :Index=2
-                        M3=:Material
-                        V3=:Volume
-                        if :ScanRes==3 then
-                            :Scanner_Addon="\n"+M3+"\n"+V3+"kv"
-                            M3=""
-                            V3=0
-                        else
-                            if :ScanRes==4 then
-                                :Index=3
-                                M4=:Material
-                                V4=:Volume
-                                :Scanner_Addon="\n"+M3+"\n"+V3+"kv\n"+M4+"\n"+V4+"kv"
-                                M3=""
-                                V3=0
-                                M4=""
-                                V4=0
-                            end
-                        end
-                    else
-                        :Scanner_Addon="\nNo extra Ores"
-                    end
+    logic_wait(:Scan==1)
+    if :Scan_Results==0 then
+        :Display="\n\n-=|No Target|=-"
+    else
+        :Index=0
+        M1=:Material
+        V1=:Volume
+    end
+        if :Scan_Results==1 then
+            :Display=(M1-"Ore")+"\n"+V1+"kv"
+        else if :Scan_Results>=2 then
+            :Index=1
+            M2=:Material
+            V2=:Volume
+            :Display=(M1-"Ore")+"\n"+V1+"kv\n"+(M2-"Ore")+"\n"+V2+"kv"
+            if :Scan_Results>=3 then
+                :Index=2
+                M3=:Material
+                V3=:Volume
+                if :Scan_Results==3 then
+                    :Display_2=(M3-"Ore")+"\n"+V3+"kv"
+                else if :Scan_Results>=4 then
+                    M4=:Material
+                    V4=:Volume
+                    :Display_2=(M3-"Ore")+"\n"+V3+"kv\n"+(M4-"Ore")+"\n"+V4+"kv"
                 end
+            else
+                :Display_2="\n\n-=|No Extra Ores|=-"
             end
-        end
+    end
 else
-    :Scanner="Offline"
+    :Display="\n\n-=|Offline|=-"
 end

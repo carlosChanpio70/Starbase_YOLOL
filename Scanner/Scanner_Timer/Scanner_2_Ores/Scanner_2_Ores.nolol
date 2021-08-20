@@ -1,31 +1,35 @@
+include "std/logic"
+define :Display=:Scanner
+define :Scan_Results=:ScanRes
+define :Delay=:Scanner_Delay*5
+
 if :Scanbutton==1 then
-    while Loop<=:Scanner_Delay*5 do
+    while Loop<=:Delay do
         Loop=Loop+1
     end
     :Scan=1
-        if :ScanRes==0 then
-        :Scanner="\nNo Target"
-        else 
-            :Index=0
-            M1=:Material
-            V1=:Volume
-            if :ScanRes==1 then
-            :Scanner=M1+"\n"+V1+"kv"
-            M1=""
+    logic_wait(:Scan==1)
+    if :Scan_Results==0 then
+        :Display="\n\n-=|No Target|=-"
+    else
+        :Index=0
+        M1=:Material
+        V1=:Volume
+        if :Scan_Results==1 then
+        :Display=(M1-"Ore")+"\n"+V1+"kv"
+        M1=0
+        V1=0
+        else if :Scan_Results>=1 then
+            :Index=1
+            M2=:Material
+            V2=:Volume
+            :Display=(M1-"Ore")+"\n"+V1+"kv\n"+(M2-"Ore")+"\n"+V2+"kv"
+            M1=0
             V1=0
-            else 
-                :Index=1
-                M2=:Material
-                V2=:Volume
-                if :ScanRes==2 then
-                    :Scanner=M1+"\n"+V1+"kv\n"+M2+"\n"+V2+"kv"
-                    M1=""
-                    V1=0
-                    M2=""
-                    V2=0
-                end
-            end
+            M2=0
+            V2=0
         end
+    end
 else
-    :Scanner="Offline"
+    :Display="\n\n-=|Offline|=-"
 end
