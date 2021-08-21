@@ -2,7 +2,7 @@ include "std/math"
 include "std/string"
 
 if string_contains(:_,"Streamer") then
-    :Distance="\n\n -=|Streamer Mode|=-"
+    :Distance="\n\n  Streamer Mode"
 else
     while :X+:Y+:Z!=0 do
         X1=math_floor(:XX)
@@ -14,5 +14,5 @@ else
         D1=X2+Y2+Z2
         :Distance="\nX:"+X2+"m\nY:"+Y2+"m\nZ:"+Z2+"m\nTotal:\n"+D1+"m"
     end
-    :Distance="\nNo Target"
+    :Distance="\n\n No Target"
 end
