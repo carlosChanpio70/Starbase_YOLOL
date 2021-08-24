@@ -1,0 +1,20 @@
+if:Scanbutton!=1thengoto17end :Scan=1
+if:Scan==1thengoto2end
+if:ScanRes==0then:Scanner="\n\nNo Target" goto5end :Index=0
+a=:Material/1728/1000*1000 b=:Volume/1728/1000*1000
+if:ScanRes==1then:Scanner=a-"Ore"+"\n"+b+"Stacks" goto1end
+if:ScanRes<2thengoto1end :Index=1 c=:Material/1728/1000*1000
+d=:Volume/1728/1000*1000
+:Scanner=a-"Ore"+"\n"+b+"Stacks\n"+(c-"Ore")+"\n"+d+"Stacks"
+if:ScanRes<3thengoto16end :Index=2 e=:Material/1728/1000*1000
+f=:Volume/1728/1000*1000
+if:ScanRes==3then:Scanner_Addon=e-"Ore"+"\n"+f+"Stacks" goto18end
+if:ScanRes<4thengoto18end g=:Material/1728/1000*1000
+h=:Volume/1728/1000*1000
+:Scanner_Addon=e-"Ore"+"\n"+f+"Stacks\n"+(g-"Ore")+"\n"+h+"Stacks"
+goto1
+:Scanner_Addon="\n\nNo Extra Ores" goto1
+:Scanner="\n\n  Offline"
+goto1
+
+//Scanner_4_Ores code made by carlosChanpio70 / Carlos//

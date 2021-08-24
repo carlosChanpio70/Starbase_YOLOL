@@ -1,0 +1,26 @@
+include "std/logic"
+include "std/math"
+define :Display=:Scanner
+define :Scan_Results=:ScanRes
+
+if :Scanbutton==1 then
+    :Scan=1
+    logic_wait(:Scan==1)
+    if :Scan_Results==0 then
+        :Display="\n\nNo Target"
+    else
+        :Index=0
+        M1=math_floor(:Material/1728)
+        V1=math_floor(:Volume/1728)
+        if :Scan_Results==1 then
+        :Display=(M1-"Ore")+"\n"+V1+"Stacks"
+        else if :Scan_Results>=1 then
+            :Index=1
+            M2=math_floor(:Material/1728)
+            V2=math_floor(:Volume/1728)
+            :Display=(M1-"Ore")+"\n"+V1+"Stacks\n"+(M2-"Ore")+"\n"+V2+"Stacks"
+        end
+    end
+else
+    :Display="\n\n  Offline"
+end
