@@ -1,6 +1,6 @@
-b=:Scanbutton
-ifb==1then:Nose=1 if:Scanbutton==0then:Nose=0 goto1end goto2end
-goto1
+if:Scanbutton!=1thengoto1end :Nose=1
+if:Scanbutton==0then:Nose=0 goto1end goto1
+
 
 
 

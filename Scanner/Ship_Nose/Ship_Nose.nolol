@@ -1,5 +1,6 @@
-Loop=:Scanbutton
-while Loop==1 do
+define :Loop=:Scanbutton
+
+while :Loop==1 do
     :Nose=1
     if :Scanbutton==0 then
         :Nose=0
