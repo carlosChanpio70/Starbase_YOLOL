@@ -1,5 +1,4 @@
 define :Deploy_Weapon=:DW
-define :Deploy_timer=:DT
 define :Door_Hinge=:H1
 define :Door_Hinge_State=:H1R
 define :Weapon_Hinge=:H2
