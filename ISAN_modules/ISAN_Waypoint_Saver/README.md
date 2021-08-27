@@ -1,4 +1,16 @@
 Description:\
     Stores and controls 6 waypoints\
 Setup:\
-    
+    Will require:\
+    ISAN_Waypoint_Distance\
+    2 Basic chips\
+    2 Memory chips\
+    6 text panels\
+    4 buttons\
+Name fields on the Memory chips:\
+    From X1 to X6
+    From Y1 to Y6
+    From Z1 to Z6
+    From SL and SW
+Name the text panels fields from WD1 to WD6\
+Name the buttons from WB1 to WB4
