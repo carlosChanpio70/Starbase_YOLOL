@@ -1,0 +1,59 @@
+define :Selection=:SL
+define :Showing=:SW
+define :Next=:WB1
+define :Previous=:WB2
+define :Deselect=:WB3
+define :Save=:WB4
+define :Display_1=:WD1
+define :Display_2=:WD2
+define :Display_3=:WD3
+define :Display_4=:WD4
+define :Display_5=:WD5
+define :Display_6=:WD6
+
+if :Save==1 then
+    :Save=0
+    if :Selection==1 then
+        :X1=:X
+        :Y1=:Y
+        :Z1=:Z
+    else if :Selection==2 then
+        :X2=:X
+        :Y2=:Y
+        :Z2=:Z
+    else if :Selection==3 then
+        :X3=:X
+        :Y3=:Y
+        :Z3=:Z
+    else if :Selection==4 then
+        :X4=:X
+        :Y4=:Y
+        :Z4=:Z
+    else if :Selection==5 then
+        :X5=:X
+        :Y5=:Y
+        :Z5=:Z
+    else if :Selection==6 then
+        :X6=:X
+        :Y6=:Y
+        :Z6=:Z
+    end
+end
+if :Next==1 then
+    :Next=0
+    :Selection=:Selection+1
+    if :Selection>6 then
+        :Selection=1
+    end
+end
+if :Previous==1 then
+    :Previous=0
+    :Selection=:Selection-1
+    if :Selection<1 then
+        :Selection=6
+    end
+end
+if :Deselect==1 then
+    :Deselect=0
+    :Selection=0
+end
