@@ -14,3 +14,8 @@ Name fields on the Memory chips:\
     From SL and SW
 Name the text panels fields from WD1 to WD6\
 Name the buttons from WB1 to WB4
+Button Scheme:\
+    WB1 is used to select the next panel\
+    WB2 is used to select the previous panel\
+    WB3 is used to deselect all panels\
+    WB4 is used to save information\
