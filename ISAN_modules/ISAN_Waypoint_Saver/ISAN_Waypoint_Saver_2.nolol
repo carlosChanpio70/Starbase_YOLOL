@@ -1,21 +1,41 @@
 define :Selection=:SL
 define :Showing=:SW
+define :Display_1=:WD1
+define :Display_2=:WD2
+define :Display_3=:WD3
+define :Display_4=:WD4
+define :Display_5=:WD5
+define :Display_6=:WD6
 
-:X1
-:Y1
-:Z1
-:X2
-:Y2
-:Z2
-:X3
-:Y3
-:Z3
-:X4
-:Y4
-:Z4
-:X5
-:Y5
-:Z5
-:X6
-:Y6
-:Z6
+while :Showing==0 do
+    :Display_1="\n\n  Streamer Mode"
+    :Display_2="\n\n  Streamer Mode"
+    :Display_3="\n\n  Streamer Mode"
+    :Display_4="\n\n  Streamer Mode"
+    :Display_5="\n\n  Streamer Mode"
+    :Display_6="\n\n  Streamer Mode"
+end
+while :Selection==1 do
+    :Display_1="\n  -=|=-\nX:"+:X1+"\nY:"+:Y1+"\nZ:"+:Z1
+end
+:Display_1="\n\nX:"+:X1+"\nY:"+:Y1+"\nZ:"+:Z1
+while :Selection==2 do
+    :Display_2="\n  -=|=-\nX:"+:X2+"\nY:"+:Y2+"\nZ:"+:Z2
+end
+:Display_2="\n\nX:"+:X2+"\nY:"+:Y2+"\nZ:"+:Z2
+while :Selection==3 do
+    :Display_3="\n  -=|=-\nX:"+:X3+"\nY:"+:Y3+"\nZ:"+:Z3
+end
+:Display_3="\n\nX:"+:X3+"\nY:"+:Y3+"\nZ:"+:Z3
+while :Selection==4 do
+    :Display_4="\n  -=|=-\nX:"+:X4+"\nY:"+:Y4+"\nZ:"+:Z4
+end
+:Display_4="\n\nX:"+:X4+"\nY:"+:Y4+"\nZ:"+:Z4
+while :Selection==5 do
+    :Display_5="\n  -=|=-\nX:"+:X5+"\nY:"+:Y5+"\nZ:"+:Z5
+end
+:Display_5="\n\nX:"+:X5+"\nY:"+:Y5+"\nZ:"+:Z5
+while :Selection==6 do
+    :Display_6="\n  -=|=-\nX:"+:X6+"\nY:"+:Y6+"\nZ:"+:Z6
+end
+:Display_6="\n\nX:"+:X6+"\nY:"+:Y6+"\nZ:"+:Z6

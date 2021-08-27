@@ -4,12 +4,6 @@ define :Next=:WB1
 define :Previous=:WB2
 define :Deselect=:WB3
 define :Save=:WB4
-define :Display_1=:WD1
-define :Display_2=:WD2
-define :Display_3=:WD3
-define :Display_4=:WD4
-define :Display_5=:WD5
-define :Display_6=:WD6
 
 if :Save==1 then
     :Save=0
