@@ -11,7 +11,7 @@ Name fields on the Memory chips:\
     From X1 to X6
     From Y1 to Y6
     From Z1 to Z6
-    From SL and SW
+    From SL and SM
 Name the text panels fields from WD1 to WD6\
 Name the buttons from WB1 to WB4
 Button Scheme:\

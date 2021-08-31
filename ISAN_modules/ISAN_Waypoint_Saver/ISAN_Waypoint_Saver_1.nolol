@@ -1,5 +1,5 @@
 define :Selection=:SL
-define :Showing=:SW
+define :Streamer_Mode=:SM
 define :Next=:WB1
 define :Previous=:WB2
 define :Deselect=:WB3

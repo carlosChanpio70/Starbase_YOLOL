@@ -1,4 +1,4 @@
-if:SW!=0thengoto5end :WD1="\n\n  Streamer Mode"
+if:SM!=0thengoto5end :WD1="\n\n  Streamer Mode"
 :WD2="\n\n  Streamer Mode" :WD3="\n\n  Streamer Mode"
 :WD4="\n\n  Streamer Mode" :WD5="\n\n  Streamer Mode"
 :WD6="\n\n  Streamer Mode" goto1

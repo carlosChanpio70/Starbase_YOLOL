@@ -1,5 +1,5 @@
 define :Selection=:SL
-define :Showing=:SW
+define :Streamer_Mode=:SM
 define :Display_1=:WD1
 define :Display_2=:WD2
 define :Display_3=:WD3
@@ -7,7 +7,7 @@ define :Display_4=:WD4
 define :Display_5=:WD5
 define :Display_6=:WD6
 
-while :Showing==0 do
+while :Streamer_Mode==0 do
     :Display_1="\n\n  Streamer Mode"
     :Display_2="\n\n  Streamer Mode"
     :Display_3="\n\n  Streamer Mode"
