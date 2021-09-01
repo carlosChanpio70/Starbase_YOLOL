@@ -17,3 +17,4 @@ if:SL!=5thengoto16end
 if:SL!=6thengoto19end
 :WD6="\n  |=---=|\nX:"+:X6+"\nY:"+:Y6+"\nZ:"+:Z6+"\n  |=---=|" goto17
 :WD6="\n\nX:"+:X6+"\nY:"+:Y6+"\nZ:"+:Z6 goto1
+//ISAN_Waypoint_Saver_2 code made by carlosChanpio70 / Carlos//

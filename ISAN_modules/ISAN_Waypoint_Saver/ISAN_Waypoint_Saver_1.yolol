@@ -8,3 +8,13 @@ if:SL==6then:X6=:X :Y6=:Y :Z6=:Z end
 if:WB1==1then:WB1=0 :SL=:SL+1 if:SL>6then:SL=1endend
 if:WB2==1then:WB2=0 :SL=:SL-1 if:SL<1then:SL=6endend
 if:WB3==1then:WB3=0 :SL=0end goto1
+
+
+
+
+
+
+
+
+
+//ISAN_Waypoint_Saver_1 code made by carlosChanpio70 / Carlos//
