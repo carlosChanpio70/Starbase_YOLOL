@@ -1,0 +1,2 @@
+if(:_-"Streamer")!=:_ then:SM=1else:SM=0end if:IT==1then:IT=0 :_=""end
+goto1

@@ -1,0 +1,13 @@
+include "std/string"
+define :ISAN_Toggle = :IT
+define :Streamer_Mode = :SM
+
+if string_contains(:_,"Streamer") then
+    :Streamer_Mode = 1
+else
+    :Streamer_Mode = 0
+end
+if :ISAN_Toggle==1 then
+    :ISAN_Toggle = 0
+    :_=""
+end

@@ -1,8 +1,7 @@
 include "std/math"
-include "std/string"
 
-if string_contains(:_,"Streamer") then
-    :Distance="\n\n  Streamer Mode"
+if :SM==1 then
+    :Distance="\n\n |--------|\n |Streamer|\n |  Mode  |\n |--------|"
 else
     while :X+:Y+:Z!=0 do
         X1=math_floor(:XX)
