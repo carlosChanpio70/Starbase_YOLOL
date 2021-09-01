@@ -8,34 +8,28 @@ define :Display_5=:WD5
 define :Display_6=:WD6
 
 while :Streamer_Mode==0 do
-    :Display_1="\n\n  Streamer Mode"
-    :Display_2="\n\n  Streamer Mode"
-    :Display_3="\n\n  Streamer Mode"
-    :Display_4="\n\n  Streamer Mode"
-    :Display_5="\n\n  Streamer Mode"
-    :Display_6="\n\n  Streamer Mode"
+    while :Selection==1 do
+        :Display_1="\n  |=---=|\nX:"+:X1+"\nY:"+:Y1+"\nZ:"+:Z1+"\n  |=---=|"
+    end
+    :Display_1="\n\nX:"+:X1+"\nY:"+:Y1+"\nZ:"+:Z1
+    while :Selection==2 do
+        :Display_2="\n  |=---=|\nX:"+:X2+"\nY:"+:Y2+"\nZ:"+:Z2+"\n  |=---=|"
+    end
+    :Display_2="\n\nX:"+:X2+"\nY:"+:Y2+"\nZ:"+:Z2
+    while :Selection==3 do
+        :Display_3="\n  |=---=|\nX:"+:X3+"\nY:"+:Y3+"\nZ:"+:Z3+"\n  |=---=|"
+    end
+    :Display_3="\n\nX:"+:X3+"\nY:"+:Y3+"\nZ:"+:Z3
+    while :Selection==4 do
+        :Display_4="\n  |=---=|\nX:"+:X4+"\nY:"+:Y4+"\nZ:"+:Z4+"\n  |=---=|"
+    end
+    :Display_4="\n\nX:"+:X4+"\nY:"+:Y4+"\nZ:"+:Z4
+    while :Selection==5 do
+        :Display_5="\n  |=---=|\nX:"+:X5+"\nY:"+:Y5+"\nZ:"+:Z5+"\n  |=---=|"
+    end
+    :Display_5="\n\nX:"+:X5+"\nY:"+:Y5+"\nZ:"+:Z5
+    while :Selection==6 do
+        :Display_6="\n  |=---=|\nX:"+:X6+"\nY:"+:Y6+"\nZ:"+:Z6+"\n  |=---=|"
+    end
+    :Display_6="\n\nX:"+:X6+"\nY:"+:Y6+"\nZ:"+:Z6
 end
-while :Selection==1 do
-    :Display_1="\n  -=|=-\nX:"+:X1+"\nY:"+:Y1+"\nZ:"+:Z1
-end
-:Display_1="\n\nX:"+:X1+"\nY:"+:Y1+"\nZ:"+:Z1
-while :Selection==2 do
-    :Display_2="\n  -=|=-\nX:"+:X2+"\nY:"+:Y2+"\nZ:"+:Z2
-end
-:Display_2="\n\nX:"+:X2+"\nY:"+:Y2+"\nZ:"+:Z2
-while :Selection==3 do
-    :Display_3="\n  -=|=-\nX:"+:X3+"\nY:"+:Y3+"\nZ:"+:Z3
-end
-:Display_3="\n\nX:"+:X3+"\nY:"+:Y3+"\nZ:"+:Z3
-while :Selection==4 do
-    :Display_4="\n  -=|=-\nX:"+:X4+"\nY:"+:Y4+"\nZ:"+:Z4
-end
-:Display_4="\n\nX:"+:X4+"\nY:"+:Y4+"\nZ:"+:Z4
-while :Selection==5 do
-    :Display_5="\n  -=|=-\nX:"+:X5+"\nY:"+:Y5+"\nZ:"+:Z5
-end
-:Display_5="\n\nX:"+:X5+"\nY:"+:Y5+"\nZ:"+:Z5
-while :Selection==6 do
-    :Display_6="\n  -=|=-\nX:"+:X6+"\nY:"+:Y6+"\nZ:"+:Z6
-end
-:Display_6="\n\nX:"+:X6+"\nY:"+:Y6+"\nZ:"+:Z6

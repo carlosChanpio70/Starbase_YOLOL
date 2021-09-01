@@ -1,16 +1,19 @@
-if:SM!=0thengoto5end :WD1="\n\n  Streamer Mode"
-:WD2="\n\n  Streamer Mode" :WD3="\n\n  Streamer Mode"
-:WD4="\n\n  Streamer Mode" :WD5="\n\n  Streamer Mode"
-:WD6="\n\n  Streamer Mode" goto1
-if:SL==1then:WD1="\n  -=|=-\nX:"+:X1+"\nY:"+:Y1+"\nZ:"+:Z1 goto5end
+if:SM!=0thengoto1end
+if:SL!=1thengoto4end
+:WD1="\n  |=---=|\nX:"+:X1+"\nY:"+:Y1+"\nZ:"+:Z1+"\n  |=---=|" goto2
 :WD1="\n\nX:"+:X1+"\nY:"+:Y1+"\nZ:"+:Z1
-if:SL==2then:WD2="\n  -=|=-\nX:"+:X2+"\nY:"+:Y2+"\nZ:"+:Z2 goto7end
+if:SL!=2thengoto7end
+:WD2="\n  |=---=|\nX:"+:X2+"\nY:"+:Y2+"\nZ:"+:Z2+"\n  |=---=|" goto5
 :WD2="\n\nX:"+:X2+"\nY:"+:Y2+"\nZ:"+:Z2
-if:SL==3then:WD3="\n  -=|=-\nX:"+:X3+"\nY:"+:Y3+"\nZ:"+:Z3 goto9end
+if:SL!=3thengoto10end
+:WD3="\n  |=---=|\nX:"+:X3+"\nY:"+:Y3+"\nZ:"+:Z3+"\n  |=---=|" goto8
 :WD3="\n\nX:"+:X3+"\nY:"+:Y3+"\nZ:"+:Z3
-if:SL==4then:WD4="\n  -=|=-\nX:"+:X4+"\nY:"+:Y4+"\nZ:"+:Z4 goto11end
+if:SL!=4thengoto13end
+:WD4="\n  |=---=|\nX:"+:X4+"\nY:"+:Y4+"\nZ:"+:Z4+"\n  |=---=|" goto11
 :WD4="\n\nX:"+:X4+"\nY:"+:Y4+"\nZ:"+:Z4
-if:SL==5then:WD5="\n  -=|=-\nX:"+:X5+"\nY:"+:Y5+"\nZ:"+:Z5 goto13end
+if:SL!=5thengoto16end
+:WD5="\n  |=---=|\nX:"+:X5+"\nY:"+:Y5+"\nZ:"+:Z5+"\n  |=---=|" goto14
 :WD5="\n\nX:"+:X5+"\nY:"+:Y5+"\nZ:"+:Z5
-if:SL==6then:WD6="\n  -=|=-\nX:"+:X6+"\nY:"+:Y6+"\nZ:"+:Z6 goto15end
+if:SL!=6thengoto19end
+:WD6="\n  |=---=|\nX:"+:X6+"\nY:"+:Y6+"\nZ:"+:Z6+"\n  |=---=|" goto17
 :WD6="\n\nX:"+:X6+"\nY:"+:Y6+"\nZ:"+:Z6 goto1
