@@ -1,15 +1,15 @@
 include "std/math"
 
-if :SM==1 then
-    :Distance="\n\n |--------|\n |Streamer|\n |  Mode  |\n |--------|"
+if :IS==1 then
+    :Distance="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
 else
-    while :X+:Y+:Z!=0 do
-        X1=math_floor(:XX)
-        Y1=math_floor(:YY)
-        Z1=math_floor(:ZZ)
-        X2=:X-X1
-        Y2=:Y-Y1
-        Z2=:Z-Z1
+    while :DX+:DY+:DZ!=0 do
+        X1=math_floor(:x)
+        Y1=math_floor(:y)
+        Z1=math_floor(:z)
+        X2=:DX-X1
+        Y2=:DY-Y1
+        Z2=:DZ-Z1
         D1=X2+Y2+Z2
         :Distance="\nX:"+X2+"m\nY:"+Y2+"m\nZ:"+Z2+"m\nTotal:\n"+D1+"m"
     end

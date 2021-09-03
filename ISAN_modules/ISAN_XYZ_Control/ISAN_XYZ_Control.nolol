@@ -1,0 +1,28 @@
+define :Reset_Button = :RB
+define :X_Switch = :XS
+define :Y_Switch = :YS
+define :Z_Switch = :ZS
+define :Multiplication_Factor = :MF
+define :MF_Switch = :MS
+
+if :MF_Switch != 0 then 
+    :MF_Switch = 0
+    :Multiplication_Factor = (:MF_Switch*10)
+end
+if :X_Switch != 0 then
+    :DX= :DX+(:X_Switch*:Multiplication_Factor)
+    :X_Switch = 0
+else if :Y_Switch != 0 then
+    :DY= :DY+(:Y_Switch*:Multiplication_Factor)
+    :Y_Switch = 0
+else if :Z_Switch != 0 then
+    :DZ= :DZ+(:Z_Switch*:Multiplication_Factor)
+    :Z_Switch = 0
+end
+if :Reset_Button== 1 then 
+    :Reset_Button = 0
+    :DX= 0
+    :DY= 0
+    :DZ= 0
+    :Multiplication_Factor = 1000
+end

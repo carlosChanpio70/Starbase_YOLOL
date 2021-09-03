@@ -1,0 +1,20 @@
+if:MS!=0then:MS=0 :MF=:MS*10end
+if:XS!=0then:DX=:DX+:XS*:MF :XS=0 goto5end
+if:YS!=0then:DY=:DY+:YS*:MF :YS=0 goto5end
+if:ZS!=0then:DZ=:DZ+:ZS*:MF :ZS=0end
+if:RB==1then:RB=0 :DX=0 :DY=0 :DZ=0 :MF=1000end goto1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ISAN_XYZ_Control code made by carlosChanpio70 / Carlos//

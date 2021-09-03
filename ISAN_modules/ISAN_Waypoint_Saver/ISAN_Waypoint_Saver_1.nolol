@@ -1,5 +1,4 @@
 define :Selection=:SL
-define :Streamer_Mode=:SM
 define :Next=:WB1
 define :Previous=:WB2
 define :Deselect=:WB3
@@ -8,29 +7,29 @@ define :Save=:WB4
 if :Save==1 then
     :Save=0
     if :Selection==1 then
-        :X1=:X
-        :Y1=:Y
-        :Z1=:Z
+        :X1=:DX
+        :Y1=:DY
+        :Z1=:DZ
     else if :Selection==2 then
-        :X2=:X
-        :Y2=:Y
-        :Z2=:Z
+        :X2=:DX
+        :Y2=:DY
+        :Z2=:DZ
     else if :Selection==3 then
-        :X3=:X
-        :Y3=:Y
-        :Z3=:Z
+        :X3=:DX
+        :Y3=:DY
+        :Z3=:DZ
     else if :Selection==4 then
-        :X4=:X
-        :Y4=:Y
-        :Z4=:Z
+        :X4=:DX
+        :Y4=:DY
+        :Z4=:DZ
     else if :Selection==5 then
-        :X5=:X
-        :Y5=:Y
-        :Z5=:Z
+        :X5=:DX
+        :Y5=:DY
+        :Z5=:DZ
     else if :Selection==6 then
-        :X6=:X
-        :Y6=:Y
-        :Z6=:Z
+        :X6=:DX
+        :Y6=:DY
+        :Z6=:DZ
     end
 end
 if :Next==1 then

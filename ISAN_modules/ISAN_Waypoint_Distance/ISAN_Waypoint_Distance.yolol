@@ -1,8 +1,8 @@
-if:SM!=1thengoto4end
-:Distance="\n\n |--------|\n |Streamer|\n |  Mode  |\n |--------|"
+if:IS!=1thengoto4end
+:Distance="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
 goto1
-ifnot :X+:Y+:Z!=0thengoto7end a=:XX/1000*1000 b=:YY/1000*1000
-c=:ZZ/1000*1000 d=:X-a e=:Y-b f=:Z-c g=d+e+f
+ifnot :DX+:DY+:DZ!=0thengoto7end a=:x/1000*1000 b=:y/1000*1000
+c=:z/1000*1000 d=:DX-a e=:DY-b f=:DZ-c g=d+e+f
 :Distance="\nX:"+d+"m\nY:"+e+"m\nZ:"+f+"m\nTotal:\n"+g+"m" goto4
 :Distance="\n\n No Target" goto1
 
@@ -17,4 +17,4 @@ c=:ZZ/1000*1000 d=:X-a e=:Y-b f=:Z-c g=d+e+f
 
 
 
-//Waypoint Distance code made by carlosChanpio70 / Carlos //
+//ISAN_Waypoint_Distance code made by carlosChanpio70 / Carlos //

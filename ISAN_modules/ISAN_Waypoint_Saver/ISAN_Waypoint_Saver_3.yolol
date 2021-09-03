@@ -1,10 +1,10 @@
-if:SM!=1thengoto1end
-:WD1="\n\n |--------|\n |Streamer|\n |  Mode  |\n |--------|"
-:WD2="\n\n |--------|\n |Streamer|\n |  Mode  |\n |--------|"
-:WD3="\n\n |--------|\n |Streamer|\n |  Mode  |\n |--------|"
-:WD4="\n\n |--------|\n |Streamer|\n |  Mode  |\n |--------|"
-:WD5="\n\n |--------|\n |Streamer|\n |  Mode  |\n |--------|"
-:WD6="\n\n |--------|\n |Streamer|\n |  Mode  |\n |--------|" goto1
+if:IS!=1thengoto1end
+:WD1="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
+:WD2="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
+:WD3="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
+:WD4="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
+:WD5="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
+:WD6="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|" goto1
 
 
 

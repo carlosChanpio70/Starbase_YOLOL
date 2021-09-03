@@ -1,11 +1,11 @@
 include "std/string"
 define :ISAN_Toggle = :IT
-define :Streamer_Mode = :SM
+define :ISAN_Offline = :IS
 
-if string_contains(:_,"Streamer") then
-    :Streamer_Mode = 1
+if string_contains(:_,"OFFLINE") then
+    :ISAN_Offline = 1
 else
-    :Streamer_Mode = 0
+    :ISAN_Offline = 0
 end
 if :ISAN_Toggle==1 then
     :ISAN_Toggle = 0

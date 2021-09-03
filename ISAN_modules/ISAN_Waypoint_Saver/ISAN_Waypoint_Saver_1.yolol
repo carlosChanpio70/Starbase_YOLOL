@@ -1,10 +1,10 @@
 if:WB4!=1thengoto8end :WB4=0
-if:SL==1then:X1=:X :Y1=:Y :Z1=:Z goto8end
-if:SL==2then:X2=:X :Y2=:Y :Z2=:Z goto8end
-if:SL==3then:X3=:X :Y3=:Y :Z3=:Z goto8end
-if:SL==4then:X4=:X :Y4=:Y :Z4=:Z goto8end
-if:SL==5then:X5=:X :Y5=:Y :Z5=:Z goto8end
-if:SL==6then:X6=:X :Y6=:Y :Z6=:Z end
+if:SL==1then:X1=:DX :Y1=:DY :Z1=:DZ goto8end
+if:SL==2then:X2=:DX :Y2=:DY :Z2=:DZ goto8end
+if:SL==3then:X3=:DX :Y3=:DY :Z3=:DZ goto8end
+if:SL==4then:X4=:DX :Y4=:DY :Z4=:DZ goto8end
+if:SL==5then:X5=:DX :Y5=:DY :Z5=:DZ goto8end
+if:SL==6then:X6=:DX :Y6=:DY :Z6=:DZ end
 if:WB1==1then:WB1=0 :SL=:SL+1 if:SL>6then:SL=1endend
 if:WB2==1then:WB2=0 :SL=:SL-1 if:SL<1then:SL=6endend
 if:WB3==1then:WB3=0 :SL=0end goto1
