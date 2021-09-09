@@ -7,11 +7,11 @@ X1=:X; Y1=:Y; Z1=:Z$
 $
 $
 X2=:X; Y2=:Y; Z2=:Z
-X_Speed = math_floor((X2-X1)/0.6)
-Y_Speed = math_floor((Y2-Y1)/0.6)
-Z_Speed = math_floor((Z2-Z1)/0.6)
+X_Speed = (X2-X1)/0.6
+Y_Speed = (Y2-Y1)/0.6
+Z_Speed = (Z2-Z1)/0.6
 Total_Speed = math_abs(X_Speed)+math_abs(Y_Speed)+math_abs(Z_Speed)
-:Display = "\nX:"+X_Speed+"m/s\nY:"+Y_Speed+"m/s\nZ:"+Z_Speed+"m/s\nTotal:\n"+Total_Speed+"m/s"
+:Display = "\nSpeed:\nX:"+X_Speed+"\nY:"+Y_Speed+"\nZ:"+Z_Speed+"\nTotal:\n"+Total_Speed
 while :ISAN_Offline==0 do
     :Display = "\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
 end

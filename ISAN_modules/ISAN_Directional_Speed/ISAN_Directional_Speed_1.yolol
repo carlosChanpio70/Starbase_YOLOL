@@ -1,9 +1,8 @@
 a=:X b=:Y c=:Z
 
 
-d=:X e=:Y f=:Z g=(d-a)/.6/1000*1000 h=(e-b)/.6/1000*1000
-i=(f-c)/.6/1000*1000
+d=:X e=:Y f=:Z g=(d-a)/.6 h=(e-b)/.6 i=(f-c)/.6
 j=(g>=0)*g-(g<0)*g+((h>=0)*h-(h<0)*h)+((i>=0)*i-(i<0)*i)
-:DS="\nX:"+g+"m/s\nY:"+h+"m/s\nZ:"+i+"m/s\nTotal:\n"+j+"m/s"
+:DS="\nSpeed:\nX:"+g+"\nY:"+h+"\nZ:"+i+"\nTotal:\n"+j
 if:IS!=0thengoto1end
-:DS="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|" goto8
+:DS="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|" goto7

@@ -1,20 +1,20 @@
-if:IS==0thengoto1end if:SL!=1thengoto3end
-:WD1="\n  |=---=|\nX:"+:X1+"\nY:"+:Y1+"\nZ:"+:Z1+"\n  |=---=|" goto4
-:WD1="\n\nX:"+:X1+"\nY:"+:Y1+"\nZ:"+:Z1
-if:SL!=2thengoto6end
-:WD2="\n  |=---=|\nX:"+:X2+"\nY:"+:Y2+"\nZ:"+:Z2+"\n  |=---=|" goto7
-:WD2="\n\nX:"+:X2+"\nY:"+:Y2+"\nZ:"+:Z2
-if:SL!=3thengoto9end
-:WD3="\n  |=---=|\nX:"+:X3+"\nY:"+:Y3+"\nZ:"+:Z3+"\n  |=---=|" goto10
-:WD3="\n\nX:"+:X3+"\nY:"+:Y3+"\nZ:"+:Z3
-if:SL!=4thengoto12end
-:WD4="\n  |=---=|\nX:"+:X4+"\nY:"+:Y4+"\nZ:"+:Z4+"\n  |=---=|" goto13
-:WD4="\n\nX:"+:X4+"\nY:"+:Y4+"\nZ:"+:Z4
-if:SL!=5thengoto15end
-:WD5="\n  |=---=|\nX:"+:X5+"\nY:"+:Y5+"\nZ:"+:Z5+"\n  |=---=|" goto16
-:WD5="\n\nX:"+:X5+"\nY:"+:Y5+"\nZ:"+:Z5
-if:SL!=6thengoto18end
-:WD6="\n  |=---=|\nX:"+:X6+"\nY:"+:Y6+"\nZ:"+:Z6+"\n  |=---=|" goto1
-:WD6="\n\nX:"+:X6+"\nY:"+:Y6+"\nZ:"+:Z6 goto1
+if:IS!=0thengoto10end a="\n  |=---=|\nX:" b="\n\nX:" c="\nY:" d="\nZ:"
+e="\n  |=---=|"
+if:SL==1then:WD1=a+:X1+c+:Y1+d+:Z1+e else:WD1=b+:X1+c+:Y1+d+:Z1 end
+if:SL==2then:WD2=a+:X2+c+:Y2+d+:Z2+e else:WD2=b+:X2+c+:Y2+d+:Z2 end
+if:SL==3then:WD3=a+:X3+c+:Y3+d+:Z3+e else:WD3=b+:X3+c+:Y3+d+:Z3 end
+if:SL==4then:WD4=a+:X4+c+:Y4+d+:Z4+e else:WD4=b+:X4+c+:Y4+d+:Z4 end
+if:SL==5then:WD5=a+:X5+c+:Y5+d+:Z5+e else:WD5=b+:X5+c+:Y5+d+:Z5 end
+if:SL==6then:WD6=a+:X6+c+:Y6+d+:Z6+e else:WD6=b+:X6+c+:Y6+d+:Z6 end
+goto1
+if:IS!=1thengoto1end
+f="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|" :WD1=f
+:WD2=f :WD3=f :WD4=f :WD5=f :WD6=f goto10
+
+
+
+
+
+
 
 //ISAN_Waypoint_Saver_2 code made by carlosChanpio70 / Carlos//

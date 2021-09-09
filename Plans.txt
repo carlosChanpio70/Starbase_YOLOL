@@ -1,5 +1,3 @@
-Directional Velocity calculator for ISAN.
-Auto Scanner activation code.
 Autopilot.
 Modable auto-avoidance code.
 Compass for ISAN.

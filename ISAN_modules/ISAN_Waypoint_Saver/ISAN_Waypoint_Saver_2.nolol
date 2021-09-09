@@ -7,35 +7,49 @@ define :Display_4=:WD4
 define :Display_5=:WD5
 define :Display_6=:WD6
 
-while :ISAN_Offline!=0 do
+while :ISAN_Offline==0 do
+    SX = "\n  |=---=|\nX:"
+    X = "\n\nX:"
+    Y = "\nY:"
+    Z = "\nZ:"
+    SE = "\n  |=---=|"
     if :Selection==1 then
-        :Display_1="\n  |=---=|\nX:"+:X1+"\nY:"+:Y1+"\nZ:"+:Z1+"\n  |=---=|"
+        :Display_1=SX+:X1+Y+:Y1+Z+:Z1+SE
     else
-        :Display_1="\n\nX:"+:X1+"\nY:"+:Y1+"\nZ:"+:Z1
+        :Display_1=X+:X1+Y+:Y1+Z+:Z1
     end
     if :Selection==2 then
-        :Display_2="\n  |=---=|\nX:"+:X2+"\nY:"+:Y2+"\nZ:"+:Z2+"\n  |=---=|"
+        :Display_2=SX+:X2+Y+:Y2+Z+:Z2+SE
     else
-        :Display_2="\n\nX:"+:X2+"\nY:"+:Y2+"\nZ:"+:Z2
+        :Display_2=X+:X2+Y+:Y2+Z+:Z2
     end
     if :Selection==3 then
-        :Display_3="\n  |=---=|\nX:"+:X3+"\nY:"+:Y3+"\nZ:"+:Z3+"\n  |=---=|"
+        :Display_3=SX+:X3+Y+:Y3+Z+:Z3+SE
     else
-        :Display_3="\n\nX:"+:X3+"\nY:"+:Y3+"\nZ:"+:Z3
+        :Display_3=X+:X3+Y+:Y3+Z+:Z3
     end
     if :Selection==4 then
-        :Display_4="\n  |=---=|\nX:"+:X4+"\nY:"+:Y4+"\nZ:"+:Z4+"\n  |=---=|"
+        :Display_4=SX+:X4+Y+:Y4+Z+:Z4+SE
     else
-        :Display_4="\n\nX:"+:X4+"\nY:"+:Y4+"\nZ:"+:Z4
+        :Display_4=X+:X4+Y+:Y4+Z+:Z4
     end
     if :Selection==5 then
-        :Display_5="\n  |=---=|\nX:"+:X5+"\nY:"+:Y5+"\nZ:"+:Z5+"\n  |=---=|"
+        :Display_5=SX+:X5+Y+:Y5+Z+:Z5+SE
     else
-        :Display_5="\n\nX:"+:X5+"\nY:"+:Y5+"\nZ:"+:Z5
+        :Display_5=X+:X5+Y+:Y5+Z+:Z5
     end
     if :Selection==6 then
-        :Display_6="\n  |=---=|\nX:"+:X6+"\nY:"+:Y6+"\nZ:"+:Z6+"\n  |=---=|"
+        :Display_6=SX+:X6+Y+:Y6+Z+:Z6+SE
     else
-        :Display_6="\n\nX:"+:X6+"\nY:"+:Y6+"\nZ:"+:Z6
+        :Display_6=X+:X6+Y+:Y6+Z+:Z6
     end
+end
+while :ISAN_Offline== 1 do
+    ISAN_OFF = "\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
+    :Display_1 = ISAN_OFF
+    :Display_2 = ISAN_OFF
+    :Display_3 = ISAN_OFF
+    :Display_4 = ISAN_OFF
+    :Display_5 = ISAN_OFF
+    :Display_6 = ISAN_OFF
 end
