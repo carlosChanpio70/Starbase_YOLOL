@@ -1,7 +1,11 @@
 include "std/string"
 define :ISAN_Toggle = :IT
 define :ISAN_Offline = :IS
+define :ISAN_Off_Text = :ISD
 
+ISAN_G = "\n|---------|"
+ISAN_OFF = "\n"+ISAN_G+"\n|  ISAN2  |\n| OFFLINE |"+ISAN_G
+:ISAN_Off_Text = ISAN_G
 if string_contains(:_,"OFFLINE") then
     :ISAN_Offline = 1
 else
