@@ -1,6 +1,6 @@
 include "std/math"
 
-if :IS==1 then
+if :IS==0 then
     :Distance="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
 else
     while :DX+:DY+:DZ!=0 do

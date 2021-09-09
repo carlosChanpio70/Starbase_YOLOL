@@ -1,2 +1,2 @@
-if(:_-"OFFLINE")!=:_ then:IS=1else:IS=0end if:IT==1then:IT=0 :_=""end
+if(:_-"OFFLINE")!=:_ then:IS=0else:IS=-1end if:IT==1then:IT=0 :_=""end
 goto1

@@ -1,4 +1,4 @@
-if:IS!=0thengoto1end if:SL!=1thengoto3end
+if:IS==0thengoto1end if:SL!=1thengoto3end
 :WD1="\n  |=---=|\nX:"+:X1+"\nY:"+:Y1+"\nZ:"+:Z1+"\n  |=---=|" goto4
 :WD1="\n\nX:"+:X1+"\nY:"+:Y1+"\nZ:"+:Z1
 if:SL!=2thengoto6end

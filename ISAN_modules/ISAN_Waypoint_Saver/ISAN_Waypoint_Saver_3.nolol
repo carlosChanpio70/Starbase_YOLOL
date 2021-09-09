@@ -1,4 +1,3 @@
-define :ISAN_Offline=:IS
 define :Display_1=:WD1
 define :Display_2=:WD2
 define :Display_3=:WD3
@@ -6,11 +5,9 @@ define :Display_4=:WD4
 define :Display_5=:WD5
 define :Display_6=:WD6
 
-while :ISAN_Offline==1 do
     :Display_1="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
     :Display_2="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
     :Display_3="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
     :Display_4="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
     :Display_5="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
     :Display_6="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
-end

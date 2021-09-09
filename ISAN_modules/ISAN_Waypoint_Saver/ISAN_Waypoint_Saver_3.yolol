@@ -1,4 +1,3 @@
-if:IS!=1thengoto1end
 :WD1="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
 :WD2="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
 :WD3="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
@@ -17,4 +16,5 @@ if:IS!=1thengoto1end
 
 
 
-//ISAN_Waypoint_Saver_1 code made by carlosChanpio70 / Carlos//
+
+//ISAN_Waypoint_Saver_3 code made by carlosChanpio70 / Carlos//

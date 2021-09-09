@@ -1,5 +1,7 @@
 Description:\
     Stores and controls 6 waypoints\
+    The code can work only with the first code too\
+    The 2nd code works as a display driver\
     The 3rd code is an optional Streamer Mode chip(Requires ISAN_Toggle_on_off)\
 Setup:\
     Will require:\

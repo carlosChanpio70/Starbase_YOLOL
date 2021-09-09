@@ -3,9 +3,9 @@ define :ISAN_Toggle = :IT
 define :ISAN_Offline = :IS
 
 if string_contains(:_,"OFFLINE") then
-    :ISAN_Offline = 1
-else
     :ISAN_Offline = 0
+else
+    :ISAN_Offline = -1
 end
 if :ISAN_Toggle==1 then
     :ISAN_Toggle = 0
