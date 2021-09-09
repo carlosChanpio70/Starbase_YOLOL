@@ -1,40 +1,45 @@
 include "std/logic"
 define :Display=:Scanner
-define :Scan_Results=:ScanRes
 define :Display_2=:Scanner_Addon
 
+kv = "kv"
+Ore = "Ore"
+Line_Skip="\n"
 if :Scanbutton==1 then
     :Scan=1
     logic_wait(:Scan==1)
-    if :Scan_Results==0 then
-        :Display="\n\nNo Target"
+    Scan_Results = :ScanRes
+    if Scan_Results==0 then
+        Display=Line_Skip*2+"No Target"
     else
         :Index=0
-        M1=:Material
+        M1=(:Material-Ore)
         V1=:Volume
-    end
-        if :Scan_Results==1 then
-            :Display=(M1-"Ore")+"\n"+V1+"kv"
-        else if :Scan_Results>=2 then
+        if Scan_Results==1 then
+        Display=M1+Line_Skip+V1+kv
+        else if Scan_Results>=1 then
             :Index=1
-            M2=:Material
+            M2=(:Material-Ore)
             V2=:Volume
-            :Display=(M1-"Ore")+"\n"+V1+"kv\n"+(M2-"Ore")+"\n"+V2+"kv"
-            if :Scan_Results>=3 then
+            Display=M1+Line_Skip+V1+kv+Line_Skip+M2+Line_Skip+V2+kv
+            if Scan_Results>=3 then
                 :Index=2
-                M3=:Material
+                M3=(:Material-Ore)
                 V3=:Volume
-                if :Scan_Results==3 then
-                    :Display_2=(M3-"Ore")+"\n"+V3+"kv"
-                else if :Scan_Results>=4 then
-                    M4=:Material
+                if Scan_Results==3 then
+                    Display_2=M3+Line_Skip+V3+kv
+                else if Scan_Results>=4 then
+                    M4=(:Material-Ore)
                     V4=:Volume
-                    :Display_2=(M3-"Ore")+"\n"+V3+"kv\n"+(M4-"Ore")+"\n"+V4+"kv"
+                    Display_2=M3+Line_Skip+V3+kv+Line_Skip+M4+Line_Skip+V4+kv
                 end
             else
-                :Display_2="\n\nNo Extra Ores"
+                Display_2=Line_Skip*2+"No Extra Ores"
             end
+            Display_2 = :Display_2
+        end
     end
 else
-    :Display="\n\n  Offline"
+    :Display=Line_Skip*2+"  Offline"
 end
+Display = :Display
