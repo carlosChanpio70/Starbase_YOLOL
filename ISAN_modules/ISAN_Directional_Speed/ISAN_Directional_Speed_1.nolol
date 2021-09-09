@@ -2,6 +2,7 @@ include "std/logic"
 include "std/math"
 define :Display = :DS
 define :ISAN_Offline = :IS
+define :ISAN_Off_Text = :ISD
 
 X1=:X; Y1=:Y; Z1=:Z$
 $
@@ -13,5 +14,5 @@ Z_Speed = (Z2-Z1)/0.6
 Total_Speed = math_abs(X_Speed)+math_abs(Y_Speed)+math_abs(Z_Speed)
 :Display = "\nSpeed:\nX:"+X_Speed+"\nY:"+Y_Speed+"\nZ:"+Z_Speed+"\nTotal:\n"+Total_Speed
 while :ISAN_Offline==0 do
-    :Display = "\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
+    :Display = :ISAN_Off_Text
 end

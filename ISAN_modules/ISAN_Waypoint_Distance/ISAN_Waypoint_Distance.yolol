@@ -1,7 +1,5 @@
-if:IS!=0thengoto4end
-:Distance="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
-goto1
-ifnot :DX+:DY+:DZ!=0thengoto7end a=:x/1000*1000 b=:y/1000*1000
-c=:z/1000*1000 d=:DX-a e=:DY-b f=:DZ-c g=d+e+f
-:Distance="\nX:"+d+"m\nY:"+e+"m\nZ:"+f+"m\nTotal:\n"+g+"m" goto4
+if:IS then:Distance=:ISD goto1end a=:DX b=:DY c=:DZ
+ifnot a+b+c!=0thengoto5end d=:x/1000*1000 e=:y/1000*1000
+f=:z/1000*1000 g=a-d h=b-e i=c-f j=g+h+i
+:Distance="\nX:"+g+"\nY:"+h+"\nZ:"+i+"\nTotal:\n"+j goto1
 :Distance="\n\n No Target" goto1

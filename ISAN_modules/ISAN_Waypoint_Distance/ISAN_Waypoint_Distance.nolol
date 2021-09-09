@@ -1,17 +1,22 @@
 include "std/math"
+define :ISAN_Offline=:IS
+define :ISAN_Off_Text = :ISD
 
-if :IS==0 then
-    :Distance="\n\n|---------|\n|  ISAN2  |\n| OFFLINE |\n|---------|"
+while :ISAN_Offline do
+    :Distance = :ISAN_Off_Text
+end
+X = :DX        
+Y = :DY
+Z = :DZ
+if X+Y+Z!=0 then
+    X1=math_floor(:x)
+    Y1=math_floor(:y)
+    Z1=math_floor(:z)
+    X2=X-X1
+    Y2=Y-Y1
+    Z2=Z-Z1
+    D1=X2+Y2+Z2
+    :Distance="\nX:"+X2+"\nY:"+Y2+"\nZ:"+Z2+"\nTotal:\n"+D1
 else
-    while :DX+:DY+:DZ!=0 do
-        X1=math_floor(:x)
-        Y1=math_floor(:y)
-        Z1=math_floor(:z)
-        X2=:DX-X1
-        Y2=:DY-Y1
-        Z2=:DZ-Z1
-        D1=X2+Y2+Z2
-        :Distance="\nX:"+X2+"m\nY:"+Y2+"m\nZ:"+Z2+"m\nTotal:\n"+D1+"m"
-    end
     :Distance="\n\n No Target"
 end
