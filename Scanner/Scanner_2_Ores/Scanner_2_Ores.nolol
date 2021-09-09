@@ -2,24 +2,27 @@ include "std/logic"
 define :Display=:Scanner
 define :Scan_Results=:ScanRes
 
+kv = "kv"
+Ore = "Ore"
+Line_Skip="\n"
 if :Scanbutton==1 then
     :Scan=1
     logic_wait(:Scan==1)
     if :Scan_Results==0 then
-        :Display="\n\nNo Target"
+        :Display=Line_Skip*2+"No Target"
     else
         :Index=0
-        M1=:Material
+        M1=(:Material-Ore)
         V1=:Volume
         if :Scan_Results==1 then
-        :Display=(M1-"Ore")+"\n"+V1+"kv"
+        :Display=M1+Line_Skip+V1+kv
         else if :Scan_Results>=1 then
             :Index=1
-            M2=:Material
+            M2=(:Material-Ore)
             V2=:Volume
-            :Display=(M1-"Ore")+"\n"+V1+"kv\n"+(M2-"Ore")+"\n"+V2+"kv"
+            :Display=M1+Line_Skip+V1+kv+Line_Skip+M2+Line_Skip+V2+kv
         end
     end
 else
-    :Display="\n\n  Offline"
+    :Display=Line_Skip*2+"  Offline"
 end

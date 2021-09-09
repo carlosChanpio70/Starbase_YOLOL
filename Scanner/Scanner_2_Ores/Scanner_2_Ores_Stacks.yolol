@@ -1,12 +1,12 @@
-if:Scanbutton!=1thengoto9end :Scan=1
+a="kv" b="Ore" c="Stacks" d="\n" if:Scanbutton!=1thengoto8end :Scan=1
 if:Scan==1thengoto2end
-if:ScanRes==0then:Scanner="\n\nNo Target" goto1end :Index=0
-a=:Material/1728/1000*1000 b=:Volume/1728/1000*1000
-if:ScanRes==1then:Scanner=a-"Ore"+"\n"+b+"Stacks" goto1end
-if:ScanRes<1thengoto1end :Index=1 c=:Material/1728/1000*1000
-d=:Volume/1728/1000*1000
-:Scanner=a-"Ore"+"\n"+b+"Stacks\n"+(c-"Ore")+"\n"+d+"Stacks" goto1
-:Scanner="\n\n  Offline" goto1
+if:ScanRes==0then:Scanner=d*2+"No Target" goto1end :Index=0
+e=:Material-b f=:Volume/1728/1000*1000
+if:ScanRes==1then:Scanner=e+d+f+c goto1end if:ScanRes<1thengoto1end
+:Index=1 g=:Material-b h=:Volume/1728/1000*1000
+:Scanner=e+d+f+c+d+g+d+h+c goto1
+:Scanner=d*2+"  Offline" goto1
+
 
 
 
