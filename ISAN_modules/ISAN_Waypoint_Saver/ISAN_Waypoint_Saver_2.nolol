@@ -1,85 +1,80 @@
 define :Selection=:SL
 define :ISAN_Offline=:IS
 define :ISAN_Off_Text = :ISD
-define :Display_1=:WD1
-define :Display_2=:WD2
-define :Display_3=:WD3
-define :Display_4=:WD4
-define :Display_5=:WD5
-define :Display_6=:WD6
+define D1=:WD1
+define D2=:WD2
+define D3=:WD3
+define D4=:WD4
+define D5=:WD5
+define D6=:WD6
 
-while :ISAN_Offline== 1 do
-    :Display_1 = :ISAN_Off_Text
-    :Display_2 = :ISAN_Off_Text
-    :Display_3 = :ISAN_Off_Text
-    :Display_4 = :ISAN_Off_Text
-    :Display_5 = :ISAN_Off_Text
-    :Display_6 = :ISAN_Off_Text
-end
-SX = "\n  |=---=|\nX:"
-X = "\n\nX:"
-Y = "\nY:"
-Z = "\nZ:"
-SE = "\n  |=---=|"
-X1 = :X1
-Y1 = :Y1
-Z1 = :Z1
-X2 = :X2
-Y2 = :Y2
-Z2 = :Z2
-X3 = :X3
-Y3 = :Y3
-Z3 = :Z3
-X4 = :X4
-Y4 = :Y4
-Z4 = :Z4
-X5 = :X5
-Y5 = :Y5
-Z5 = :Z5
-X6 = :X6
-Y6 = :Y6
-Z6 = :Z6
-D1 = X+X1+Y+Y1+Z+Z1
-D2 = X+X2+Y+Y2+Z+Z2
-D3 = X+X3+Y+Y3+Z+Z3
-D4 = X+X4+Y+Y4+Z+Z4
-D5 = X+X5+Y+Y5+Z+Z5
-D6 = X+X6+Y+Y6+Z+Z6
-SD1 = SX+X1+Y+Y1+Z+Z1+SE
-SD2 = SX+X2+Y+Y2+Z+Z2+SE
-SD3 = SX+X3+Y+Y3+Z+Z3+SE
-SD4 = SX+X4+Y+Y4+Z+Z4+SE
-SD5 = SX+X5+Y+Y5+Z+Z5+SE
-SD6 = SX+X6+Y+Y6+Z+Z6+SE
+//Handle Streamer Mode//
 if :ISAN_Offline==1 then
-    if :Selection==1 then
-        :Display_1=SD1
-    else
-        :Display_1=D1
-        if :Selection==2 then
-            :Display_2=SD2
-        else
-            :Display_2=D2
-            if :Selection==3 then
-                :Display_3=SD3
-            else
-                :Display_3=D3
-                if :Selection==4 then
-                    :Display_4=SD4
-                else
-                    :Display_4=D4
-                    if :Selection==5 then
-                        :Display_5=SD5
-                    else
-                        :Display_5=D5
-                        if :Selection==6 then
-                            :Display_6=SD6
-                        else
-                            :Display_6=D6
-                        end
-                    end
-                end
-            end
-        end
+    D1 = :ISAN_Off_Text
+    D2 = :ISAN_Off_Text
+    D3 = :ISAN_Off_Text
+    D4 = :ISAN_Off_Text
+    D5 = :ISAN_Off_Text
+    D6 = :ISAN_Off_Text
+end
+if :ISAN_Offline==0 then
+//Memory load//
+    Selection = :Selection
+    X1 = :X1
+    Y1 = :Y1
+    Z1 = :Z1
+    X2 = :X2
+    Y2 = :Y2
+    Z2 = :Z2    
+    X3 = :X3
+    Y3 = :Y3
+    Z3 = :Z3
+    X4 = :X4
+    Y4 = :Y4
+    Z4 = :Z4
+    X5 = :X5
+    Y5 = :Y5
+    Z5 = :Z5
+    X6 = :X6
+    Y6 = :Y6
+    Z6 = :Z6
+//Display variables//
+    SX = "\n  |=---=|\nX:"
+    X = "\n\nX:"
+    Y = "\nY:"
+    Z = "\nZ:"
+    SE = "\n  |=---=|"
+    D1 = X+X1+Y+Y1+Z+Z1
+    D2 = X+X2+Y+Y2+Z+Z2
+    D3 = X+X3+Y+Y3+Z+Z3
+    D4 = X+X4+Y+Y4+Z+Z4
+    D5 = X+X5+Y+Y5+Z+Z5
+    D6 = X+X6+Y+Y6+Z+Z6
+    SD1 = SX+X1+Y+Y1+Z+Z1+SE
+    SD2 = SX+X2+Y+Y2+Z+Z2+SE
+    SD3 = SX+X3+Y+Y3+Z+Z3+SE
+    SD4 = SX+X4+Y+Y4+Z+Z4+SE
+    SD5 = SX+X5+Y+Y5+Z+Z5+SE
+    SD6 = SX+X6+Y+Y6+Z+Z6+SE
+//Display selection//
+    if Selection==1 then
+        D1=SD1
+    else if Selection==2 then
+        D2=SD2
+    else if Selection==3 then
+        D3=SD3
+    else if Selection==4 then
+        D4=SD4
+    else if Selection==5 then
+        D5=SD5
+    else if Selection==6 then
+        D6=SD6
     end
 end
+//Output Display//
+:Display_1 = D1
+:Display_2 = D2
+:Display_3 = D3
+:Display_4 = D4
+:Display_5 = D5
+:Display_6 = D6

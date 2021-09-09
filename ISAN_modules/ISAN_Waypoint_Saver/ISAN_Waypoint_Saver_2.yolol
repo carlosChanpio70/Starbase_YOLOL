@@ -1,16 +1,16 @@
 if:IS!=1thengoto3end :WD1=:ISD :WD2=:ISD :WD3=:ISD :WD4=:ISD
-:WD5=:ISD :WD6=:ISD goto1
-a="\n  |=---=|\nX:" b="\n\nX:" c="\nY:" d="\nZ:" e="\n  |=---=|" f=:X1
-g=:Y1 h=:Z1 i=:X2 j=:Y2 k=:Z2 l=:X3 m=:Y3 n=:Z3 o=:X4 p=:Y4 q=:Z4
-r=:X5 s=:Y5 t=:Z5 u=:X6 v=:Y6 w=:Z6 x=b+f+c+g+d+h y=b+i+c+j+d+k
-z=b+l+c+m+d+n aa=b+o+c+p+d+q ab=b+r+c+s+d+t ac=b+u+c+v+d+w
-ad=a+f+c+g+d+h+e ae=a+i+c+j+d+k+e af=a+l+c+m+d+n+e ag=a+o+c+p+d+q+e
-ah=a+r+c+s+d+t+e ai=a+u+c+v+d+w+e if:IS!=1thengoto1end
-if:SL==1then:WD1=ad goto1end :WD1=x if:SL==2then:WD2=ae goto1end
-:WD2=y if:SL==3then:WD3=af goto1end :WD3=z
-if:SL==4then:WD4=ag goto1end :WD4=aa
-if:SL==5then:WD5=ah else:WD5=ab if:SL==6then:WD6=ai else:WD6=ac endend
-goto1
+:WD5=:ISD :WD6=:ISD
+if:IS!=0thengoto12end a=:SL b=:X1 c=:Y1 d=:Z1 e=:X2 f=:Y2 g=:Z2 h=:X3
+i=:Y3 j=:Z3 k=:X4 l=:Y4 m=:Z4 n=:X5 o=:Y5 p=:Z5 q=:X6 r=:Y6 s=:Z6
+t="\n  |=---=|\nX:" u="\n\nX:" v="\nY:" w="\nZ:" x="\n  |=---=|"
+:WD1=u+b+v+c+w+d :WD2=u+e+v+f+w+g :WD3=u+h+v+i+w+j :WD4=u+k+v+l+w+m
+:WD5=u+n+v+o+w+p :WD6=u+q+v+r+w+s y=t+b+v+c+w+d+x z=t+e+v+f+w+g+x
+aa=t+h+v+i+w+j+x ab=t+k+v+l+w+m+x ac=t+n+v+o+w+p+x ad=t+q+v+r+w+s+x
+ifa==1then:WD1=y goto12end ifa==2then:WD2=z goto12end
+ifa==3then:WD3=aa goto12end ifa==4then:WD4=ab goto12end
+ifa==5then:WD5=ac goto12end ifa==6then:WD6=ad end
+:Display_1=:WD1 :Display_2=:WD2 :Display_3=:WD3 :Display_4=:WD4
+:Display_5=:WD5 :Display_6=:WD6 goto1
 
 
 
