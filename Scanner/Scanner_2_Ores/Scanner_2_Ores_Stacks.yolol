@@ -1,11 +1,11 @@
-a="kv" b="Ore" c="Stacks" d="\n" if:Scanbutton!=1thengoto8end :Scan=1
-if:Scan==1thengoto2end
-if:ScanRes==0then:Scanner=d*2+"No Target" goto1end :Index=0
-e=:Material-b f=:Volume/1728/1000*1000
-if:ScanRes==1then:Scanner=e+d+f+c goto1end if:ScanRes<1thengoto1end
-:Index=1 g=:Material-b h=:Volume/1728/1000*1000
-:Scanner=e+d+f+c+d+g+d+h+c goto1
-:Scanner=d*2+"  Offline" goto1
+a="kv" b="Ore" c="Stacks" d="\n" if:Scanbutton!=1thengoto7end :Scan=1
+if:Scan==1thengoto2end e=:ScanRes
+ife==0thenf=d*2+"No Target" goto8end :Index=0 g=:Material-b
+h=:Volume/1728/1000*1000 ife==1thenf=g+d+h+c goto8end
+ife<1thengoto8end :Index=1 i=:Material-b j=:Volume/1728/1000*1000
+f=g+d+h+c+d+i+d+j+c goto8
+f=d*2+"  Offline"
+f=:Scanner goto1
 
 
 
@@ -17,4 +17,4 @@ if:ScanRes==1then:Scanner=e+d+f+c goto1end if:ScanRes<1thengoto1end
 
 
 
-//Scanner_2_Ores code made by carlosChanpio70 / Carlos//
+//Scanner_2_Ores_Stacks code made by carlosChanpio70 / Carlos//
