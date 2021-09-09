@@ -1,0 +1,12 @@
+while :AuG==1 do
+    :GenLimit=100-(:Battery/100)
+    while :Slep==1 do
+        :GenLimit=0
+        :AuG=0
+        if:Battery<=2500 then
+            :AuG=1
+            :Slep=0
+            break
+        end
+    end
+end

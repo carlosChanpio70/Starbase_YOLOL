@@ -1,0 +1,20 @@
+if:AuG!=1thengoto1end :GenLimit=100-:Battery/100
+if:Slep!=1thengoto1end :GenLimit=0 :AuG=0
+if:Battery<=2500then:AuG=1 :Slep=0 goto1end goto2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Gen_Sys code made by carlosChanpio70 / Carlos//
