@@ -1,0 +1,85 @@
+include "std/math"
+define :Display = :u
+
+line_skip = "\n"
+Tier_Display = line_skip+"Tier:"
+Tier_MaxT = "% max"
+Score_D = "\nRock Score:\n"
+Score_D2 = "/100"
+Perc=100
+Tier_01 = 6555
+Tier_02 = 7942
+Tier_03 = 11555
+Tier_04 = 12851
+Tier_05 = 17761
+Tier_06 = 19600
+Tier_07 = 45926
+Tier_08 = 31348
+Tier_09 = 215837
+Tier_10 = 468058
+MaxEF_01=20
+MaxEF_02=53
+MaxEF_03=00
+MaxEF_04=00
+MaxEF_05=38
+MaxEF_06=37
+MaxEF_07=39
+MaxEF_08=13
+MaxEF_09=00
+MaxEF_10=00
+Volume=(:V1+:V2)
+if Volume<=Tier_01 then
+    Tier=1
+    Tier_V = Tier_01
+    Max_EF = MaxEF_01
+end
+if Volume<=Tier_02 and Volume>=Tier_01 then
+    Tier=2
+    Tier_V = Tier_02
+    Max_EF = MaxEF_02
+end
+if Volume<=Tier_03 and Volume>=Tier_02 then
+    Tier=3
+    Tier_V = Tier_03
+    Max_EF = MaxEF_03
+end
+if Volume<=Tier_04 and Volume>=Tier_03 then
+    Tier=4
+    Tier_V = Tier_04
+    Max_EF = MaxEF_04
+end
+if Volume<=Tier_05 and Volume>=Tier_04 then
+    Tier=5
+    Tier_V = Tier_05
+    Max_EF = MaxEF_05
+end
+if Volume<=Tier_06 and Volume>=Tier_05 then
+    Tier=6
+    Tier_V = Tier_06
+    Max_EF = MaxEF_06
+end
+if Volume<=Tier_07 and Volume>=Tier_08 then
+    Tier=7
+    Tier_V = Tier_07
+    Max_EF = MaxEF_07
+end
+if Volume<=Tier_08 and Volume>=Tier_06 then
+    Tier=8
+    Tier_V = Tier_08
+    Max_EF = MaxEF_08
+end
+if Volume<=Tier_09 and Volume>=Tier_07 then
+    Tier=9
+    Tier_V = Tier_09
+    Max_EF = MaxEF_09
+end
+if Volume<=Tier_10 and Volume>=Tier_09 then
+    Tier=10
+    Tier_V = Tier_10
+    Max_EF = MaxEF_10
+end
+MaxT = (Volume/Tier_V)*Perc
+EF = (:V2/:V1)*Perc
+Score = (EF/Max_EF)*Perc
+Display = Tier_Display+Tier+line_skip+MaxT+Tier_MaxT+Score_D+Score+Score_D2
+:Display = Display

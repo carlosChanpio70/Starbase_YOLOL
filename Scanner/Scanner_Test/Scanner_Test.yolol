@@ -1,0 +1,14 @@
+a="\n" b=a+"Tier:" c="% max" d="\nRock Score:\n" e="/100" f=100 g=6555
+h=7942 i=11555 j=12851 k=17761 l=19600 m=45926 n=31348 o=215837
+p=468058 q=20 r=53 s=0 t=0 u=38 v=37 w=39 x=13 y=0 z=0 aa=:V1+:V2
+ifaa<=g thenab=1 ac=g ad=q end
+ifaa<=h and aa>=g thenab=2 ac=h ad=r end
+ifaa<=i and aa>=h thenab=3 ac=i ad=s end
+ifaa<=j and aa>=i thenab=4 ac=j ad=t end
+ifaa<=k and aa>=j thenab=5 ac=k ad=u end
+ifaa<=l and aa>=k thenab=6 ac=l ad=v end
+ifaa<=m and aa>=n thenab=7 ac=m ad=w end
+ifaa<=n and aa>=l thenab=8 ac=n ad=x end
+ifaa<=o and aa>=m thenab=9 ac=o ad=y end
+ifaa<=p and aa>=o thenab=10 ac=p ad=z end ae=aa/ac*f af=:V2/:V1*f
+ag=af/ad*f ah=b+ab+a+ae+c+d+ag+e :u=ah goto1
