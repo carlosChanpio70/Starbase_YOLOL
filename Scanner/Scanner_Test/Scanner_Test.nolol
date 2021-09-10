@@ -13,6 +13,10 @@ Tier_Display = line_skip+"Tier: "
 Score_D1 = line_skip+"Rock Score:"+line_skip
 Score_D2 = "/100"
 Effy = line_skip+"Efficiency:"+line_skip
+Off = line_skip*2+" Offline"
+No_Target = Line_Skip*2+"No Target"
+slash = "|"
+Total_ST = " Total"
 Stack = 1728
 Perc = 100
 Tier_01 = 6557
@@ -40,69 +44,65 @@ if :Scanbutton==1 then
     logic_wait(:Scan==1)
     Scan_Results = :Scan_Results
     if Scan_Results==0 then
-        Display=Line_Skip*2+"No Target"
+        Display=No_Target
+        Display_2 = Display
     else
         :Index=0
         M1=(:Material-Ore)
         V1=:Volume
         Stack_Res_1=math_floor(V1*Stack)
-        if Scan_Results==1 then
         DR1=M1+Line_Skip+V1+kv
-        else if Scan_Results>=1 then
+        if Scan_Results ==1 then
+            Display_1 = DR1+line_skip*2+Stack_Res_1+slash+line_skip+Stack_Res_1+Total_ST
+        end
+        if Scan_Results>=1 then
             :Index=1
             M2=(:Material-Ore)
             V2=:Volume
-            DR2=DR1+Line_Skip+M2+Line_Skip+V2+kv
+            Stack_Res_2=math_floor(V2*Stack)
+            Total_Stacks = Stack_Res_1+Stack_Res_2
+            DR1=DR1+Line_Skip+M2+Line_Skip+V2+kv
+            Display_1 = DR1+line_skip+Stack_Res_1+slash+Stack_Res_2+line_skip+Total_Stacks+Total_ST
         end
         Volume=(V1+V2)
         if Volume<=Tier_01 then
             Tier=1
-            Tier_V = Tier_01
             Max_EF = MaxEF_01
-        else if Volume<=Tier_02 and Volume>Tier_01 then
+        else if Volume<=Tier_02 then
             Tier=2
-            Tier_V = Tier_02
             Max_EF = MaxEF_02
-        else if Volume<=Tier_03 and Volume>Tier_02 then
+        else if Volume<=Tier_03 then
             Tier=3
-            Tier_V = Tier_03
             Max_EF = MaxEF_03
-        else if Volume<=Tier_04 and Volume>Tier_03 then
+        else if Volume<=Tier_04 then
             Tier=4
-            Tier_V = Tier_04
             Max_EF = MaxEF_04
-        else if Volume<=Tier_05 and Volume>Tier_04 then
+        else if Volume<=Tier_05 then
             Tier=5
-            Tier_V = Tier_05
             Max_EF = MaxEF_05
-        else if Volume<=Tier_06 and Volume>Tier_05 then
+        else if Volume<=Tier_06 then
             Tier=6
-            Tier_V = Tier_06
             Max_EF = MaxEF_06
-        else if Volume<=Tier_07 and Volume>Tier_08 then
+        else if Volume<=Tier_08 then
             Tier=7
-            Tier_V = Tier_07
             Max_EF = MaxEF_07
-        else if Volume<=Tier_08 and Volume>Tier_06 then
+        else if Volume<=Tier_07 then
             Tier=8
-            Tier_V = Tier_08
             Max_EF = MaxEF_08
-        else if Volume<=Tier_09 and Volume>Tier_07 then
+        else if Volume<=Tier_09 then
             Tier=9
-            Tier_V = Tier_09
             Max_EF = MaxEF_09
-        else if Volume<=Tier_10 and Volume>Tier_09 then
+        else if Volume<=Tier_10 then
             Tier=10
-            Tier_V = Tier_10
             Max_EF = MaxEF_10
         end
         EF = (V2/V1)*Perc
         Score = (EF/Max_EF)*Perc
-        Display_2 = Tier_Display+Tier+Effy+Max_EF+"/"+EF+Score_D1+Score+Score_D2
-        :Display_2 = Display_2
+        Display_2 = Tier_Display+Tier+Effy+Max_EF+line_skip+EF+Score_D1+Score+Score_D2
     end
 else
-    Display_1 = line_skip*2+" Offline"
+    Display_1 = Off
+    Display_2 = Display
 end
 :Display_1 = Display_1
 :Display_2 = Display_2
