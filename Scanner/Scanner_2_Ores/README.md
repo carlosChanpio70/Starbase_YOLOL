@@ -10,6 +10,7 @@ Setup:\
             "ScanResults" to "SR"\
             "Material" to "M"\
             "Volume" to "V"\
+            "Reset" to "RR"\
         Change in the button the variable "ButtonState" to "SB"\
         Change in the text panel the variable "PanelValue" to "SD1"\
     For when using the Timer version also do:\
