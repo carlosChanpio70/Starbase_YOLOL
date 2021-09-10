@@ -45,7 +45,7 @@ if :Scan_button then
     Sad = " :("
     //Handles main Scan logic//
     while :Scan_Results==0 do
-        :Scan = 1
+        :Scan = 1 
     end
     if :Scan_Results!=2 then
         //Handle no asteroid scanned//
@@ -53,10 +53,10 @@ if :Scan_button then
         Display_2 = Display_1
     else
         //Scanner Results handling//
-        :Index=0
+        :Index = 0
         M1 = (:Material-Ore-Crystal)
         V1 = :Volume $
-        :Index=1
+        :Index = 1
         M2 = (:Material-Ore-Crystal)
         V2 = :Volume
         //Stack calculations//
