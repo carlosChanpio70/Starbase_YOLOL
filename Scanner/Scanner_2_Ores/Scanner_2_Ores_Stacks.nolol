@@ -1,5 +1,10 @@
 include "std/logic"
-include "std/math"
+define :Scan_Button = :SB
+define :Display_1 = :SD1
+define :Material = :M
+define :Volume = :V
+define :Index = :I
+define :Scan_Results = :SR
 
 kv = "kv"
 Ore = "Ore"
@@ -7,7 +12,8 @@ Stacks = "Stacks"
 Line_Skip = "\n"
 Offline = Line_Skip*2+"  Offline"
 No_Target = Line_Skip*2+"No Target"
-Stack = 1728
+P100 = 100
+Stack = 172800
 if :Scanbutton==1 then
     :Scan=1
     logic_wait(:Scan==1)
@@ -17,18 +23,18 @@ if :Scanbutton==1 then
     else
         :Index=0
         M1=(:Material-Ore)
-        V1=math_floor(:Volume/Stack)
+        V1 = :Volume/Stack*P100
         D1 = M1+Line_Skip+V1+Stacks
-        if Scan_Results==1 then
         Display=D1
-        else if Scan_Results>=1 then
+        if Scan_Results>=1 then
             :Index=1
             M2=(:Material-Ore)
-            V2=math_floor(:Volume/Stack)
+            V2 = :Volume/Stack*P100
             Display=D1+Line_Skip+M2+Line_Skip+V2+Stacks
         end
     end
 else
     Display=Offline
 end
-Display = :SD1
+:Display_1 = Display
+//Scanner_2_Ores_Stacks code made by carlosChanpio70 / Carlos//

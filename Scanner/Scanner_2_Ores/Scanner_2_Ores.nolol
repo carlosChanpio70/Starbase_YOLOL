@@ -1,28 +1,35 @@
 include "std/logic"
+define :Scan_Button = :SB
+define :Display_1 = :SD1
+define :Material = :M
+define :Volume = :V
+define :Index = :I
+define :Scan_Results = :SR
 
 kv = "kv"
 Ore = "Ore"
 Line_Skip="\n"
-if :Scanbutton==1 then
+Line_Skip2=Line_Skip+Line_Skip
+if :Scan_Button then
     :Scan=1
     logic_wait(:Scan==1)
     Scan_Results = :ScanRes
     if Scan_Results==0 then
-        Display=Line_Skip*2+"No Target"
+        Display=Line_Skip2+"No Target"
     else
         :Index=0
         M1=(:Material-Ore)
         V1=:Volume
-        if Scan_Results==1 then
-        Display=M1+Line_Skip+V1+kv
-        else if Scan_Results>=1 then
+        D1=M1+Line_Skip+V1+kv
+        if Scan_Results>=1 then
             :Index=1
             M2=(:Material-Ore)
             V2=:Volume
-            Display=M1+Line_Skip+V1+kv+Line_Skip+M2+Line_Skip+V2+kv
+            Display=D1+Line_Skip+M2+Line_Skip+V2+kv
         end
     end
 else
-    Display=Line_Skip*2+"  Offline"
+    Display=Line_Skip2+"  Offline"
 end
-Display = :SD1
+:Display1 = Display
+//Scanner_2_Ores code made by carlosChanpio70 / Carlos//

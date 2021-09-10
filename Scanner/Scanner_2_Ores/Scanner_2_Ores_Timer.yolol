@@ -1,12 +1,12 @@
-a=:Scanner_Delay*5 b="kv" c="Ore" d="\n" if:Scanbutton!=1thengoto8end
-ife<=a thene=e+1 goto2end :Scan=1
-if:Scan==1thengoto3end f=:ScanRes
-iff==0theng=d*2+"No Target" goto9end :Index=0 h=:Material-c i=:Volume
-iff==1theng=h+d+i+b goto9end
-iff>=1then:Index=1 j=:Material-c k=:Volume g=h+d+i+b+d+j+d+k+b end
-goto9
-g=d*2+"  Offline"
-g=:Scanner goto1
+a=:SDelay*5 b="kv" c="Ore" d="\n" e=d+d if:Scanbutton!=1thengoto7end
+f=0
+iff<=a thenf=f+1 goto3end :Scan=1
+if:Scan==1thengoto4end g=:ScanRes ifg==0thenh=e+"No Target" goto8end
+:I=0 i=:M-c j=:V k=i+d+j+b
+ifg>=1then:I=1 l=:M-c m=:V h=k+d+l+d+m+b end goto8
+h=d*2+"  Offline"
+:SD1=h goto1
+
 
 
 
