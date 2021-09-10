@@ -30,4 +30,4 @@ if :Scanbutton==1 then
 else
     Display=Line_Skip*2+"  Offline"
 end
-Display = :Scanner
+Display = :SD1

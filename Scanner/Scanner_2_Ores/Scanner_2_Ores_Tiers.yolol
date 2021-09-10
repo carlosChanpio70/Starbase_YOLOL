@@ -1,0 +1,20 @@
+ifnot :SB thengoto16end a="\n" b=a+a c=" kv"+a d=100 e=172800 f=6557
+g=7945 h=11555 i=12851 j=17763 k=19603 l=45929 m=31351 n=215837
+o=468058 p=20 q=53 r=69 s=69 t=38 u=37 v=39 w=13 x=69 y=69 :Scan=1
+if:Scan==1thengoto4end z=:Sq aa="Ore" ab="Crystal" ac=" :D" ad=" :("
+ifz!=2thenae=b+"No Target" af=ae goto17end :o=0 ag=:e-aa-ab ah=:t
+:o=1 ai=:e-aa-ab aj=:t ak=ah/e*d al=aj/e*d am=ak+al
+ae=ag+a+ah+c+ai+a+aj+c+ak+"|"+al+a+am+" Total" an=ah+aj
+ifan<=f thenao=1 ap=p goto13end ifan<=g thenao=2 ap=q goto13end
+ifan<=h thenao=3 ap=r goto13end ifan<=i thenao=4 ap=s goto13end
+ifan<=j thenao=5 ap=t goto13end ifan<=k thenao=6 ap=u goto13end
+ifan<=m thenao=7 ap=v goto13end ifan<=l thenao=8 ap=w goto13end
+ifan<=n thenao=9 ap=x goto13end ifan<=o thenao=10 ap=y end
+aq=aj/ah*d ar=aq/ap*d as="/100" at=ar+as ifar>100thenat="PERFECT"end
+ifar>70thenat=ar+as+ac end ifar<30thenat=ar+as+ad end au="\nTier: "+ao
+af=au+a+ap+"% Max\nEfficiency:\n"+aq+"%\nRock Score:\n"+at goto17
+ae=b+"  Offline" af=ae
+:SD1=ae :SD2=af goto1
+
+
+//Scanner_2_Ores_Tiers code made by carlosChanpio70 / Carlos & Nax//
