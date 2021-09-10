@@ -1,19 +1,19 @@
-a="\n" b=a+"Tier: " c=a+"Rock Score:"+a d="/100" e=a+"Efficiency:"+a
-f=a*2+" Offline" g=a*2+"No Target" h="|" i=" Total" j=1728 k=100
-l=6557 m=7945 n=11555 o=12851 p=17763 q=19603 r=45929 s=31351 t=215837
-u=468058 v=20 w=53 x=69 y=69 z=38 aa=37 ab=39 ac=13 ad=69 ae=69
-if:Scanbutton!=1thengoto18end :Scan=1
-if:Scan==1thengoto6end af=:SR ifaf==0thenag=g ah=ag goto19end :I=0
-ai=:M-aj ak=:V al=ak*j/1000*1000 am=ai+a+ak+an
-ifaf==1thenao=am+a*2+al+h+a+al+i end ifaf<1thengoto11end :I=1 ap=:M-aj
-aq=:V ar=aq*j/1000*1000 as=al+ar am=am+a+ap+a+aq+an
-ao=am+a+al+h+ar+a+as+i
-at=ak+aq ifat<=l thenau=1 av=v goto17end
-ifat<=m thenau=2 av=w goto17end ifat<=n thenau=3 av=x goto17end
-ifat<=o thenau=4 av=y goto17end ifat<=p thenau=5 av=z goto17end
-ifat<=q thenau=6 av=aa goto17end ifat<=s thenau=7 av=ab goto17end
-ifat<=r thenau=8 av=ac goto17end ifat<=t thenau=9 av=ad goto17end
-ifat<=u thenau=10 av=ae end
-aw=aq/ak*k ax=aw/av*k ah=b+au+e+av+a+aw+c+ax+d goto19
-ao=f ah=ag
-:SD1=ao :SD2=ah goto1
+a="\n" b="Ore" c=a+"Tier: " d=a+"Rock Score:"+a e="/100"
+f=a+"Efficiency:"+a g=a*2+" Offline" h=a*2+"No Target" i="|"
+j=" Total" k=1728 l=100 m=6557 n=7945 o=11555 p=12851 q=17763 r=19603
+s=45929 t=31351 u=215837 v=468058 w=20 x=53 y=69 z=69 aa=38 ab=37
+ac=39 ad=13 ae=69 af=69 if:SB!=1thengoto18end :Scan=1
+if:Scan==1thengoto6end ag=:Sq ifag==0thenah=h ai=ah goto19end :o=0
+aj=:e-b ak=:t al=ak*k/1000*1000 am=aj+a+ak+an
+ifag==1thenah=am+a*2+al+i+a+al+j goto11end ifag<1thengoto11end :o=1
+ao=:e-b ap=:t aq=ap*k/1000*1000 ar=al+aq
+ah=am+a+ao+a+ap+an+a+al+i+aq+a+ar+j
+as=ak+ap ifas<=m thenat=1 au=w goto17end
+ifas<=n thenat=2 au=x goto17end ifas<=o thenat=3 au=y goto17end
+ifas<=p thenat=4 au=z goto17end ifas<=q thenat=5 au=aa goto17end
+ifas<=r thenat=6 au=ab goto17end ifas<=t thenat=7 au=ac goto17end
+ifas<=s thenat=8 au=ad goto17end ifas<=u thenat=9 au=ae goto17end
+ifas<=v thenat=10 au=af end
+av=ap/ak*l aw=av/au*l ai=c+at+a+au+"% Max"+f+av+d+aw+e goto19
+ah=g ai=ah
+:SD1=ah :SD2=ai goto1
