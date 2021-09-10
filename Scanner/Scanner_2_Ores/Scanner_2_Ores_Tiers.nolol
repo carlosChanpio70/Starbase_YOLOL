@@ -42,7 +42,7 @@ if :Scan_button then
     Ore = "Ore"
     Crystal = "Crystal"
     Happy = " :D"
-    Sad = " :("
+    Sad = " D:"
     //Handles main Scan logic//
     while :Scan_Results==0 do
         :Scan = 1 

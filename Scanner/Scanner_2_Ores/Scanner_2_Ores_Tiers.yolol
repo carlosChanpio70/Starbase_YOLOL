@@ -1,7 +1,7 @@
 ifnot :SB thengoto17end a="\n" b=a+a c=" kv"+a d=100 e=1728*d f=6557
 g=7945 h=11555 i=12851 j=17763 k=19603 l=45929 m=31351 n=215837
 o=468058 p=17 q=35 r=69 s=69 t=28 u=27 v=28 w=11 x=69 y=69 z="Ore"
-aa="Crystal" ab=" :D" ac=" :("
+aa="Crystal" ab=" :D" ac=" D:"
 if:SR==0then:Scan=1 goto5end
 if:SR!=2thenad=b+"Bad Target" ae=ad goto17end :I=0 af=:M-z-aa ag=:V
 :I=1 ah=:M-z-aa ai=:V aj=ag/e*d ak=ai/e*d al=aj+ak
