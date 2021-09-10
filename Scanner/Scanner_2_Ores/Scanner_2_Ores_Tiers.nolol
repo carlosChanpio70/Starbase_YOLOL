@@ -15,7 +15,7 @@ if :Scan_button then
     line_skip2 = line_skip+line_skip
     kv = " kv"+line_skip
     P100 = 100
-    Stack = 172800
+    Stack = 1728*P100
     //Tier Volumes//
     Tier_01 = 6557
     Tier_02 = 7945

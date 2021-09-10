@@ -1,4 +1,4 @@
-ifnot :SB thengoto16end a="\n" b=a+a c=" kv"+a d=100 e=172800 f=6557
+ifnot :SB thengoto16end a="\n" b=a+a c=" kv"+a d=100 e=1728*d f=6557
 g=7945 h=11555 i=12851 j=17763 k=19603 l=45929 m=31351 n=215837
 o=468058 p=17 q=35 r=69 s=69 t=28 u=27 v=28 w=11 x=69 y=69 :Scan=1
 if:Scan==1thengoto4end z=:SR aa="Ore" ab="Crystal" ac=" :D" ad=" :("
