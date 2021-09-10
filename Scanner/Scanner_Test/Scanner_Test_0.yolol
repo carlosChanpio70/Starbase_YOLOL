@@ -1,0 +1,4 @@
+n="\n" o=" kv" p=o+n y=" Ore" z=" Crystal" a=100 b=a*1728 s1="" s2=""
+:scn=1 :ix=0 if:sq thenq=n+:mat-y-z+n :v1=:vo q+=:v1+p goto3end goto2
+if:sq<2 then:v=q goto2end :ix=1 q+=:mat-y-z+n :v2=:vo v=q+:v2+p 
+s1=(:v1/b*a) s2=(:v2/b*a) st=s1+s2 :v=v+s1+"|"+s2+n+st+" total" goto2

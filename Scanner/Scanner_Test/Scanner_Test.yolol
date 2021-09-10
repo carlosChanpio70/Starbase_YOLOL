@@ -1,14 +1,21 @@
-a="\n" b=a+"Tier:" c="% max" d="\nRock Score:\n" e="/100" f=100 g=6555
-h=7942 i=11555 j=12851 k=17761 l=19600 m=45926 n=31348 o=215837
-p=468058 q=20 r=53 s=0 t=0 u=38 v=37 w=39 x=13 y=0 z=0 aa=:V1+:V2
-ifaa<=g thenab=1 ac=g ad=q end
-ifaa<=h and aa>=g thenab=2 ac=h ad=r end
-ifaa<=i and aa>=h thenab=3 ac=i ad=s end
-ifaa<=j and aa>=i thenab=4 ac=j ad=t end
-ifaa<=k and aa>=j thenab=5 ac=k ad=u end
-ifaa<=l and aa>=k thenab=6 ac=l ad=v end
-ifaa<=m and aa>=n thenab=7 ac=m ad=w end
-ifaa<=n and aa>=l thenab=8 ac=n ad=x end
-ifaa<=o and aa>=m thenab=9 ac=o ad=y end
-ifaa<=p and aa>=o thenab=10 ac=p ad=z end ae=aa/ac*f af=:V2/:V1*f
-ag=af/ad*f ah=b+ab+a+ae+c+d+ag+e :u=ah goto1
+a="\n" b=a+"Tier: " c=a+"Rock Score:"+a d="/100" e=a+"Efficiency:"+a
+f=1728 g=100 h=6557 i=7945 j=11555 k=12851 l=17763 m=19603 n=45929
+o=31351 p=215837 q=468058 r=20 s=53 t=69 u=69 v=38 w=37 x=39 y=13 z=69
+aa=69 if:Scanbutton!=1thengoto20end :Scan=1
+if:Scan==1thengoto5end ab=:SR ifab==0thenac=a*2+"No Target" goto21end
+:I=0 ad=:M-ae af=:V ag=af*f/1000*1000
+ifab==1thenah=ad+a+af+ai goto9end
+ifab>=1then:I=1 aj=:M-ae ak=:V al=ah+a+aj+a+ak+ai end
+am=af+ak ifam<=h thenan=1 ao=h ap=r goto19end
+ifam<=i and am>h thenan=2 ao=i ap=s goto19end
+ifam<=j and am>i thenan=3 ao=j ap=t goto19end
+ifam<=k and am>j thenan=4 ao=k ap=u goto19end
+ifam<=l and am>k thenan=5 ao=l ap=v goto19end
+ifam<=m and am>l thenan=6 ao=m ap=w goto19end
+ifam<=n and am>o thenan=7 ao=n ap=x goto19end
+ifam<=o and am>m thenan=8 ao=o ap=y goto19end
+ifam<=p and am>n thenan=9 ao=p ap=z goto19end
+ifam<=q and am>p thenan=10 ao=q ap=aa end
+aq=ak/af*g ar=aq/ap*g as=b+an+e+ap+"/"+aq+c+ar+d :SD2=as goto21
+at=a*2+" Offline"
+:SD1=at :SD2=as goto1
