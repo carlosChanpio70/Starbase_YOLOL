@@ -90,8 +90,9 @@ if :Scan_button then
         Display_2 = D1+EF+"%\nRock Score:\n"+((EF/Max_EF)*P100)+"/100"
     end
 else
-    Display_1 = line_skip2+" Offline"
+    Display_1 = line_skip2+"  Offline"
     Display_2 = Display_1
 end
 :Display_1 = Display_1
 :Display_2 = Display_2
+Credits = "Made by Nax and Carlos"

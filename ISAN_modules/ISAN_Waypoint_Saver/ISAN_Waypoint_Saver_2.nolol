@@ -1,12 +1,6 @@
 define :Selection=:SL
 define :ISAN_Offline=:IS
 define :ISAN_Off_Text = :ISD
-define D1=:WD1
-define D2=:WD2
-define D3=:WD3
-define D4=:WD4
-define D5=:WD5
-define D6=:WD6
 
 //Handle Streamer Mode//
 if :ISAN_Offline==1 then
