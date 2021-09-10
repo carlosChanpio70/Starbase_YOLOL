@@ -8,62 +8,52 @@ define :Volume = :t
 define :Index = :o
 define :Scan_Results = :Sq
 
-line_skip = "\n"
-Ore = "Ore"
-Tier_Display = line_skip+"Tier: "
-Score_D1 = line_skip+"Rock Score:"+line_skip
-Score_D2 = "/100"
-Effy = line_skip+"Efficiency:"+line_skip
-Off = line_skip*2+" Offline"
-No_Target = line_skip*2+"No Target"
-slash = "|"
-Total_ST = " Total"
-Stack = 1728
-Perc = 100
-Tier_01 = 6557
-Tier_02 = 7945
-Tier_03 = 11555
-Tier_04 = 12851
-Tier_05 = 17763
-Tier_06 = 19603
-Tier_07 = 45929
-Tier_08 = 31351
-Tier_09 = 215837
-Tier_10 = 468058
-MaxEF_01 = 20
-MaxEF_02 = 53
-MaxEF_03 = 69
-MaxEF_04 = 69
-MaxEF_05 = 38
-MaxEF_06 = 37
-MaxEF_07 = 39
-MaxEF_08 = 13
-MaxEF_09 = 69
-MaxEF_10 = 69
-if :Scan_button==1 then 
+if :Scan_button then
+    line_skip = "\n"
+    line_skip2 = line_skip+line_skip
+    kv = " kv"+line_skip
+    P100 = 100
+    Stack = 172800
+    Tier_01 = 6557
+    Tier_02 = 7945
+    Tier_03 = 11555
+    Tier_04 = 12851
+    Tier_05 = 17763
+    Tier_06 = 19603
+    Tier_07 = 45929
+    Tier_08 = 31351
+    Tier_09 = 215837
+    Tier_10 = 468058
+    MaxEF_01 = 20
+    MaxEF_02 = 53
+    MaxEF_03 = 69
+    MaxEF_04 = 69
+    MaxEF_05 = 38
+    MaxEF_06 = 37
+    MaxEF_07 = 39
+    MaxEF_08 = 13
+    MaxEF_09 = 69
+    MaxEF_10 = 69
     :Scan = 1
     logic_wait(:Scan==1)
     Scan_Results = :Scan_Results
-    if Scan_Results==0 then
-        Display_1=No_Target
+    Ore = "Ore"
+    Crystal = "Crystal"
+    if Scan_Results!=2 then
+        Display_1 = line_skip2+"No Target"
         Display_2 = Display_1
     else
         :Index=0
-        M1=(:Material-Ore)
-        V1=:Volume
-        Stack_Res_1=math_floor(V1*Stack)
-        DR1=M1+line_skip+V1+kv
-        if Scan_Results ==1 then
-            Display_1 = DR1+line_skip*2+Stack_Res_1+slash+line_skip+Stack_Res_1+Total_ST
-        else if Scan_Results>=1 then
-            :Index=1
-            M2=(:Material-Ore)
-            V2=:Volume
-            Stack_Res_2=math_floor(V2*Stack)
-            Total_Stacks = Stack_Res_1+Stack_Res_2
-            Display_1 = DR1+line_skip+M2+line_skip+V2+kv+line_skip+Stack_Res_1+slash+Stack_Res_2+line_skip+Total_Stacks+Total_ST
-        end
-        Volume=(V1+V2)
+        M1 = (:Material-Ore-Crystal)
+        V1 = :Volume $
+        :Index=1
+        M2 = (:Material-Ore-Crystal)
+        V2 = :Volume
+        Stack_Res_1 = V1/Stack*P100
+        Stack_Res_2 = V2/Stack*P100
+        Total_Stacks = Stack_Res_1+Stack_Res_2
+        Display_1 = M1+line_skip+V1+kv+M2+line_skip+V2+kv+Stack_Res_1+"|"+Stack_Res_2+line_skip+Total_Stacks+" Total"
+        Volume = (V1+V2)
         if Volume<=Tier_01 then
             Tier=1
             Max_EF = MaxEF_01
@@ -95,12 +85,12 @@ if :Scan_button==1 then
             Tier=10
             Max_EF = MaxEF_10
         end
-        EF = (V2/V1)*Perc
-        Score = (EF/Max_EF)*Perc
-        Display_2 = Tier_Display+Tier+line_skip+Max_EF+"% Max"+Effy+EF+Score_D1+Score+Score_D2
+        EF = (V2/V1)*P100
+        D1 = "\nTier: "+Tier+line_skip+Max_EF+"% Max\nEfficiency:\n" 
+        Display_2 = D1+EF+"%\nRock Score:\n"+((EF/Max_EF)*P100)+"/100"
     end
 else
-    Display_1 = Off
+    Display_1 = line_skip2+" Offline"
     Display_2 = Display_1
 end
 :Display_1 = Display_1
