@@ -1,0 +1,20 @@
+a=0 b=0 //Turn on features here//
+c="kv" d="Ore" e="Stacks" f="\n" g=f+f h=100 b=172800
+if:Scanbutton!=1thengoto9end ifa!=1thengoto5end i=0
+ifi<=a theni=i+1 goto4end i=0
+if:SR==0then:Scan=1 goto5end if:SR==0thenj=f*2+"No Target" goto9end
+:I=0 k=:M-d l=:V ifb==1thenl=l/b*h m=k+f+l+e elsem=k+f+l+c end j=m
+if:SR<1thengoto9end :I=1 n=:M-d o=:V
+ifb==1theno=o/b*h j=m+f+n+f+o+e elsej=m+f+n+f+o+c end
+if:SB==0thenj=g+"  Offline"end :SD1=j :RR=1 goto1
+
+
+
+
+
+
+
+
+
+
+//Scanner_2_Ores_Standalone code made by carlosChanpio70 / Carlos//

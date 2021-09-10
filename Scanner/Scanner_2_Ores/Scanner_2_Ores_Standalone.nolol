@@ -1,0 +1,66 @@
+include "std/logic"
+define :Scan_Button = :SB
+define :Display_1 = :SD1
+define :Material = :M
+define :Volume = :V
+define :Index = :I
+define :Scan_Results = :SR
+define :Delay=:SDelay*5
+define :Reset_Results = :RR
+
+Delay = 0; Stack = 0$ //Turn on features here//
+kv = "kv"
+Ore = "Ore"
+Stacks = "Stacks"
+Line_Skip="\n"
+Line_Skip2=Line_Skip+Line_Skip
+P100 = 100
+Stack = 172800
+if :Scanbutton==1 then
+    //Handles delay//
+    If Delay == 1 then
+            Loop=0
+        while Loop<=Delay do
+            Loop=Loop+1
+        end
+        Loop=0
+    end
+    //Handles main Scan logic//
+    while :Scan_Results==0 do
+        :Scan = 1
+    end
+    if :Scan_Results==0 then
+        Display=Line_Skip*2+"No Target"
+    else
+        :Index=0
+        M1 = (:Material-Ore)
+        V1 = :Volume
+        if Stack==1 then
+            V1 = V1/Stack*P100
+            D1 = M1+Line_Skip+V1+Stacks
+        else
+            D1=M1+Line_Skip+V1+kv
+        end
+        Display=D1
+        if :Scan_Results>=1 then
+            :Index=1
+            M2 = (:Material-Ore)
+            V2 = :Volume
+            if Stack==1 then
+                V2 = V2/Stack*P100
+                Display=D1+Line_Skip+M2+Line_Skip+V2+Stacks
+            else
+                Display=D1+Line_Skip+M2+Line_Skip+V2+kv
+            end
+        end
+    end
+end
+//Displays when Offline//
+if :Scan_Button==0 then
+    Display=Line_Skip2+"  Offline"
+end
+//Output onto Display//
+:Display_1 = Display
+//Reset//
+:Reset_Results = 1
+//Scanner_2_Ores_Standalone code made by carlosChanpio70 / Carlos//
