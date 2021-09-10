@@ -27,14 +27,14 @@ if :Scan_button then
     Tier_09 = 215837
     Tier_10 = 468058
     //Tier Max Efficiency ratings//
-    MaxEF_01 = 20
-    MaxEF_02 = 53
+    MaxEF_01 = 17
+    MaxEF_02 = 35
     MaxEF_03 = 69
     MaxEF_04 = 69
-    MaxEF_05 = 38
-    MaxEF_06 = 37
-    MaxEF_07 = 39
-    MaxEF_08 = 13
+    MaxEF_05 = 28
+    MaxEF_06 = 27
+    MaxEF_07 = 28
+    MaxEF_08 = 11
     MaxEF_09 = 69
     MaxEF_10 = 69
     //Scans//
@@ -99,25 +99,21 @@ if :Scan_button then
             Max_EF = MaxEF_10
         end
         // Efficiency and score calculus//
-        EF = (V2/V1)*P100
+        EF = (V2/Volume)*P100
         RScore = (EF/Max_EF)*P100
-        D100 = "/100"
-        Score_results = RScore+D100
+        Score_results = RScore + "/100"
         // :D //
-        if RScore <= 30 then
-          Score_results = RScore + D100 + Sad
-        end
-        if RScore >= 70 then
-          Score_results = RScore + D100 + Happy
-        end
-        if RScore >= 100 then
-          Score_results = "PERFECT"
+        if RScore <= 50 then
+          Score_results = Score_results + Sad
+        else
+          Score_results = Score_results + Happy
         end 
         //Display Results//
         D1 = "\nTier: "
         Display_2 = D1+Tier+line_skip+Max_EF+"% Max\nEfficiency:\n" +EF+"%\nRock Score:\n"+Score_results
     end
-else
+end
+if :Scan_button==0 then
     //Display if Offline//
     Display_1 = line_skip2+"  Offline"
     Display_2 = Display_1
