@@ -15,10 +15,11 @@ Line_Skip2=Line_Skip+Line_Skip
 P100 = 100
 Stack = 172800
 if :Scanbutton==1 then
-    :Scan=1
-    logic_wait(:Scan==1)
-    Scan_Results = :ScanRes
-    if Scan_Results==0 then
+    //Handles main Scan logic//
+    while :Scan_Results==0 do
+        :Scan = 1
+    end
+    if :Scan_Results==0 then
         Display=Line_Skip*2+"No Target"
     else
         :Index=0
@@ -26,7 +27,7 @@ if :Scanbutton==1 then
         V1 = :Volume/Stack*P100
         D1 = M1+Line_Skip+V1+Stacks
         Display=D1
-        if Scan_Results>=1 then
+        if :Scan_Results>=1 then
             :Index=1
             M2=(:Material-Ore)
             V2 = :Volume/Stack*P100

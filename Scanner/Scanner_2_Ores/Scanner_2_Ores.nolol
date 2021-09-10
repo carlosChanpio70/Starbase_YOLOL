@@ -12,17 +12,18 @@ Ore = "Ore"
 Line_Skip="\n"
 Line_Skip2=Line_Skip+Line_Skip
 if :Scan_Button then
-    :Scan=1
-    logic_wait(:Scan==1)
-    Scan_Results = :ScanRes
-    if Scan_Results==0 then
+    //Handles main Scan logic//
+    while :Scan_Results==0 do
+        :Scan = 1
+    end
+    if :Scan_Results==0 then
         Display=Line_Skip2+"No Target"
     else
         :Index=0
         M1=(:Material-Ore)
         V1=:Volume
         D1=M1+Line_Skip+V1+kv
-        if Scan_Results>=1 then
+        if :Scan_Results>=1 then
             :Index=1
             M2=(:Material-Ore)
             V2=:Volume

@@ -1,9 +1,9 @@
 a="kv" b="Ore" c="Stacks" d="\n" e=d+d f=100 g=172800
-if:Scanbutton!=1thengoto6end :Scan=1
-if:Scan==1thengoto3end h=:ScanRes
-ifh==0theni=d*2+"No Target" goto6end :I=0 j=:M-b k=:V/g*f l=j+d+k+c
-i=l ifh>=1then:I=1 m=:M-b n=:V/g*f i=l+d+m+d+n+c end
-if:SB==0theni=e+"  Offline"end :SD1=i :RR=1 goto1
+if:Scanbutton!=1thengoto6end
+if:SR==0then:Scan=1 goto3end if:SR==0thenh=d*2+"No Target" goto6end
+:I=0 i=:M-b j=:V/g*f k=i+d+j+c h=k
+if:SR>=1then:I=1 l=:M-b m=:V/g*f h=k+d+l+d+m+c end
+if:SB==0thenh=e+"  Offline"end :SD1=h :RR=1 goto1
 
 
 

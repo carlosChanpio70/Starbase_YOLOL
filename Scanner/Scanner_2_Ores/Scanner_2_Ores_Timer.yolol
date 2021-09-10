@@ -1,10 +1,10 @@
-a=:SDelay*5 b="kv" c="Ore" d="\n" e=d+d if:Scanbutton!=1thengoto7end
-f=0
-iff<=a thenf=f+1 goto3end :Scan=1
-if:Scan==1thengoto4end g=:ScanRes ifg==0thenh=e+"No Target" goto7end
-:I=0 i=:M-c j=:V k=i+d+j+b
-ifg>=1then:I=1 l=:M-c m=:V h=k+d+l+d+m+b end
-if:SB==0thenh=e+"  Offline"end :SD1=h :RR=1 goto1
+a=:SDelay*5 b="kv" c="Ore" d="\n" e=d+d if:SB!=1thengoto6end f=0
+iff<=a thenf=f+1 goto2end
+if:SR==0then:Scan=1 goto3end if:SR==0theng=e+"No Target" goto6end
+:I=0 h=:M-c i=:V j=h+d+i+b
+if:SR>=1then:I=1 k=:M-c l=:V g=j+d+k+d+l+b end
+if:SB==0theng=e+"  Offline"end :SD1=g :RR=1 goto1
+
 
 
 

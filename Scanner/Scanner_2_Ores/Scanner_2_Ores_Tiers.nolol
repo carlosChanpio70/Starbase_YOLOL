@@ -38,19 +38,18 @@ if :Scan_button then
     MaxEF_08 = 11
     MaxEF_09 = 69
     MaxEF_10 = 69
-    //Scans//
-    :Scan = 1
-    logic_wait(:Scan==1)
-    Scan_Results = :Scan_Results
     //Sets Variables//
     Ore = "Ore"
     Crystal = "Crystal"
     Happy = " :D"
     Sad = " :("
     //Handles main Scan logic//
-    if Scan_Results!=2 then
-        //Handle no asteroid selected//
-        Display_1 = line_skip2+"No Target"
+    while :Scan_Results==0 do
+        :Scan = 1
+    end
+    if :Scan_Results!=2 then
+        //Handle no asteroid scanned//
+        Display_1 = line_skip2+"Bad Target"
         Display_2 = Display_1
     else
         //Scanner Results handling//

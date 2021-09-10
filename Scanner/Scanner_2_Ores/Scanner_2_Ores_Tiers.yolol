@@ -1,20 +1,20 @@
-ifnot :SB thengoto16end a="\n" b=a+a c=" kv"+a d=100 e=1728*d f=6557
+ifnot :SB thengoto17end a="\n" b=a+a c=" kv"+a d=100 e=1728*d f=6557
 g=7945 h=11555 i=12851 j=17763 k=19603 l=45929 m=31351 n=215837
-o=468058 p=17 q=35 r=69 s=69 t=28 u=27 v=28 w=11 x=69 y=69 :Scan=1
-if:Scan==1thengoto4end z=:SR aa="Ore" ab="Crystal" ac=" :D" ad=" :("
-ifz!=2thenae=b+"No Target" af=ae goto16end :I=0 ag=:M-aa-ab ah=:V
-:I=1 ai=:M-aa-ab aj=:V ak=ah/e*d al=aj/e*d am=ak+al
-ae=ag+a+ah+c+ai+a+aj+c+ak+"|"+al+a+am+" Total" an=ah+aj
-ifan<=f thenao=1 ap=p goto13end ifan<=g thenao=2 ap=q goto13end
-ifan<=h thenao=3 ap=r goto13end ifan<=i thenao=4 ap=s goto13end
-ifan<=j thenao=5 ap=t goto13end ifan<=k thenao=6 ap=u goto13end
-ifan<=m thenao=8 ap=w goto13end ifan<=l thenao=7 ap=v goto13end
-ifan<=n thenao=9 ap=x goto13end ifan<=o thenao=10 ap=y end
-aq=aj/an*d ar=aq/ap*d as=ar+"/100"
-ifar<=50thenas=as+ad elseas=as+ac end at="\nTier: "
-af=at+ao+a+ap+"% Max\nEfficiency:\n"+aq+"%\nRock Score:\n"+as
-if:SB==0thenae=b+"  Offline" af=ae end :SD1=ae :SD2=af :RR=1 goto1
-
+o=468058 p=17 q=35 r=69 s=69 t=28 u=27 v=28 w=11 x=69 y=69 z="Ore"
+aa="Crystal" ab=" :D" ac=" :("
+if:SR==0then:Scan=1 goto5end
+if:SR!=2thenad=b+"Bad Target" ae=ad goto17end :I=0 af=:M-z-aa ag=:V
+:I=1 ah=:M-z-aa ai=:V aj=ag/e*d ak=ai/e*d al=aj+ak
+ad=af+a+ag+c+ah+a+ai+c+aj+"|"+ak+a+al+" Total" am=ag+ai
+ifam<=f thenan=1 ao=p goto14end ifam<=g thenan=2 ao=q goto14end
+ifam<=h thenan=3 ao=r goto14end ifam<=i thenan=4 ao=s goto14end
+ifam<=j thenan=5 ao=t goto14end ifam<=k thenan=6 ao=u goto14end
+ifam<=m thenan=8 ao=w goto14end ifam<=l thenan=7 ao=v goto14end
+ifam<=n thenan=9 ao=x goto14end ifam<=o thenan=10 ao=y end
+ap=ai/am*d aq=ap/ao*d ar=aq+"/100"
+ifaq<=50thenar=ar+ac elsear=ar+ab end as="\nTier: "
+ae=as+an+a+ao+"% Max\nEfficiency:\n"+ap+"%\nRock Score:\n"+ar
+if:SB==0thenad=b+"  Offline" ae=ad end :SD1=ad :SD2=ae :RR=1 goto1
 
 
 //Scanner_2_Ores_Tiers code made by carlosChanpio70 / Carlos & Nax//

@@ -1,8 +1,8 @@
-a="kv" b="Ore" c="\n" d=c+c ifnot :SB thengoto5end :Scan=1
-if:Scan==1thengoto2end e=:ScanRes ife==0thenf=d+"No Target" goto5end
-:I=0 g=:M-b h=:V i=g+c+h+a
-ife>=1then:I=1 j=:M-b k=:V f=i+c+j+c+k+a end
-if:SB==0thenf=d+"  Offline"end :Display1=f :RR=1 goto1
+a="kv" b="Ore" c="\n" d=c+c ifnot :SB thengoto5end
+if:SR==0then:Scan=1 goto2end if:SR==0thene=d+"No Target" goto5end
+:I=0 f=:M-b g=:V h=f+c+g+a
+if:SR>=1then:I=1 i=:M-b j=:V e=h+c+i+c+j+a end
+if:SB==0thene=d+"  Offline"end :Display1=e :RR=1 goto1
 
 
 
@@ -17,4 +17,4 @@ if:SB==0thenf=d+"  Offline"end :Display1=f :RR=1 goto1
 
 
 
-//Scanner_2_Ores code made by carlosChanpio70 / Carlos//
+//Scanner_2_Ores_Stacks code made by carlosChanpio70 / Carlos//
