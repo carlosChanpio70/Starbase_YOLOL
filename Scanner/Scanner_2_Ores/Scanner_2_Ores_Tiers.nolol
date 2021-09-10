@@ -6,6 +6,7 @@ define :Material = :M
 define :Volume = :V
 define :Index = :I
 define :Scan_Results = :SR
+define :Reset_Results = :RR
 
 //Checks for the Scan button status//
 if :Scan_button then
@@ -121,4 +122,6 @@ end
 //Output Display//
 :Display_1 = Display_1
 :Display_2 = Display_2
+//Reset//
+:Reset_Results = 1
 //Scanner_2_Ores_Tiers code made by carlosChanpio70 / Carlos & Nax//

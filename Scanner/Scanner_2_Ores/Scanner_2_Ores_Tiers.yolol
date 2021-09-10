@@ -13,7 +13,7 @@ ifan<=n thenao=9 ap=x goto13end ifan<=o thenao=10 ap=y end
 aq=aj/an*d ar=aq/ap*d as=ar+"/100"
 ifar<=50thenas=as+ad elseas=as+ac end at="\nTier: "
 af=at+ao+a+ap+"% Max\nEfficiency:\n"+aq+"%\nRock Score:\n"+as
-if:SB==0thenae=b+"  Offline" af=ae end :SD1=ae :SD2=af goto1
+if:SB==0thenae=b+"  Offline" af=ae end :SD1=ae :SD2=af :RR=1 goto1
 
 
 

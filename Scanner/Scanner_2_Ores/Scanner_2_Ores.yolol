@@ -1,9 +1,9 @@
 a="kv" b="Ore" c="\n" d=c+c ifnot :SB thengoto5end :Scan=1
-if:Scan==1thengoto2end e=:ScanRes ife==0thenf=d+"No Target" goto6end
+if:Scan==1thengoto2end e=:ScanRes ife==0thenf=d+"No Target" goto5end
 :I=0 g=:M-b h=:V i=g+c+h+a
-ife>=1then:I=1 j=:M-b k=:V f=i+c+j+c+k+a end goto6
-f=d+"  Offline"
-:Display1=f goto1
+ife>=1then:I=1 j=:M-b k=:V f=i+c+j+c+k+a end
+if:SB==0thenf=d+"  Offline"end :Display1=f :RR=1 goto1
+
 
 
 
