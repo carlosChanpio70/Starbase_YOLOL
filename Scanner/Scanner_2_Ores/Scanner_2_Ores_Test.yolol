@@ -1,4 +1,4 @@
-ifnot :SB thengoto12end a="\n" b=a+a c="% Max\nEfficiency:" d="kv"+a
+ifnot :SB thengoto12end a="\n" b=a+a c="% Max\nEfficiency:" d=" kv"+a
 if:SR==0then:Scan=1 goto2end e=100 f="Ore" g="Crystal" h=a+"Tier: "
 if:SR!=2theni=b+"Bad Target" j=i goto12end :I=0 k=:M-f-g+a l=:V
 :I=1 m=:M-f-g+a n=:V o=l/(1728*e)*e p=n/(1728*e)*e q=a+(o+p)

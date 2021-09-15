@@ -44,7 +44,7 @@ if :Scan_button then
     line_skip = "\n"
     line_skip2 = line_skip+line_skip
     Max_EF_tx = "% Max\nEfficiency:"
-    kv = "kv"+line_skip
+    kv = " kv"+line_skip
     while :Scan_Results==0 do
         :Scan = 1
     end
