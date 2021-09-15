@@ -108,7 +108,7 @@ if :Scan_button then
             Max_EF = MaxEF_10
         end
         // Efficiency and score calculus//
-        EF = line_skip+(V2/Volume)*P100
+        EF = (V2/Volume)*P100
         RScore = (EF/Max_EF)*P100
         Score_R = line_skip+(RScore + "/100")
         // :D //
@@ -118,7 +118,7 @@ if :Scan_button then
           Score_results = Score_R + Happy
         end
         //Display Results//
-        Display_2 = Tier_tx+Tier+Max_EF+Max_EF_tx+EF+"%\nRock Score:"+Score_results
+        Display_2 = Tier_tx+Tier+Max_EF+Max_EF_tx+line_skip+EF+"%\nRock Score:"+Score_results
     end
 end
 if :Scan_button==0 then
@@ -131,4 +131,4 @@ end
 :Display_2 = Display_2
 //Reset//
 :Reset_Results = 1
-//Scanner_2_Ores_Tiers code made by carlosChanpio70 / Carlos & Nax// / Carlos & Nax//
+//Scanner_2_Ores_Tiers code made by carlosChanpio70 / Carlos & Nax//
