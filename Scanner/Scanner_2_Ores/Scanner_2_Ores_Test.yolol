@@ -1,15 +1,12 @@
-ifnot :SB thengoto15end a="\n" b=a+a c=" kv"+a d=100 e=1728*d f="Ore"
-g="Crystal"
-if:SR==0then:Scan=1 goto3end
-if:SR!=2thenh=b+"Bad Target" i=h goto15end :I=0 j=:M-f-g k=:V
-:I=1 l=:M-f-g m=:V n=k/e*d o=m/e*d p=n+o
-h=j+a+k+c+l+a+m+c+n+"|"+o+a+p+" Total" q=k+m r=q-6557 s=q-7945
-t=q-11555 u=q-12851 v=q-17763 w=q-19603 x=q-45929 y=q-31351 z=q-215837
-aa=q-468058 ifr<=0thenab=1 ac=17end ifs<=0thenab=2 ac=35end
-ift<=0thenab=3 ac=69end ifu<=0thenab=4 ac=69end
-ifv<=0thenab=5 ac=28end ifw<=0thenab=6 ac=27end
-ifx<=0thenab=8 ac=11end ify<=0thenab=7 ac=28end
-ifz<=0thenab=9 ac=69end ifaa<=0thenab=10 ac=69end ad=m/q*d ae=ad/ac*d
-af=ae+"/100" ifae<=50thenaf=af+" D:"elseaf=af+" :D"end ag="\nTier: "
-i=ag+ab+a+ac+"% Max\nEfficiency:\n"+ad+"%\nRock Score:\n"+af
-if:SB==0thenh=b+"  Offline" i=h end :SD1=h :SD2=i :RR=1 goto1
+ifnot :SB thengoto12end a="\n" b=a+a c="% Max\nEfficiency:" d="kv"+a
+if:SR==0then:Scan=1 goto2end e=100 f="Ore" g="Crystal" h=a+"Tier: "
+if:SR!=2theni=b+"Bad Target" j=i goto12end :I=0 k=:M-f-g+a l=:V
+:I=1 m=:M-f-g+a n=:V o=l/(1728*e)*e p=n/(1728*e)*e q=a+(o+p)
+i=k+l+d+m+n+d+o+"|"+p+q+" Total" r=l+n if(r-6557)<=0thens=1+a t=17end
+if(r-7945)<=0thens=2+a t=35end if(r-11555)<=0thens=3+a t=69end
+if(r-12851)<=0thens=4+a t=69end if(r-17763)<=0thens=5+a t=28end
+if(r-19603)<=0thens=6+a t=27end if(r-31351)<=0thens=8+a t=11end
+if(r-45929)<=0thens=7+a t=28end if(r-215837)<=0thens=9+a t=69end
+if(r-468058)<=0thens=10+a t=69end u=a+n/r*e v=u/t*e w=a+(v+"/100")
+ifv<=50thenw=w+" D:"elsew=w+" :D"end j=h+s+t+c+u+"%\nRock Score:"+w
+if:SB==0theni=b+"  Offline" j=i end :SD1=i :SD2=j :RR=1 goto1

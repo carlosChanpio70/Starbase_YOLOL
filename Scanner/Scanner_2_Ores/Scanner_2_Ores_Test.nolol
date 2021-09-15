@@ -37,16 +37,16 @@ if :Scan_button then
     //Sets variables//
     line_skip = "\n"
     line_skip2 = line_skip+line_skip
-    kv = " kv"+line_skip
+    Max_EF_tx = "% Max\nEfficiency:"
+    kv = "kv"+line_skip
+    while :Scan_Results==0 do
+        :Scan = 1
+    end
+    //Sets variables//
     P100 = 100
-    Stack = 1728*P100
-    //Sets Variables//
     Ore = "Ore"
     Crystal = "Crystal"
-    //Handles main Scan logic//
-    while :Scan_Results==0 do
-        :Scan = 1 
-    end
+    Tier_tx = line_skip+"Tier: "
     if :Scan_Results!=2 then
         //Handle no asteroid scanned//
         Display_1 = line_skip2+"Bad Target"
@@ -54,74 +54,63 @@ if :Scan_button then
     else
         //Scanner Results handling//
         :Index = 0
-        M1 = (:Material-Ore-Crystal)
+        M1 = (:Material-Ore-Crystal)+line_skip
         V1 = :Volume $
         :Index = 1
-        M2 = (:Material-Ore-Crystal)
+        M2 = (:Material-Ore-Crystal)+line_skip
         V2 = :Volume
         //Stack calculations//
-        Stack_Res_1 = V1/Stack*P100
-        Stack_Res_2 = V2/Stack*P100
-        Total_Stacks = Stack_Res_1+Stack_Res_2
+        Stack_Res_1 = V1/(1728*P100)*P100
+        Stack_Res_2 = V2/(1728*P100)*P100
+        Total_Stacks = line_skip+(Stack_Res_1+Stack_Res_2)
         //Display Scan Results//
-        Display_1 = M1+line_skip+V1+kv+M2+line_skip+V2+kv+Stack_Res_1+"|"+Stack_Res_2+line_skip+Total_Stacks+" Total"
+        Display_1 = M1+V1+kv+M2+V2+kv+Stack_Res_1+"|"+Stack_Res_2+Total_Stacks+" Total"
         Volume = (V1+V2)
         //Tier selection//
-        Tier_Res01 = (Volume-Tier_01)
-        Tier_Res02 = (Volume-Tier_02)
-        Tier_Res03 = (Volume-Tier_03)
-        Tier_Res04 = (Volume-Tier_04)
-        Tier_Res05 = (Volume-Tier_05)
-        Tier_Res06 = (Volume-Tier_06)
-        Tier_Res07 = (Volume-Tier_07)
-        Tier_Res08 = (Volume-Tier_08)
-        Tier_Res09 = (Volume-Tier_09)
-        Tier_Res10 = (Volume-Tier_10)
-        if Tier_Res01<=0 then
-            Tier=1
+        if (Volume-Tier_01)<=0 then
+            Tier=1+line_skip
             Max_EF = MaxEF_01
         end
-        if Tier_Res02<=0 then
-            Tier=2
+        if (Volume-Tier_02)<=0 then
+            Tier=2+line_skip
             Max_EF = MaxEF_02
         end
-        if Tier_Res03<=0 then
-            Tier=3
+        if (Volume-Tier_03)<=0 then
+            Tier=3+line_skip
             Max_EF = MaxEF_03
         end
-        if Tier_Res04<=0 then
-            Tier=4
+        if (Volume-Tier_04)<=0 then
+            Tier=4+line_skip
             Max_EF = MaxEF_04
         end
-        if Tier_Res05<=0 then
-            Tier=5
+        if (Volume-Tier_05)<=0 then
+            Tier=5+line_skip
             Max_EF = MaxEF_05
         end
-        if Tier_Res06<=0 then
-            Tier=6
+        if (Volume-Tier_06)<=0 then
+            Tier=6+line_skip
             Max_EF = MaxEF_06
         end
-        if Tier_Res07<=0 then
-            Tier=8  
+        if (Volume-Tier_08)<=0 then
+            Tier=8+line_skip
             Max_EF = MaxEF_08
         end
-        if Tier_Res08<=0 then
-            Tier=7
+        if (Volume-Tier_07)<=0 then
+            Tier=7+line_skip
             Max_EF = MaxEF_07
         end
-        if Tier_Res09<=0 then
-            Tier=9
+        if (Volume-Tier_09)<=0 then
+            Tier=9+line_skip
             Max_EF = MaxEF_09
         end
-        if Tier_Res10<=0 then
-            Tier=10
+        if (Volume-Tier_10)<=0 then
+            Tier=10+line_skip
             Max_EF = MaxEF_10
         end
-
         // Efficiency and score calculus//
-        EF = (V2/Volume)*P100
+        EF = line_skip+(V2/Volume)*P100
         RScore = (EF/Max_EF)*P100
-        Score_results = RScore + "/100"
+        Score_results = line_skip+(RScore + "/100")
         // :D //
         if RScore <= 50 then
           Score_results = Score_results + Sad
@@ -129,8 +118,7 @@ if :Scan_button then
           Score_results = Score_results + Happy
         end 
         //Display Results//
-        D1 = "\nTier: "
-        Display_2 = D1+Tier+line_skip+Max_EF+"% Max\nEfficiency:\n" +EF+"%\nRock Score:\n"+Score_results
+        Display_2 = Tier_tx+Tier+Max_EF+Max_EF_tx+EF+"%\nRock Score:"+Score_results
     end
 end
 if :Scan_button==0 then
