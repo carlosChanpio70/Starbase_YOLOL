@@ -10,7 +10,9 @@ define :Reset_Results = :RR
 //Tier Volumes//
 define Tier_01 = 6557
 define Tier_02 = 7945
+//Temporary//
 define Tier_03 = 11555
+//Temporary//
 define Tier_04 = 12851
 define Tier_05 = 17763
 define Tier_06 = 19603
@@ -21,13 +23,17 @@ define Tier_10 = 468058
 //Tier Max Efficiency ratings//
 define MaxEF_01 = 17
 define MaxEF_02 = 35
+//Temporary//
 define MaxEF_03 = 69
+//Temporary//
 define MaxEF_04 = 69
 define MaxEF_05 = 28
 define MaxEF_06 = 27
 define MaxEF_07 = 28
 define MaxEF_08 = 11
+//Temporary//
 define MaxEF_09 = 69
+//Temporary//
 define MaxEF_10 = 69
 define Happy = " :D"
 define Sad = " D:"
