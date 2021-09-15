@@ -1,20 +1,20 @@
-ifnot :SB thengoto17end a="\n" b=a+a c=" kv"+a d=100 e=1728*d f=6557
-g=7945 h=11555 i=12851 j=17763 k=19603 l=45929 m=31351 n=215837
-o=468058 p=17 q=35 r=69 s=69 t=28 u=27 v=28 w=11 x=69 y=69 z="Ore"
-aa="Crystal" ab=" :D" ac=" D:"
-if:SR==0then:Scan=1 goto5end
-if:SR!=2thenad=b+"Bad Target" ae=ad goto17end :I=0 af=:M-z-aa ag=:V
-:I=1 ah=:M-z-aa ai=:V aj=ag/e*d ak=ai/e*d al=aj+ak
-ad=af+a+ag+c+ah+a+ai+c+aj+"|"+ak+a+al+" Total" am=ag+ai
-ifam<=f thenan=1 ao=p goto14end ifam<=g thenan=2 ao=q goto14end
-ifam<=h thenan=3 ao=r goto14end ifam<=i thenan=4 ao=s goto14end
-ifam<=j thenan=5 ao=t goto14end ifam<=k thenan=6 ao=u goto14end
-ifam<=m thenan=8 ao=w goto14end ifam<=l thenan=7 ao=v goto14end
-ifam<=n thenan=9 ao=x goto14end ifam<=o thenan=10 ao=y end
-ap=ai/am*d aq=ap/ao*d ar=aq+"/100"
-ifaq<=50thenar=ar+ac elsear=ar+ab end as="\nTier: "
-ae=as+an+a+ao+"% Max\nEfficiency:\n"+ap+"%\nRock Score:\n"+ar
-if:SB==0thenad=b+"  Offline" ae=ad end :SD1=ad :SD2=ae :RR=1 goto1
+ifnot :SB thengoto12end a="\n" b=a+a c="% Max\nEfficiency:" d=" kv"+a
+if:SR==0then:Scan=1 goto2end e=100 f="Ore" g="Crystal" h=a+"Tier: "
+if:SR!=2theni=b+"Bad Target" j=i goto12end :I=0 k=:M-f-g+a l=:V
+:I=1 m=:M-f-g+a n=:V o=l/(1728*e)*e p=n/(1728*e)*e q=a+(o+p)
+i=k+l+d+m+n+d+o+"|"+p+q+" Total" r=l+n if(r-6557)>=0thens=1+a t=17end
+if(r-7945)>=0thens=2+a t=35end if(r-11555)>=0thens=3+a t=69end
+if(r-12851)>=0thens=4+a t=69end if(r-17763)>=0thens=5+a t=28end
+if(r-19603)>=0thens=6+a t=27end if(r-31351)>=0thens=8+a t=11end
+if(r-45929)>=0thens=7+a t=28end if(r-215837)>=0thens=9+a t=69end
+if(r-468058)>=0thens=10+a t=69end u=n/r*e v=u/t*e w=a+(v+"/100")
+ifv<=50thenx=w+" D:"elsex=w+" :D"end j=h+s+t+c+a+u+"%\nRock Score:"+x
+if:SB==0theni=b+"  Offline" j=i end :SD1=i :SD2=j :RR=1 goto1
+
+
+
+
+
 
 
 //Scanner_2_Ores_Tiers code made by carlosChanpio70 / Carlos & Nax//
