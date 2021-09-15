@@ -1,0 +1,146 @@
+include "std/logic"
+define :Scan_Button = :SB
+define :Display_1 = :SD1
+define :Display_2 = :SD2
+define :Material = :M
+define :Volume = :V
+define :Index = :I
+define :Scan_Results = :SR
+define :Reset_Results = :RR
+//Tier Volumes//
+define Tier_01 = 6557
+define Tier_02 = 7945
+define Tier_03 = 11555
+define Tier_04 = 12851
+define Tier_05 = 17763
+define Tier_06 = 19603
+define Tier_07 = 45929
+define Tier_08 = 31351
+define Tier_09 = 215837
+define Tier_10 = 468058
+//Tier Max Efficiency ratings//
+define MaxEF_01 = 17
+define MaxEF_02 = 35
+define MaxEF_03 = 69
+define MaxEF_04 = 69
+define MaxEF_05 = 28
+define MaxEF_06 = 27
+define MaxEF_07 = 28
+define MaxEF_08 = 11
+define MaxEF_09 = 69
+define MaxEF_10 = 69
+define Happy = " :D"
+define Sad = " D:"
+
+//Checks for the Scan button status//
+if :Scan_button then
+    //Sets variables//
+    line_skip = "\n"
+    line_skip2 = line_skip+line_skip
+    kv = " kv"+line_skip
+    P100 = 100
+    Stack = 1728*P100
+    //Sets Variables//
+    Ore = "Ore"
+    Crystal = "Crystal"
+    //Handles main Scan logic//
+    while :Scan_Results==0 do
+        :Scan = 1 
+    end
+    if :Scan_Results!=2 then
+        //Handle no asteroid scanned//
+        Display_1 = line_skip2+"Bad Target"
+        Display_2 = Display_1
+    else
+        //Scanner Results handling//
+        :Index = 0
+        M1 = (:Material-Ore-Crystal)
+        V1 = :Volume $
+        :Index = 1
+        M2 = (:Material-Ore-Crystal)
+        V2 = :Volume
+        //Stack calculations//
+        Stack_Res_1 = V1/Stack*P100
+        Stack_Res_2 = V2/Stack*P100
+        Total_Stacks = Stack_Res_1+Stack_Res_2
+        //Display Scan Results//
+        Display_1 = M1+line_skip+V1+kv+M2+line_skip+V2+kv+Stack_Res_1+"|"+Stack_Res_2+line_skip+Total_Stacks+" Total"
+        Volume = (V1+V2)
+        //Tier selection//
+        Tier_Res01 = (Volume-Tier_01)
+        Tier_Res02 = (Volume-Tier_02)
+        Tier_Res03 = (Volume-Tier_03)
+        Tier_Res04 = (Volume-Tier_04)
+        Tier_Res05 = (Volume-Tier_05)
+        Tier_Res06 = (Volume-Tier_06)
+        Tier_Res07 = (Volume-Tier_07)
+        Tier_Res08 = (Volume-Tier_08)
+        Tier_Res09 = (Volume-Tier_09)
+        Tier_Res10 = (Volume-Tier_10)
+        if Tier_Res01<=0 then
+            Tier=1
+            Max_EF = MaxEF_01
+        end
+        if Tier_Res02<=0 then
+            Tier=2
+            Max_EF = MaxEF_02
+        end
+        if Tier_Res03<=0 then
+            Tier=3
+            Max_EF = MaxEF_03
+        end
+        if Tier_Res04<=0 then
+            Tier=4
+            Max_EF = MaxEF_04
+        end
+        if Tier_Res05<=0 then
+            Tier=5
+            Max_EF = MaxEF_05
+        end
+        if Tier_Res06<=0 then
+            Tier=6
+            Max_EF = MaxEF_06
+        end
+        if Tier_Res07<=0 then
+            Tier=8  
+            Max_EF = MaxEF_08
+        end
+        if Tier_Res08<=0 then
+            Tier=7
+            Max_EF = MaxEF_07
+        end
+        if Tier_Res09<=0 then
+            Tier=9
+            Max_EF = MaxEF_09
+        end
+        if Tier_Res10<=0 then
+            Tier=10
+            Max_EF = MaxEF_10
+        end
+
+        // Efficiency and score calculus//
+        EF = (V2/Volume)*P100
+        RScore = (EF/Max_EF)*P100
+        Score_results = RScore + "/100"
+        // :D //
+        if RScore <= 50 then
+          Score_results = Score_results + Sad
+        else
+          Score_results = Score_results + Happy
+        end 
+        //Display Results//
+        D1 = "\nTier: "
+        Display_2 = D1+Tier+line_skip+Max_EF+"% Max\nEfficiency:\n" +EF+"%\nRock Score:\n"+Score_results
+    end
+end
+if :Scan_button==0 then
+    //Display if Offline//
+    Display_1 = line_skip2+"  Offline"
+    Display_2 = Display_1
+end
+//Output Display//
+:Display_1 = Display_1
+:Display_2 = Display_2
+//Reset//
+:Reset_Results = 1
+//Scanner_2_Ores_Tiers code made by carlosChanpio70 / Carlos & Nax//

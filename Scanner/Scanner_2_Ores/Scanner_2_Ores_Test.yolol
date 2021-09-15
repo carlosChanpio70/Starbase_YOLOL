@@ -1,0 +1,15 @@
+ifnot :SB thengoto15end a="\n" b=a+a c=" kv"+a d=100 e=1728*d f="Ore"
+g="Crystal"
+if:SR==0then:Scan=1 goto3end
+if:SR!=2thenh=b+"Bad Target" i=h goto15end :I=0 j=:M-f-g k=:V
+:I=1 l=:M-f-g m=:V n=k/e*d o=m/e*d p=n+o
+h=j+a+k+c+l+a+m+c+n+"|"+o+a+p+" Total" q=k+m r=q-6557 s=q-7945
+t=q-11555 u=q-12851 v=q-17763 w=q-19603 x=q-45929 y=q-31351 z=q-215837
+aa=q-468058 ifr<=0thenab=1 ac=17end ifs<=0thenab=2 ac=35end
+ift<=0thenab=3 ac=69end ifu<=0thenab=4 ac=69end
+ifv<=0thenab=5 ac=28end ifw<=0thenab=6 ac=27end
+ifx<=0thenab=8 ac=11end ify<=0thenab=7 ac=28end
+ifz<=0thenab=9 ac=69end ifaa<=0thenab=10 ac=69end ad=m/q*d ae=ad/ac*d
+af=ae+"/100" ifae<=50thenaf=af+" D:"elseaf=af+" :D"end ag="\nTier: "
+i=ag+ab+a+ac+"% Max\nEfficiency:\n"+ad+"%\nRock Score:\n"+af
+if:SB==0thenh=b+"  Offline" i=h end :SD1=h :SD2=i :RR=1 goto1
