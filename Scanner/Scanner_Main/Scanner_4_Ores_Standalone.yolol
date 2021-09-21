@@ -1,14 +1,14 @@
 a=0 b=0 //Turn on features here/ a is Delay mode, b is Stacks mode //
 c="kv" d="Ore" e="Crystal" f="Stacks" g="\n" h=g+g i=100 j=172800
-if:Scanbutton!=1thengoto12end ifb thenc=f end ifnot a thengoto5end
+ifnot :SB thengoto12end ifb thenc=f end ifnot a thengoto5end
 ifk<=a thenk=k+1 goto4end k=0
 if:SR==0then:Scan=1 goto5end if:SR==0thenl=g*2+"No Target" m=l end
 ifnot :SR thengoto12end :I=0 n=:M-d-e o=:V ifb theno=o/j*i end
-l=n+g+o+c if:SR<1thengoto12end :I=1 p=:M-d-e q=:V ifb thenq=q/j*i end
-l=l+g+p+g+q+c ifr<3thengoto11end :I=2 s=:M-d-e t=:V m=s+g+t+c
+l=n+g+o+c if:SR<=1thengoto12end :I=1 p=:M-d-e q=:V ifb thenq=q/j*i end
+l+=g+p+g+q+c ifr<=2thengoto11end :I=2 s=:M-d-e t=:V m=s+g+t+c
 ifb thent=t/j*i end m=s+g+t+c
-ifr>=4thenu=:M-d-e v=:V ifb thenv=v/j*i end m=m+g+u+g+v+c end
-ifr<3thenm=g*2+"No Extra Ores"end
+ifr>3thenu=:M-d-e v=:V ifb thenv=v/j*i end m=m+g+u+g+v+c end
+ifr<=2thenm=g*2+"No Extra Ores"end
 if:SB==0thenl=h+"  Offline" m=l end :SD1=l :SD2=m :RR=1 goto1
 
 

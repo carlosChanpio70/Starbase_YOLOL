@@ -1,12 +1,12 @@
 a=0 b=0 //Turn on features here/ a is Delay mode, b is Stacks mode //
-c="kv" d="Ore" e="Crystal" f="Stacks" g="\n" h=g+g i=100 j=172800
-if:Scanbutton!=1thengoto9end ifb thenc=f end ifa!=1thengoto5end k=0
-ifk<=a thenk=k+1 goto4end k=0
-if:SR==0then:Scan=1 goto5end if:SR==0thenl=g*2+"No Target"end
-ifnot :SR thengoto9end :I=0 m=:M-d-e n=:V ifb==1thenn=n/j*i end
-l=m+g+n+c
-if:SR>=1then:I=1 o=:M-d-e p=:V ifb==1thenp=p/j*i end l=q+g+o+g+p+c end
-if:SB==0thenl=h+"  Offline"end :SD1=l :RR=1 goto1
+c="kv" d="Ore" e="Crystal" f="\n" g=f+f h=100 i=172800
+ifnot :SB thengoto8end ifb thenc="Stacks"end ifnot a thengoto5end
+ifj<a thenj++ goto4end j=0
+if:SR==0then:Scan=1 goto5end if:SR==0thenk=f*2+"No Target"end
+if:SR<=0thengoto8end :I=0 l=:M-d-e m=:V ifb thenm=m/i*h end k=l+f+m+c
+if:SR>2then:I=1 n=:M-d-e o=:V ifb theno=o/i*h end k+=f+n+f+o+c end
+if:SB==0thenk=g+"  Offline"end :SD1=k :RR=1 goto1
+
 
 
 
