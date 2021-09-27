@@ -1,4 +1,4 @@
-if:AuG==1then:GenLimit=100-:Battery/100end goto1
+if:AuG then:GenLimit=100-:Battery/100end goto1
 
 
 

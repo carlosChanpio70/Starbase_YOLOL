@@ -6,8 +6,8 @@ define :Multiplication_Factor = :MF
 define :MF_Switch = :MS
 
 if :MF_Switch != 0 then 
-    :MF_Switch = 0
     :Multiplication_Factor = (:MF_Switch*10)
+    :MF_Switch = 0
 end
 if :X_Switch != 0 then
     :DX= :DX+(:X_Switch*:Multiplication_Factor)
@@ -19,10 +19,11 @@ else if :Z_Switch != 0 then
     :DZ= :DZ+(:Z_Switch*:Multiplication_Factor)
     :Z_Switch = 0
 end
-if :Reset_Button== 1 then 
+if :Reset_Button then 
     :Reset_Button = 0
     :DX= 0
     :DY= 0
     :DZ= 0
     :Multiplication_Factor = 1000
 end
+//ISAN_XYZ_Control code made by carlosChanpio70 / Carlos//

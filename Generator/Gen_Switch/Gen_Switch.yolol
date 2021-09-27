@@ -1,4 +1,4 @@
-:GenLimit=:Generator+:BT*5 goto1
+if:AuG==0then:GenLimit=:Generator+:BT*5 goto1end goto1
 
 
 

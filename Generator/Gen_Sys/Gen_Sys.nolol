@@ -1,6 +1,6 @@
-while :AuG==1 do
+while :AuG do
     :GenLimit=100-(:Battery/100)
-    while :Slep==1 do
+    while :Slep do
         :GenLimit=0
         :AuG=0
         if:Battery<=2500 then
@@ -10,3 +10,4 @@ while :AuG==1 do
         end
     end
 end
+//Gen_Sys code made by carlosChanpio70 / Carlos//

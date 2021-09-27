@@ -2,4 +2,4 @@ if:IS then:Distance=:ISD goto1end a=:DX b=:DY c=:DZ d="\n"
 ifnot a+b+c!=0thengoto5end e=:x/1000*1000 f=:y/1000*1000
 g=:z/1000*1000 h=a-e i=b-f j=c-g k=h+i+j
 :Distance=d+"X:"+h+d+"Y:"+i+d+"Z:"+j+d+"Total:"+d+k goto1
-:Distance=d*2+" No Target" goto1
+:Distance=d+d+" No Target" goto1

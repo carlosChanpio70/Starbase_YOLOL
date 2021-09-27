@@ -1,3 +1,4 @@
-if :AuG==1 then
+if :AuG then
     :GenLimit=100-(:Battery/100)
 end
+//Auto_Gen code made by carlosChanpio70 / Carlos//

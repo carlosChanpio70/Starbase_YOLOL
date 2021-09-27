@@ -1,4 +1,4 @@
-if:Slep==1 then
+if:Slep then
     :GenLimit=0
     :AuG=0
     if:Battery<=2500 then
@@ -6,3 +6,4 @@ if:Slep==1 then
     :Slep=0
     end
 end
+//Sleep Mode code made by carlosChanpio70 / Carlos//

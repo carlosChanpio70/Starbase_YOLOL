@@ -19,5 +19,5 @@ if X+Y+Z!=0 then
     D1=X2+Y2+Z2
     :Distance=line_skip+"X:"+X2+line_skip+"Y:"+Y2+line_skip+"Z:"+Z2+line_skip+"Total:"+line_skip+D1
 else
-    :Distance=line_skip*2+" No Target"
+    :Distance=line_skip+line_skip+" No Target"
 end

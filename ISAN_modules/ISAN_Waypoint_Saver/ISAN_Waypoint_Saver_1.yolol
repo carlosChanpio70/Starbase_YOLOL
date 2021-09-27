@@ -1,12 +1,12 @@
-if:WB4!=1thengoto7end :WB4=0 a=:DX b=:DY c=:DZ d=:SL
-ifd==1then:X1=a :Y1=b :Z1=c goto7end
+ifnot :WB4 thengoto7end :WB4=0 a=:DX b=:DY c=:DZ d=:SL
+ifd then:X1=a :Y1=b :Z1=c goto7end
 ifd==2then:X2=a :Y2=b :Z2=c goto7end
 ifd==3then:X3=a :Y3=b :Z3=c goto7end
 ifd==4then:X4=a :Y4=b :Z4=c goto7end
 ifd==5then:X5=a :Y5=b :Z5=c goto7end ifd==6then:X6=a :Y6=b :Z6=c end
-if:WB1==1then:WB1=0 d=d+1 ifd>6thend=1endend
-if:WB2==1then:WB2=0 d=d-1 ifd<1thend=6endend
-if:WB3==1then:WB3=0 d=0end :SL=d goto1
+if:WB1 then:WB1=0 d++ ifd>6thend=1endend
+if:WB2 then:WB2=0 d-- ifd<1thend=6endend if:WB3 then:WB3=0 d=0end
+:SL=d goto1
 
 
 
@@ -17,4 +17,4 @@ if:WB3==1then:WB3=0 d=0end :SL=d goto1
 
 
 
-//ISAN_Waypoint_Saver_1 code made by carlosChanpio70 / Carlos//
+//ISAN_Waypoint_Saver code made by carlosChanpio70 / Carlos//

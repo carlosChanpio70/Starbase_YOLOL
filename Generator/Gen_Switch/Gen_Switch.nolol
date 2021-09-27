@@ -1,1 +1,4 @@
-:GenLimit=:Generator+(:BT*5)
+while :AuG == 0 do
+    :GenLimit=:Generator+(:BT*5)
+end
+//Gen_Switch code made by carlosChanpio70 / Carlos//

@@ -1,4 +1,4 @@
-if:Slep!=1thengoto1end :GenLimit=0 :AuG=0
+ifnot :Slep thengoto1end :GenLimit=0 :AuG=0
 if:Battery<=2500then:AuG=1 :Slep=0end goto1
 
 

@@ -1,8 +1,8 @@
-if:MS!=0then:MS=0 :MF=:MS*10end
+if:MS!=0then:MF=:MS*10 :MS=0end
 if:XS!=0then:DX=:DX+:XS*:MF :XS=0 goto5end
 if:YS!=0then:DY=:DY+:YS*:MF :YS=0 goto5end
 if:ZS!=0then:DZ=:DZ+:ZS*:MF :ZS=0end
-if:RB==1then:RB=0 :DX=0 :DY=0 :DZ=0 :MF=1000end goto1
+if:RB then:RB=0 :DX=0 :DY=0 :DZ=0 :MF=1000end goto1
 
 
 

@@ -1,15 +1,15 @@
-if:IS==1thena=:ISD b=:ISD c=:ISD d=:ISD e=:ISD f=:ISD end
-if:IS!=0thengoto11end g=:SL h=:X1 i=:Y1 j=:Z1 k=:X2 l=:Y2 m=:Z2 n=:X3
-o=:Y3 p=:Z3 q=:X4 r=:Y4 s=:Z4 t=:X5 u=:Y5 v=:Z5 w=:X6 x=:Y6 y=:Z6
-z="\n  |=---=|\nX:" aa="\n\nX:" ab="\nY:" ac="\nZ:" ad="\n  |=---=|"
-a=aa+h+ab+i+ac+j b=aa+k+ab+l+ac+m c=aa+n+ab+o+ac+p d=aa+q+ab+r+ac+s
-e=aa+t+ab+u+ac+v f=aa+w+ab+x+ac+y ae=z+h+ab+i+ac+j+ad
-af=z+k+ab+l+ac+m+ad ag=z+n+ab+o+ac+p+ad ah=z+q+ab+r+ac+s+ad
-ai=z+t+ab+u+ac+v+ad aj=z+w+ab+x+ac+y+ad ifg==1thena=ae goto11end
-ifg==2thenb=af goto11end ifg==3thenc=ag goto11end
-ifg==4thend=ah goto11end ifg==5thene=ai goto11end ifg==6thenf=aj end
-:Display_1=a :Display_2=b :Display_3=c :Display_4=d :Display_5=e
-:Display_6=f goto1
+if:IS thena=:ISD b=a c=a d=a e=a f=a g=a end if:IS!=0thengoto9end
+h=:SL i="\n  |=---=|\nX:" j="\n\nX:" k="\nY:" l="\nZ:" m="\n  |=---=|"
+n=:X1+k+:Y1+l+:Z1 o=:X2+k+:Y2+l+:Z2 p=:X3+k+:Y3+l+:Z3
+q=:X4+k+:Y4+l+:Z4 r=:X5+k+:Y5+l+:Z5 s=:X6+k+:Y6+l+:Z6 b=j+n c=j+o
+d=j+p e=j+q f=j+r g=j+s t=i+n+m u=i+o+m v=i+p+m w=i+q+m x=i+r+m
+y=i+s+m ifh thenb=t goto9end ifh==2thenc=u goto9end
+ifh==3thend=v goto9end ifh==4thene=w goto9end
+ifh==5thenf=x goto9end ifh==6theng=y end
+:Display_1=b :Display_2=c :Display_3=d :Display_4=e :Display_5=f
+:Display_6=g goto1
+
+
 
 
 

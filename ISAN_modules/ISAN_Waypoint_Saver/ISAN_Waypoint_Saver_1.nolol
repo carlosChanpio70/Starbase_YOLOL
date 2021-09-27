@@ -4,15 +4,15 @@ define :Deselect=:WB3
 define :Save=:WB4
 
 //Handles save button//:Deselect
-if :Save==1 then
-    :Save=0
+if :Save then
+    :Save = 0
     //Inputs Selection//
     X = :DX
     Y = :DY
     Z = :DZ
     Selection = :SL
     //Checks what's selected and saves on memory//
-    if Selection==1 then
+    if Selection then
         :X1=X
         :Y1=Y
         :Z1=Z
@@ -39,25 +39,26 @@ if :Save==1 then
     end
 end
 //Handles :Next button//
-if :Next==1 then
+if :Next then
     :Next=0
-    Selection=Selection+1
+    Selection++
     if Selection>6 then
         Selection=1
     end
 end
 //Handles :Previous button//
-if :Previous==1 then
+if :Previous then
     :Previous=0
-    Selection=Selection-1
+    Selection--
     if Selection<1 then
         Selection=6
     end
 end
 //Handles :Deselect button//
-if :Deselect==1 then
+if :Deselect then
     :Deselect=0
     Selection=0
 end
 //Outputs Selection//
 :SL = Selection
+//ISAN_Waypoint_Saver code made by carlosChanpio70 / Carlos//
