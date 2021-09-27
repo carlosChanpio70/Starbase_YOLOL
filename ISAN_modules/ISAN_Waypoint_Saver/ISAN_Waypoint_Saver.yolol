@@ -1,0 +1,20 @@
+ifnot :WB4 thengoto5end :WB4=0 a=:DX b=:DY c=:DZ
+ifd thene=a f=b g=c goto5end ifd==2thenh=a i=b j=c goto5end
+ifd==3thenk=a l=b m=c goto5end ifd==4thenn=a o=b p=c goto5end
+ifd==5thenq=a r=b s=c goto5end ifd==6thent=a u=b v=c end
+if:WB1 then:WB1=0 d++ ifd>6thend=1endend
+if:WB2 then:WB2=0 d-- ifd<1thend=6endend if:WB3 then:WB3=0 d=0end
+if:IS thenw=:ISD x=w y=w z=w aa=w ab=w ac=w end if:IS!=0thengoto15end
+ad="\n  |=---=|\nX:" a="\n\nX:" b="\nY:" c="\nZ:" ae="\n  |=---=|"
+af=e+b+f+c+g ag=h+b+i+c+j ah=k+b+l+c+m ai=n+b+o+c+p aj=q+b+r+c+s
+ak=t+b+u+c+v x=a+af y=a+ag z=a+ah aa=a+ai ab=a+aj ac=a+ak al=ad+af+ae
+am=ad+ag+ae an=ad+ah+ae ao=ad+ai+ae ap=ad+aj+ae aq=ad+ak+ae
+ifd thenx=al goto15end ifd==2theny=am goto15end
+ifd==3thenz=an goto15end ifd==4thenaa=ao goto15end
+ifd==5thenab=ap goto15end ifd==6thenac=aq end
+:Display_1=x :Display_2=y :Display_3=z :Display_4=aa :Display_5=ab
+:Display_6=ac goto1
+
+
+
+//ISAN_Waypoint_Saver code made by carlosChanpio70 / Carlos//
