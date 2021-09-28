@@ -5,16 +5,16 @@ ifb<3theni=c j=d k=e goto7end ifb<4thenl=c m=d n=e goto7end
 ifb<5theno=c p=d q=e goto7end ifb<6thenr=c s=d t=e goto7end
 ifb<7thenu=c v=d w=e end
 :WB1=0 :WB2=0 :WB3=0 :WB4=0
-if:IS thenx=:ISD y=x z=x aa=x ab=x ac=x ad=x goto16end ae="\n"
+if:IS thenx=:ISD y=x z=x aa=x ab=x ac=x ad=x goto17end ae="\n"
 c=ae+"X:" d=ae+"Y:" e=ae+"Z:" af=ae+"  |=---=|" y=c+f+d+g+e+h
 z=c+i+d+j+e+k aa=c+l+d+m+e+n ab=c+o+d+p+e+q ac=c+r+d+s+e+t
-ad=c+u+d+v+e+w ifb theny=af+y+af goto16end
-ifb<3thenz=af+z+af goto16end ifb<4thenaa=af+aa+af goto16end
-ifb<5thenab=af+ab+af goto16end ifb<6thenac=af+ac+af goto16end
-ifb<7thenad=af+ad+af goto16end y=ae+y z=ae+z aa=ae+aa ab=ae+ab
-ac=ae+ac ad=ae+ad
+ad=c+u+d+v+e+w ifb theny=af+y+af elsey=ae+y end
+ifb<3thenz=af+z+af elsez=ae+z end
+ifb<4thenaa=af+aa+af elseaa=ae+aa end
+ifb<5thenab=af+ab+af elseab=ae+ab end
+ifb<6thenac=af+ac+af elseac=ae+ac end
+ifb<7thenad=af+ad+af elsead=ae+ad end
 :Display_1=y :Display_2=z :Display_3=aa :Display_4=ab :Display_5=ac
 :Display_6=ad goto1
-
 
 //ISAN_6_Waypoint_Saver code made by carlosChanpio70 / Carlos//

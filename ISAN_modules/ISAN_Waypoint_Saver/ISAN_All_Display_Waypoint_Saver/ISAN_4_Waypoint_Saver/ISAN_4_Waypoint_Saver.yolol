@@ -1,0 +1,20 @@
+a=:WB1+:WB2+:WB3+:WB4 ifnot a thengoto7end b+=:WB1+:WB2*-1
+b*=(:WB3-1)*-1 ifb>4thenb=1 goto3end ifb<1thenb=4end
+c=:DX d=:DY e=:DZ ifb thenf=c g=d h=e goto6end
+ifb<3theni=c j=d k=e goto6end ifb<4thenl=c m=d n=e goto6end
+ifb<5theno=c p=d q=e end
+:WB1=0 :WB2=0 :WB3=0 :WB4=0
+if:IS thenr=:ISD s=r t=r u=r v=r goto12end w="\n" c=w+"X:" d=w+"Y:"
+e=w+"Z:" x=w+"  |=---=|" s=c+f+d+g+e+h t=c+i+d+j+e+k u=c+l+d+m+e+n
+v=c+o+d+p+e+q ifb thens=x+s+x elses=w+s end
+ifb<3thent=x+t+x elset=w+t end ifb<4thenu=x+u+x elseu=w+u end
+ifb<5thenv=x+v+x elsev=w+v end
+:Display_1=s :Display_2=t :Display_3=u :Display_4=v goto1
+
+
+
+
+
+
+
+//ISAN_4_Waypoint_Saver code made by carlosChanpio70 / Carlos//
