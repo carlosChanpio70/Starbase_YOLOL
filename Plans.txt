@@ -1,4 +1,5 @@
 Make different versions of ISAN_Waypoint_Saver
-Autopilot.
+Autopilot(Someday).
 Modable auto-avoidance code.
 Compass for ISAN.
+Please help with ideas in the discussion area
