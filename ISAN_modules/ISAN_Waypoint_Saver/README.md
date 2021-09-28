@@ -1,5 +1,6 @@
 Description:\
-    Stores and controls 6 waypoints\
+    Stores and controls n waypoints\
+    Slide version only needs 3 monitors\
 Setup:\
     Will require:\
     ISAN_Toggle_on_off\
