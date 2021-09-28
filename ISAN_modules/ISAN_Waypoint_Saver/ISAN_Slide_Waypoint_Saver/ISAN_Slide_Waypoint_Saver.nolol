@@ -10,10 +10,10 @@ Buttons = :Next + :Previous + :Deselect + :Save
 if Buttons then
     Selection += :Next+(:Previous*(-1))
     Selection *= ((:Deselect-1)*(-1))
-    if Selection>6 then
+    if Selection>9 then
         Selection=1
     else if Selection<1 then
-        Selection=6
+        Selection=9
     end
     //Inputs Selection//
     X = :DX
@@ -44,6 +44,18 @@ if Buttons then
         X6=X
         Y6=Y
         Z6=Z
+    else if Selection<8 then
+        X7=X
+        Y7=Y
+        Z7=Z
+    else if Selection<9 then
+        X8=X
+        Y8=Y
+        Z8=Z
+    else if Selection<10 then
+        X9=X
+        Y9=Y
+        Z9=Z
     end
     :Next=0
     :Previous=0
@@ -56,9 +68,6 @@ if :ISAN_Offline then
     D1 = ISAN_Off_Text
     D2 = ISAN_Off_Text
     D3 = ISAN_Off_Text
-    D4 = ISAN_Off_Text
-    D5 = ISAN_Off_Text
-    D6 = ISAN_Off_Text
 else
 //Display variables//
     line_skip = "\n"
@@ -72,43 +81,67 @@ else
     D4 = X+X4+Y+Y4+Z+Z4
     D5 = X+X5+Y+Y5+Z+Z5
     D6 = X+X6+Y+Y6+Z+Z6
+    D7 = X+X7+Y+Y7+Z+Z7
+    D8 = X+X8+Y+Y8+Z+Z8
+    D9 = X+X9+Y+Y9+Z+Z9
+    SD1 = Selected_Text+D1+Selected_Text
+    SD2 = Selected_Text+D2+Selected_Text
+    SD3 = Selected_Text+D3+Selected_Text
+    SD4 = Selected_Text+D4+Selected_Text
+    SD5 = Selected_Text+D5+Selected_Text
+    SD6 = Selected_Text+D6+Selected_Text
+    SD7 = Selected_Text+D7+Selected_Text
+    SD8 = Selected_Text+D8+Selected_Text
+    SD9 = Selected_Text+D9+Selected_Text
 //Display selection//
-    if Selection then
-        D1=Selected_Text+D1+Selected_Text
-    else
-        D1 = line_skip+D1
+    if Selection<10 then
+        D1 = D8
+        D2 = SD9
+        D3 = D1
     end
-    if Selection<3 then
-        D2=Selected_Text+D2+Selected_Text
-    else
-        D2 = line_skip+D2
+    if Selection<9 then
+        D1 = D7
+        D2 = SD8
+        D3 = D9
     end
-    if Selection<4 then
-        D3=Selected_Text+D3+Selected_Text
-    else
-        D3 = line_skip+D3  
-    end
-    if Selection<5 then
-        D4=Selected_Text+D4+Selected_Text
-    else
-        D4 = line_skip+D4
-    end
-    if Selection<6 then
-        D5=Selected_Text+D5+Selected_Text
-    else
-        D5 = line_skip+D5
+    if Selection<8 then
+        D1 = D6
+        D2 = SD7
+        D3 = D8
     end
     if Selection<7 then
-        D6=Selected_Text+D6+Selected_Text
-    else
-        D6 = line_skip+D6
+        D1 = D5
+        D2 = SD6
+        D3 = D7
+    end
+    if Selection<6 then
+        D1 = D4
+        D2 = SD5
+        D3 = D6
+    end
+    if Selection<5 then
+        D1 = D3
+        D2 = SD4
+        D3 = D5
+    end
+    if Selection<4 then
+        D1 = D2
+        D2 = SD3
+        D3 = D4
+    end
+    if Selection<3 then
+        D1 = D1
+        D2 = SD2
+        D3 = D3
+    end
+    if Selection then
+        D1 = D9
+        D2 = SD1
+        D3 = D2
     end
 end
 //Output Display//
 :Display_1 = D1
 :Display_2 = D2
 :Display_3 = D3
-:Display_4 = D4
-:Display_5 = D5
-:Display_6 = D6
-//ISAN_6_Waypoint_Saver code made by carlosChanpio70 / Carlos//
+//ISAN_Slide_Waypoint_Saver code made by carlosChanpio70 / Carlos//

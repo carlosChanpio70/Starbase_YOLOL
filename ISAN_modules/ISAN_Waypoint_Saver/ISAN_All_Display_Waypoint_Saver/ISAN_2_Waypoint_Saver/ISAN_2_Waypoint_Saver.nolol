@@ -4,6 +4,7 @@ define :Deselect=:WB3
 define :Save=:WB4
 define :ISAN_Offline=:IS
 define :ISAN_Off_Text = :ISD
+
 Buttons = :Next + :Previous + :Deselect + :Save
 //Handles :Next and :Previous button//
 if Buttons then
