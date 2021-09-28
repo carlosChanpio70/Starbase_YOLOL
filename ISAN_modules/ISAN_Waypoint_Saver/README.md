@@ -7,7 +7,7 @@ Setup:\
     1 Basic chips\
     6 text panels\
     4 buttons\
-Name the text panels fields from WD1 to WD6\
+Name the text panels fields from WD1 to WDn\
 Name the buttons from WB1 to WB4\
 Button Scheme:\
     WB1 is used to select the next panel\
