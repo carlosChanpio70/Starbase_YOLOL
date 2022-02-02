@@ -1,7 +1,6 @@
-Make different versions of ISAN_Waypoint_Saver
-Autopilot(Someday).
+Make ISAN_All_Display_Waypoint_Saver into one chip.
 Modable auto-avoidance code.
 Compass for ISAN.
 Cheese.
-tamagotchi
+Make so code uses less memory chips.
 Please help with ideas in the discussion area
