@@ -1,20 +1,20 @@
-g=0 h=0 n=:WB1+:WB2+:WB3+:WB4 ifnot n thengoto11end a+=:WB1+:WB2*-1
-a*=(:WB3-1)*-1 ifnot h thengoto4end ifa>6thena=1 goto6end
+d=0 e=0 q=:WB1+:WB2+:WB3+:WB4 ifnot q thengoto11end a+=:WB1+:WB2*-1
+a*=(:WB3-1)*-1 ifnot e thengoto4end ifa>6thena=1 goto6end
 ifa<1thena=6end goto6
-ifnot g thengoto5end ifa>4thena=1 goto6end ifa<1thena=4end goto6
+ifnot d thengoto5end ifa>4thena=1 goto6end ifa<1thena=4end goto6
 ifa>2thena=1 goto6end ifa<1thena=2end
-b=:DX c=:DY d=:DZ ifa theno=b p=c q=d goto10end
-ifa<3thenr=b s=c t=d goto10end ifa<4thenu=b v=c w=d goto10end
-ifa<5thenx=b y=c z=d goto10end ifa<6thenaa=b ab=c ac=d goto10end
-ifa<7thenad=b ae=c af=d end
+f=:DX g=:DY h=:DZ ifa thenr=f s=g t=h goto10end
+ifa<3thenu=f v=g w=h goto10end ifa<4thenx=f y=g z=h goto10end
+ifa<5thenaa=f ab=g ac=h goto10end ifa<6thenad=f ae=g af=h goto10end
+ifa<7thenag=f ah=g ai=h end
 :WB1=0 :WB2=0 :WB3=0 :WB4=0
-if:IS theni=:ISD j=i k=i l=i g=i m=i h=i goto17end f="\n" b=f+"X:"
-c=f+"Y:" d=f+"Z:" e=f+"  |=---=|" j=b+o+c+p+d+q k=b+r+c+s+d+t
-l=b+u+c+v+d+w g=b+x+c+y+d+z m=b+aa+c+ab+d+ac h=b+ad+c+ae+d+af
-ifa thenj=e+j+e elsej=f+j end ifa<3thenk=e+k+e elsek=f+k end
-ifa<4thenl=e+l+e elsel=f+l end ifa<5theng=e+g+e elseg=f+g end
-ifa<6thenm=e+m+e elsem=f+m end ifa<7thenh=e+h+e elseh=f+h end
-:WD1=j :WD2=k :WD3=l :WD4=g :WD5=m :WD6=h goto1
+if:IS theni=:ISD j=i k=i l=i d=i m=i e=i goto17end c="\n" n=c+"X:"
+o=c+"Y:" p=c+"Z:" b=c+"  |=---=|" j=n+r+o+s+p+t k=n+u+o+v+p+w
+l=n+x+o+y+p+z d=n+aa+o+ab+p+ac m=n+ad+o+ae+p+af e=n+ag+o+ah+p+ai
+ifa thenj=b+j+b elsej=c+j end ifa<3thenk=b+k+b elsek=c+k end
+ifa<4thenl=b+l+b elsel=c+l end ifa<5thend=b+d+b elsed=c+d end
+ifa<6thenm=b+m+b elsem=c+m end ifa<7thene=b+e+b elsee=c+e end
+:WD1=j :WD2=k :WD3=l :WD4=d :WD5=m :WD6=e goto1
 
 
 //ISAN_All_Waypoint_Saver code made by carlosChanpio70 / Carlos//

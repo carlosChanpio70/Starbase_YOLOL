@@ -15,5 +15,5 @@ Button Scheme:\
     WB2 is used to select the previous panel\
     WB3 is used to deselect all panels\
     WB4 is used to save information\
-Change value g to 1 if using 4 monitors\
-Change value h to 1 if using 6 monitors.
+Change value d to 1 if using 4 monitors\
+Change value e to 1 if using 6 monitors.

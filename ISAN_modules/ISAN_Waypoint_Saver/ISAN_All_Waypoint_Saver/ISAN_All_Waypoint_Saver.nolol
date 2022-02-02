@@ -41,34 +41,34 @@ if Buttons then
         end
     end
     //Inputs Selection//
-    X = :DX
-    Y = :DY
-    Z = :DZ
+    X0 = :DX
+    Y0 = :DY
+    Z0 = :DZ
     //Checks what's selected and saves on memory//
     if Selection then
-        X1=X
-        Y1=Y
-        Z1=Z
+        X1=X0
+        Y1=Y0
+        Z1=Z0
     else if Selection<3 then
-        X2=X
-        Y2=Y
-        Z2=Z
+        X2=X0
+        Y2=Y0
+        Z2=Z0
     else if Selection<4 then
-        X3=X
-        Y3=Y
-        Z3=Z
+        X3=X0
+        Y3=Y0
+        Z3=Z0
     else if Selection<5 then
-        X4=X
-        Y4=Y
-        Z4=Z
+        X4=X0
+        Y4=Y0
+        Z4=Z0
     else if Selection<6 then
-        X5=X
-        Y5=Y
-        Z5=Z
+        X5=X0
+        Y5=Y0
+        Z5=Z0
     else if Selection<7 then
-        X6=X
-        Y6=Y
-        Z6=Z
+        X6=X0
+        Y6=Y0
+        Z6=Z0
     end
     :Next=0
     :Previous=0
