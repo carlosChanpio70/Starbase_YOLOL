@@ -1,3 +1,20 @@
-a="\n|---------|" b="\n"+a+"\n|  ISAN2  |\n| OFFLINE |"+a :ISD=a
-if(:_-"OFFLINE")!=:_ then:IS=1else:IS=0end if:IT==1then:IT=0 :_=""end
+a="\n|---------|" b="\n"+a+"\n|  ISAN2  |\n| OFFLINE |"+a :ISD=b
+if(:_-"OFFLINE")!=:_ then:IS=1else:IS=0end if:IT then:IT=0 :_=""end
 goto1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ISAN_Toggle_on_off code made by carlosChanpio70 / Carlos//

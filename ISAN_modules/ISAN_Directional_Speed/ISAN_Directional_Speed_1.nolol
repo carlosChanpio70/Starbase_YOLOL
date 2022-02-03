@@ -4,15 +4,18 @@ define :Display = :DS
 define :ISAN_Offline = :IS
 define :ISAN_Off_Text = :ISD
 
-X1=:X; Y1=:Y; Z1=:Z$
+
+X1=:x; Y1=:y; Z1=:z$
 $
 $
-X2=:X; Y2=:Y; Z2=:Z
+X2=:x; Y2=:y; Z2=:z$
 X_Speed = (X2-X1)/0.6
 Y_Speed = (Y2-Y1)/0.6
 Z_Speed = (Z2-Z1)/0.6
 Total_Speed = math_abs(X_Speed)+math_abs(Y_Speed)+math_abs(Z_Speed)
-:Display = "\nSpeed:\nX:"+X_Speed+"\nY:"+Y_Speed+"\nZ:"+Z_Speed+"\nTotal:\n"+Total_Speed
-while :ISAN_Offline==0 do
-    :Display = :ISAN_Off_Text
+Display = "\nSpeed:\nX:"+X_Speed+"\nY:"+Y_Speed+"\nZ:"+Z_Speed+"\nTotal:\n"+Total_Speed
+if :ISAN_Offline then
+    Display = :ISAN_Off_Text
 end
+:Display = Display
+//ISAN_Directional_Speed code made by carlosChanpio70 / Carlos//

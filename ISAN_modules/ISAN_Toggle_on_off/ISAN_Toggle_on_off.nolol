@@ -5,13 +5,14 @@ define :ISAN_Off_Text = :ISD
 
 ISAN_G = "\n|---------|"
 ISAN_OFF = "\n"+ISAN_G+"\n|  ISAN2  |\n| OFFLINE |"+ISAN_G
-:ISAN_Off_Text = ISAN_G
+:ISAN_Off_Text = ISAN_OFF
 if string_contains(:_,"OFFLINE") then
     :ISAN_Offline = 1
 else
     :ISAN_Offline = 0
 end
-if :ISAN_Toggle==1 then
+if :ISAN_Toggle then
     :ISAN_Toggle = 0
     :_=""
 end
+//ISAN_Toggle_on_off code made by carlosChanpio70 / Carlos//

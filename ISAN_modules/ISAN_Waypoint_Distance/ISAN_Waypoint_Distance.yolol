@@ -1,5 +1,20 @@
-if:IS then:Distance=:ISD goto1end a=:DX b=:DY c=:DZ d="\n"
-ifnot a+b+c!=0thengoto5end e=:x/1000*1000 f=:y/1000*1000
-g=:z/1000*1000 h=a-e i=b-f j=c-g k=h+i+j
-:Distance=d+"X:"+h+d+"Y:"+i+d+"Z:"+j+d+"Total:"+d+k goto1
-:Distance=d+d+" No Target" goto1
+c=:DX d=:DY e=:DZ a="\n" ifnot c+d+e!=0thengoto4end i=:x/1000*1000
+j=:y/1000*1000 k=:z/1000*1000 f=c-i g=d-j h=e-k l=f+g+h
+b=a+"X:"+f+a+"Y:"+g+a+"Z:"+h+a+"Total:"+a+l goto5
+b=a+a+" No Target"
+if:IS thenb=:ISD end :Distance=b goto1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ISAN_Waypoint_Distance code made by carlosChanpio70 / Carlos //

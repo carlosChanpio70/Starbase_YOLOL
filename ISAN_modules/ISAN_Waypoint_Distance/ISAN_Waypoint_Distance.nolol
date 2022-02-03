@@ -2,9 +2,6 @@ include "std/math"
 define :ISAN_Offline=:IS
 define :ISAN_Off_Text = :ISD
 
-while :ISAN_Offline do
-    :Distance = :ISAN_Off_Text
-end
 X = :DX        
 Y = :DY
 Z = :DZ
@@ -17,7 +14,12 @@ if X+Y+Z!=0 then
     Y2=Y-Y1
     Z2=Z-Z1
     D1=X2+Y2+Z2
-    :Distance=line_skip+"X:"+X2+line_skip+"Y:"+Y2+line_skip+"Z:"+Z2+line_skip+"Total:"+line_skip+D1
+    Display=line_skip+"X:"+X2+line_skip+"Y:"+Y2+line_skip+"Z:"+Z2+line_skip+"Total:"+line_skip+D1
 else
-    :Distance=line_skip+line_skip+" No Target"
+    Display=line_skip+line_skip+" No Target"
 end
+if :ISAN_Offline then
+    Display = :ISAN_Off_Text
+end
+:Distance = Display
+//ISAN_Waypoint_Distance code made by carlosChanpio70 / Carlos //

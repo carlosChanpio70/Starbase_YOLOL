@@ -1,7 +1,8 @@
-a=:X b=:Y c=:Z
+e=:x f=:y g=:z
 
 
-d=:X e=:Y f=:Z g=(d-a)/.6 h=(e-b)/.6 i=(f-c)/.6
-j=(g>=0)*g-(g<0)*g+((h>=0)*h-(h<0)*h)+((i>=0)*i-(i<0)*i)
-:DS="\nSpeed:\nX:"+g+"\nY:"+h+"\nZ:"+i+"\nTotal:\n"+j
-if:IS==0then:DS=:ISD goto7end goto1
+h=:x i=:y j=:z
+a=(h-e)/.6 b=(i-f)/.6 c=(j-g)/.6
+k=(a>=0)*a-(a<0)*a+((b>=0)*b-(b<0)*b)+((c>=0)*c-(c<0)*c)
+d="\nSpeed:\nX:"+a+"\nY:"+b+"\nZ:"+c+"\nTotal:\n"+k
+if:IS thend=:ISD end :DS=d goto1
