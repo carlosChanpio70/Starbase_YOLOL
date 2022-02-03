@@ -20,13 +20,12 @@ Buttons = :Next + :Previous + :Deselect + :Save
 //Handles :Next and :Previous button
 if Buttons then
     Selection += :Next+(:Previous*(-1))
-    Selection *= ((:Deselect-1)*(-1))
     if D6 then
         if Selection>6 then
             Selection=1
         else if Selection<1 then
             Selection=6
-        end    
+        end
     else if D4 then
         if Selection>4 then
             Selection=1
@@ -40,6 +39,7 @@ if Buttons then
             Selection=2
         end
     end
+    Selection *= ((:Deselect-1)*(-1))
     //Inputs Selection//
     X0 = :DX
     Y0 = :DY
@@ -98,32 +98,32 @@ else
     D5 = X+X5+Y+Y5+Z+Z5
     D6 = X+X6+Y+Y6+Z+Z6
 //Display selection//
-    if Selection then
+    if Selection==1 then
         D1=Selected_Text+D1+Selected_Text
     else
         D1 = line_skip+D1
     end
-    if Selection<3 then
+    if Selection==2 then
         D2=Selected_Text+D2+Selected_Text
     else
         D2 = line_skip+D2
     end
-    if Selection<4 then
+    if Selection==3 then
         D3=Selected_Text+D3+Selected_Text
     else
         D3 = line_skip+D3  
     end
-    if Selection<5 then
+    if Selection==4 then
         D4=Selected_Text+D4+Selected_Text
     else
         D4 = line_skip+D4
     end
-    if Selection<6 then
+    if Selection==5 then
         D5=Selected_Text+D5+Selected_Text
     else
         D5 = line_skip+D5
     end
-    if Selection<7 then
+    if Selection==6 then
         D6=Selected_Text+D6+Selected_Text
     else
         D6 = line_skip+D6
