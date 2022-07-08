@@ -46,6 +46,7 @@ if Buttons then
     Z0 = :DZ
     //Checks what's selected and saves on memory//
     if Selection then
+
         X1=X0
         Y1=Y0
         Z1=Z0

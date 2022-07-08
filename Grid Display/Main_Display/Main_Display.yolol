@@ -1,0 +1,5 @@
+d=1000 h=:FuelChamberMaxFuel g=:F1 e=:F2 b=:F3 c=:F4 i=(g+e+b+c)/4
+ifg<e<b<c thena=g f=1 goto4end
+ife<b<c thena=e f=2elseifb<c thena=b f=3elsea=c f=4endend
+a=" Low: F"+f+"|"+a/h*100/d*d j=i/h*10/d*d k=" Total: "+j
+:CY=2 :In=k :CY++ :In=a goto1
