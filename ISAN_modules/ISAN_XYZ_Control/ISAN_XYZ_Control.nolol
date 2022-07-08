@@ -6,7 +6,7 @@ define :Multiplication_Factor = :MF
 define :MF_Switch = :MS
 
 if :MF_Switch != 0 then 
-    :Multiplication_Factor = (:MF_Switch*10)
+    :Multiplication_Factor = :Multiplication_Factor+(:MF_Switch*500)
     :MF_Switch = 0
 end
 if :X_Switch != 0 then
