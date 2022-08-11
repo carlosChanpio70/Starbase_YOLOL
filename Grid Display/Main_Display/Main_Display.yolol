@@ -1,5 +1,7 @@
-d=1000 h=:FuelChamberMaxFuel g=:F1 e=:F2 b=:F3 c=:F4 i=(g+e+b+c)/4
-ifg<e<b<c thena=g f=1 goto4end
-ife<b<c thena=e f=2elseifb<c thena=b f=3elsea=c f=4endend
-a=" Low: F"+f+"|"+a/h*100/d*d j=i/h*10/d*d k=" Total: "+j
-:CY=2 :In=k :CY++ :In=a goto1
+h=:FuelChamberMaxFuel a=:F1 b=:F2 c=:F3 d=:F4 j=(a+b+c+d)/4/h*10/k*k
+ifa<b or a<c or a<d thene=a f=1 goto4end
+ifb<c or b<d thene=b f=2elseifc<d thene=c f=3elsee=d f=4endend
+i=11 g="=========="
+ifi-->0thenifi>j theng-- g="-"+g elsegoto6end goto5end
+:CY=2 :In=" Total:     |Lowest:"
+:CY++ :In=" "+g+" |F"+f+"|"+e/h*100/1000*1000+"%" goto1
