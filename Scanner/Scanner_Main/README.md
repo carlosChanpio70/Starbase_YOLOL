@@ -1,6 +1,6 @@
 Description:\
     Controls the Material point Scanner and displays scan results\
-    You can turn on the feature to show results in stacks bu changing b=0 to b=1\
+    You can turn on the feature to show results in stacks by changing b=0 to b=1\
     You can turn on the timer feature by changing a=0 to a=1\
     Has optional Tiers version(Tiers versions does not have togglable features)\
     And optional 4 ore display\
