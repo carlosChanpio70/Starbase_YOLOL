@@ -17,6 +17,6 @@ Setup:\
         Change in the button the variable "ButtonState" to "SB"\
         Change in the text panel the variable "PanelValue" to "SD1"\
     For when using the Timer feature also do:\
-        Change in the progress bar the variable "PanelValue" to "SDelay"
+        Change in the progress bar the variable "PanelValue" to "SDelay"\
     For when using the Tier/4 ore version also do:\
         Change in the text panel the variable "PanelValue" to "SD2"
